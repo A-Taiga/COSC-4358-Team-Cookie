@@ -8,8 +8,8 @@ public class characterMovement : MonoBehaviour
     protected float xSpeed = 1f, ySpeed = 0.75f;
     private Vector3 moveDelta;
     protected virtual void Awake() {
-        blockLayer = LayerMask.GetMask(TagManager.BOUNDARY_TAG);
-        Debug.Log("blockLayer: " + blockLayer);
+        // blockLayer = LayerMask.GetMask(TagManager.BOUNDARY_TAG);
+        // Debug.Log("blockLayer: " + blockLayer);
     }
 
     protected virtual void HandleMovement(float x, float y) {
