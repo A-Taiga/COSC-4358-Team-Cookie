@@ -2,17 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pursue : MonoBehaviour
+public class Pursue : AIAction
 {
-    // Start is called before the first frame update
-    void Start()
+    protected float speed = 1f / 2;
+    private Vector2 playerLocation;
+
+
+
+    public override float Desire(RaycastHit2D[] rays)
     {
-        
+
+        if (rays.Length == 0)
+            this.desire = 0;
+
+        foreach (var ray in rays) {
+            if (ray.rigidbody != null && ray.rigidbody.tag == TagManager.PLAYER_TAG)
+            {
+                this.desire = 1;
+                playerLocation = ray.point;
+                break;
+            }
+        }
+        return this.desire;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Execute()
     {
-        
+        if (!this.collidingPlayer)
+        {
+            var step = speed * Time.deltaTime; // calculate distance to move
+            transform.position = Vector3.MoveTowards(transform.position, playerLocation, step);
+        }
+
+        this.desire = 0;
     }
 }
