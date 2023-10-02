@@ -5,6 +5,7 @@ using UnityEngine;
 public class playerMovement : characterMovement
 {
     private float moveX, moveY;
+    private bool run;
 
     private Camera mainCam;
     private Vector2 mousePos;
@@ -19,10 +20,12 @@ public class playerMovement : characterMovement
         //anim = GetComponent<Animator>();
     }
 
+
     private void FixedUpdate() {
         moveX = Input.GetAxisRaw("Horizontal");
         moveY = Input.GetAxisRaw("Vertical");
-        HandleMovement(moveX, moveY);
+        run = Input.GetButton("Jump");
+        HandleMovement(moveX, moveY, run);
     }
 
     void HandlePlayerTurning() {}

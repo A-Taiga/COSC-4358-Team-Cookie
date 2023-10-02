@@ -28,7 +28,7 @@ public class Pursue : AIAction
 
     public override void Execute()
     {
-        if (!this.collidingPlayer)
+        if (!this.collidingPlayer && Vector3.Distance(transform.position, playerLocation) > 0.25f)
         {
             var step = speed * Time.deltaTime; // calculate distance to move
             transform.position = Vector3.MoveTowards(transform.position, playerLocation, step);

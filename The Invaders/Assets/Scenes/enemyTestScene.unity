@@ -137,9 +137,9 @@ GameObject:
   - component: {fileID: 111637830}
   - component: {fileID: 111637834}
   - component: {fileID: 111637833}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collision
-  m_TagString: Untagged
+  m_TagString: Blocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2485,6 +2485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xSpeed: 1
   ySpeed: 0.75
+  runMultipler: 1.5
 --- !u!61 &1179925790
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2538,9 +2539,9 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1179925786}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
