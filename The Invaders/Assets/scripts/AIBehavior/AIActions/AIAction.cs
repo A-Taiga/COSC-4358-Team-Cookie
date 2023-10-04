@@ -4,10 +4,10 @@ using UnityEngine;
 
 public abstract class AIAction : MonoBehaviour
 {
-    public float desire;
+    public float desire { get; protected set; }
+    public bool lockAction { get; protected set; }
 
     public abstract float Desire(RaycastHit2D[] rays);
-
 
     protected BoxCollider2D cc;
     protected Rigidbody2D rb;
@@ -16,6 +16,7 @@ public abstract class AIAction : MonoBehaviour
     void Awake()
     {
         collidingPlayer = false;
+        lockAction = false;
         cc = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
     }

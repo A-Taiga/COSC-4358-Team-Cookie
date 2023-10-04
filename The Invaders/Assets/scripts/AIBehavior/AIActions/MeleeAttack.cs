@@ -13,18 +13,22 @@ public class MeleeAttack : AIAction
 
     [Header("Settings")]
     [Range(0f, 2f)]
-    public float _time = 0.2f;
+    public float _time = 1f;
     [Range(0f, 2f)]
-    public float _distance = 0.1f;
+    public float _distance = 0.015f;
     [Range(0f, 0.1f)]
     public float _delayBetweenShakes = 0f;
 
+    SpriteRenderer sRenderer;
+    Color defaultColor;
 
     private bool isShaking;
 
     void Awake()
     {
         isShaking = false;
+        sRenderer = GetComponent<SpriteRenderer>();
+        defaultColor = sRenderer.color;
     }
 
     public override float Desire(RaycastHit2D[] rays)
@@ -38,8 +42,11 @@ public class MeleeAttack : AIAction
 
     public override void Execute()
     {
+        lockAction = true;
         isShaking = true;
         _startPos = transform.position;
+        sRenderer.color = Color.red;
+        Events<TakeDamageEvent>.Instance.Trigger?.Invoke(5f);
         StopAllCoroutines();
         StartCoroutine(Shake());
         //Debug.Log("shakey shakey");
@@ -63,11 +70,14 @@ public class MeleeAttack : AIAction
             }
             else
             {
-                isShaking = false;
                 yield return null;
             }
         }
 
         transform.position = _startPos;
+        isShaking = false;
+        sRenderer.color = defaultColor;
+        this.desire = 0;
+        lockAction = false;
     }
 }
