@@ -21,7 +21,6 @@ public class characterMovement : MonoBehaviour
 
         if (run) { 
             moveDelta = new Vector3(x * xSpeed * runMultipler, y * ySpeed * runMultipler, 0f);
-            Debug.Log("JUMP");
         }
         else
         {

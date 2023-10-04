@@ -15,6 +15,7 @@ public abstract class AIAction : MonoBehaviour
 
     void Awake()
     {
+        collidingPlayer = false;
         cc = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
     }

@@ -8,7 +8,7 @@ public class AIBehavior : MonoBehaviour
 
     //[SerializeField]
     public float FollowDistance = 1f;
-
+    public AIAction action { get; private set; }
 
     // Update is called once per frame
     void FixedUpdate()

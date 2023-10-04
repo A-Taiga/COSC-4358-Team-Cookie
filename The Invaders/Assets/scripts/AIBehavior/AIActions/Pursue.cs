@@ -11,16 +11,17 @@ public class Pursue : AIAction
 
     public override float Desire(RaycastHit2D[] rays)
     {
-
-        if (rays.Length == 0)
-            this.desire = 0;
-
-        foreach (var ray in rays) {
-            if (ray.rigidbody != null && ray.rigidbody.tag == TagManager.PLAYER_TAG)
+        this.desire = 0;
+        if (!this.collidingPlayer)
+        {
+            foreach (var ray in rays)
             {
-                this.desire = 1;
-                playerLocation = ray.point;
-                break;
+                if (ray.rigidbody != null && ray.rigidbody.tag == TagManager.PLAYER_TAG)
+                {
+                    this.desire = 1;
+                    playerLocation = ray.rigidbody.position;
+                    break;
+                }
             }
         }
         return this.desire;
@@ -28,12 +29,7 @@ public class Pursue : AIAction
 
     public override void Execute()
     {
-        if (!this.collidingPlayer && Vector3.Distance(transform.position, playerLocation) > 0.25f)
-        {
-            var step = speed * Time.deltaTime; // calculate distance to move
-            transform.position = Vector3.MoveTowards(transform.position, playerLocation, step);
-        }
-
-        this.desire = 0;
+        var step = speed * Time.deltaTime; // calculate distance to move
+        transform.position = Vector3.MoveTowards(transform.position, playerLocation, step);
     }
 }
