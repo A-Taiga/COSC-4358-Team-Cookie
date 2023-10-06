@@ -1,18 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 public class IntroScene : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public VideoPlayer[] videos;
+    int index;
+
+    void Awake()
     {
-        
+        index = 0;
+        videos = GetComponentsInChildren<VideoPlayer>();
+
+       if(videos != null)
+        {
+            videos[index].loopPointReached += EndReached;
+            videos[index].Play();
+            index++;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void EndReached(VideoPlayer vp)
     {
-        
+        Debug.Log($"Video {index} ended.");
+        if (index < videos.Length)
+        {
+            videos[index].loopPointReached += EndReached;
+            videos[index].Play();
+            index++;
+        } 
+        else
+        {
+            SceneManager.LoadScene("enemyTestScene");
+        }
     }
+
 }

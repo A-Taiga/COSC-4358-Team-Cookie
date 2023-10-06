@@ -8,7 +8,7 @@ public class AIBehavior : MonoBehaviour
 
     //[SerializeField]
     public float FollowDistance = 1f;
-    public AIAction lastAction { get; private set; }
+    AIAction lastAction;
 
     void Start()
     {
