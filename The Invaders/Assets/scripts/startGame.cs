@@ -8,7 +8,7 @@ public class startGame : MonoBehaviour
     public string gameStartScene;
     public void StartGame()
     {
-        SceneManager.LoadScene(gameStartScene);
+        SceneLoadingManager.LoadScene("Cutscenes");
     }
     public void QuitGame()
     {

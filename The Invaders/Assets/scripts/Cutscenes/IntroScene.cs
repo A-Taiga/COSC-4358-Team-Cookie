@@ -31,7 +31,7 @@ public class IntroScene : MonoBehaviour
         } 
         else
         {
-            SceneManager.LoadScene("enemyTestScene");
+            SceneLoadingManager.LoadScene("enemyTestScene");
         }
     }
 
