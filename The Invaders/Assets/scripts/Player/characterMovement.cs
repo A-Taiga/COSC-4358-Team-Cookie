@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public delegate void SetPlayerRunEvent(bool v);
+
+
 public class characterMovement : MonoBehaviour
 {
     [SerializeField] 
@@ -11,17 +15,33 @@ public class characterMovement : MonoBehaviour
     private Rigidbody2D rb;
     private BoxCollider2D bc;
     private RaycastHit2D movementHit;
+    
+    private bool runLocked;
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+    void OnEnable()
+    {
+        Events<SetPlayerRunEvent>.Instance.Register(v => {
+            runLocked = v;
+        });
+    }
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+    void OnDisable()
+    {
+        Events<SetPlayerRunEvent>.Instance.Unregister(Events<SetPlayerRunEvent>.Instance.Trigger);
+    }
 
     protected virtual void Awake() {
+        runLocked = false;
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<BoxCollider2D>();
     }
 
     protected virtual void HandleMovement(float x, float y, bool run = false) {
 
-        if (run) { 
+        if (run && !runLocked) {
+            Events<RunPlayerEvent>.Instance.Trigger?.Invoke(1f);
             moveDelta = new Vector3(x * xSpeed * runMultipler, y * ySpeed * runMultipler, 0f);
-            Debug.Log("JUMP");
         }
         else
         {
