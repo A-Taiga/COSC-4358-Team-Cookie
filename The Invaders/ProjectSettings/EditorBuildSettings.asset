@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/enemyTestScene.unity
     guid: a8fca03cde2b0e040a49f0e64175fbc4
+  - enabled: 1
+    path: Assets/Scenes/LoadingScreen.unity
+    guid: c7283088f9dc4194eb3d9777aef5d2fd
   m_configObjects: {}
