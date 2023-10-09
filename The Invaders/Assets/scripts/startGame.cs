@@ -5,13 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class startGame : MonoBehaviour
 {
-    public string gameStartScene;
+    public int gameStartScene;
     public void StartGame()
     {
-        SceneLoadingManager.LoadScene("Cutscenes");
-    }
-    public void QuitGame()
-    {
-        Application.Quit();
+        SceneManager.LoadScene(gameStartScene);
     }
 }
