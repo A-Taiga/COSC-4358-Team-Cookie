@@ -933,6 +933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skipBar: {fileID: 1321416120}
   skipText: {fileID: 732385549}
+  beginScene: Village2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

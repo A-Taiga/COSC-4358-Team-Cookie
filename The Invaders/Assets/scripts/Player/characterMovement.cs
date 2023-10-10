@@ -49,7 +49,7 @@ public class characterMovement : MonoBehaviour
         }
          
         // Two translations required otherwise collisions will block the entire Vector3.
-        movementHit = BoxCastDrawer.BoxCastAndDraw(transform.position, bc.bounds.size, 0f,
+        movementHit = BoxCastDrawer.BoxCastAndDraw(bc.bounds.center, bc.bounds.size, 0f,
             new Vector2(moveDelta.x, 0f), Mathf.Abs(moveDelta.x * Time.deltaTime),
             LayerMask.GetMask(TagManager.BOUNDARY_TAG));
 
@@ -57,7 +57,7 @@ public class characterMovement : MonoBehaviour
             transform.Translate(moveDelta.x * Time.deltaTime, 0f, 0f);
         }
 
-        movementHit = BoxCastDrawer.BoxCastAndDraw(transform.position, bc.bounds.size, 0f,
+        movementHit = BoxCastDrawer.BoxCastAndDraw(bc.bounds.center, bc.bounds.size, 0f,
             new Vector2(0f, moveDelta.y), Mathf.Abs(moveDelta.y * Time.deltaTime),
             LayerMask.GetMask(TagManager.BOUNDARY_TAG));
 

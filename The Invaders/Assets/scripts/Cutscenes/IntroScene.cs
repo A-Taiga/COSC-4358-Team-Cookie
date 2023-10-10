@@ -15,6 +15,8 @@ public class IntroScene : MonoBehaviour
     private VideoPlayer[] videos;
     int index;
 
+    public string beginScene;
+
   
 
     void Awake()
@@ -51,7 +53,7 @@ public class IntroScene : MonoBehaviour
         }
         else
         {
-            SceneLoadingManager.LoadScene("enemyTestScene");
+            SceneLoadingManager.LoadScene(beginScene);
         }
     }
 

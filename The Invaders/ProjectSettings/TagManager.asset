@@ -3,15 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Blocking
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - 
+  - Blocking
   - 
   - 
   - 
@@ -38,6 +40,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Blocking
+    uniqueID: 351006285
+    locked: 0
+  - name: Map
+    uniqueID: 2584172847
+    locked: 0
+  - name: Enemy
+    uniqueID: 1707714941
+    locked: 0
+  - name: Player
+    uniqueID: 1327400861
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
