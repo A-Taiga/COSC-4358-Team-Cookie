@@ -5,9 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class startGame : MonoBehaviour
 {
-    public int gameStartScene;
+    public string gameStartScene;
     public void StartGame()
     {
         SceneManager.LoadScene(gameStartScene);
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
