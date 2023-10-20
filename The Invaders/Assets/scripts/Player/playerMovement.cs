@@ -10,10 +10,13 @@ public class playerMovement : characterMovement
 
     private Camera mainCam;
     private Vector2 mousePos;
-    private Vector3 lookDir;
     private Vector3 tempScale;
 
     public Animator animator;
+
+    public Vector3 screenPosition;
+    public Vector3 worldPosition;
+
     
 
     protected override void Awake() {
@@ -23,14 +26,8 @@ public class playerMovement : characterMovement
     }
 
 
-    private void FixedUpdate() {
+    private void Update() {
 
-
-        /* reset Speed parameter of animation */
-        animator.SetFloat("Speed",0);
-        /* restet North parameter of animation */
-        animator.SetBool("North", false);
-        animator.SetBool("South", false);
 
 
 
@@ -39,37 +36,52 @@ public class playerMovement : characterMovement
         run = Input.GetButton("Jump");
         HandleMovement(moveX, moveY, run);
 
+        // Debug.Log("X: " + moveDelta.x + "Y: " + moveDelta.y);
 
-        // Debug.Log("moveX: " + moveX + " moveY: " + moveY);
+        /* player movement animation */
+        animator.SetFloat("Horizontal", moveDelta.x);
+        animator.SetFloat("Vertical", moveDelta.y);
+        animator.SetFloat("Speed", moveDelta.sqrMagnitude);
 
-        if (moveX != 0)
-            animator.SetFloat("Speed", MathF.Abs(moveX));
+         /* get position of mouse relative to the world */
+        screenPosition = Input.mousePosition;
+        worldPosition = mainCam.ScreenToWorldPoint(screenPosition);
 
-        if (moveY != 0)
+
+        // if(Input.GetMouseButtonDown(0))
+        // {
+        //     Debug.Log("MOUSE CLICK");
+        //     if(GameObject.Find("Player").transform.position.x > worldPosition.x)
+        //     {
+        //         animator.SetBool("AttackLeft", true);
+        //     }
+        // }
+
+
+        //Debug.Log("PLAYER: " + GameObject.Find("Player").transform.position + "MOUSE: " + worldPosition);
+
+
+
+
+        if(Input.GetMouseButtonDown(0))
         {
-            if(moveY == 1)
-                animator.SetBool("North", true);
-            else if(moveY == -1)
-                animator.SetBool("South", true);
+            if(GameObject.Find("Player").transform.position.x > worldPosition.x)
+            {
+                animator.SetBool("AttackLeft", true);
+            }
+            else
+            {
+                animator.SetBool("AttackRight", true);
+            }
         }
-           
-            // animator.SetFloat("Speed", MathF.Abs(moveY));
-        
-        /* handle player direction */
-            HandlePlayerTurning(moveX);
-    }
-    void HandlePlayerTurning(float moveX) 
-    {
-        if(moveX < 0)
+        else
         {
-            lookDir = new Vector3(-0.05f, 0.05f, 0.05f);
-            transform.localScale = lookDir;
+            animator.SetBool("AttackLeft", false);
+            animator.SetBool("AttackRight", false);
+
         }
-        else if(moveX > 0)
-        {
-            lookDir = new Vector3(0.05f, 0.05f, 0.05f);
-            transform.localScale = lookDir;
-        }
+
     }
     void HandlePlayerAnimation(float x, float y) {}
+
 }
