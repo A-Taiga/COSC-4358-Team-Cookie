@@ -35,6 +35,7 @@ public abstract class AIAction : MonoBehaviour
             collidingPlayer = false;
         }
     }
+    
 
     public virtual void Execute()
     {

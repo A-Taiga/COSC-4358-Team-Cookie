@@ -23,6 +23,8 @@ public class AIBehavior : MonoBehaviour
             return;
         }
 
+
+
         Vector2 fVector = new Vector2(FollowDistance * 2, FollowDistance * 2);
         RaycastHit2D[] hits = new RaycastHit2D[5];
         ContactFilter2D filter = new ContactFilter2D();

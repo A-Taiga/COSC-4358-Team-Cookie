@@ -11,7 +11,7 @@ public class characterMovement : MonoBehaviour
     [SerializeField] 
     protected float xSpeed = 1f, ySpeed = 0.75f, runMultipler = 2f;
 
-    private Vector3 moveDelta;
+    public Vector3 moveDelta;
     private Rigidbody2D rb;
     private BoxCollider2D bc;
     private RaycastHit2D movementHit;
