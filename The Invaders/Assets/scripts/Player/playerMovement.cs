@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 using System;
 public class playerMovement : characterMovement
 {
-    
     private float moveX, moveY;
     private bool run;
 
@@ -17,26 +17,36 @@ public class playerMovement : characterMovement
     public Vector3 screenPosition;
     public Vector3 worldPosition;
 
-    
+
+    private bool isMoving = false;
 
     protected override void Awake() {
+
         base.Awake();
         mainCam = Camera.main;
-        //anim = GetComponent<Animator>();
+        // animator = GetComponent<Animator>();
     }
+
 
 
     private void Update() {
 
-
-
-
+        
         moveX = Input.GetAxisRaw("Horizontal");
         moveY = Input.GetAxisRaw("Vertical");
         run = Input.GetButton("Jump");
         HandleMovement(moveX, moveY, run);
 
         // Debug.Log("X: " + moveDelta.x + "Y: " + moveDelta.y);
+
+        if(moveX != 0 || moveY != 0)
+        {
+            isMoving = true;
+        }
+        else
+        {
+            isMoving = false;
+        }
 
         /* player movement animation */
         animator.SetFloat("Horizontal", moveDelta.x);
@@ -60,9 +70,6 @@ public class playerMovement : characterMovement
 
         //Debug.Log("PLAYER: " + GameObject.Find("Player").transform.position + "MOUSE: " + worldPosition);
 
-
-
-
         if(Input.GetMouseButtonDown(0))
         {
             if(GameObject.Find("Player").transform.position.x > worldPosition.x)
@@ -81,7 +88,13 @@ public class playerMovement : characterMovement
 
         }
 
+
+
     }
     void HandlePlayerAnimation(float x, float y) {}
+
+    public bool getIsMoving() {
+        return isMoving;
+    }
 
 }
