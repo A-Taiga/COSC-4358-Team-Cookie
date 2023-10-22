@@ -20,14 +20,15 @@ public class playerMovement : characterMovement
 
     private bool isMoving = false;
 
+    private ParticleSystem runParticles;
+
     protected override void Awake() {
 
         base.Awake();
         mainCam = Camera.main;
-        // animator = GetComponent<Animator>();
+        runParticles = GetComponentInChildren<ParticleSystem>();
+        animator = GetComponent<Animator>();
     }
-
-
 
     private void Update() {
 
@@ -39,15 +40,21 @@ public class playerMovement : characterMovement
 
         // Debug.Log("X: " + moveDelta.x + "Y: " + moveDelta.y);
 
-        if(moveX != 0 || moveY != 0)
+        if (moveX != 0 || moveY != 0)
         {
+            if (!isMoving) // Transition from not moving -> moving
+            {
+                runParticles.Clear();
+                runParticles.Play();
+            }
             isMoving = true;
         }
         else
         {
             isMoving = false;
+            runParticles.Clear();
+            runParticles.Pause();
         }
-
         /* player movement animation */
         animator.SetFloat("Horizontal", moveDelta.x);
         animator.SetFloat("Vertical", moveDelta.y);
