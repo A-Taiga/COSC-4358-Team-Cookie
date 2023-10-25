@@ -20,14 +20,20 @@ public class playerMovement : characterMovement
 
     private bool isMoving = false;
 
+    public GameObject footsteps;
     private ParticleSystem runParticles;
 
     protected override void Awake() {
 
         base.Awake();
         mainCam = Camera.main;
-        runParticles = GetComponentInChildren<ParticleSystem>();
         animator = GetComponent<Animator>();
+
+        if(footsteps)
+        {
+            footsteps.SetActive(true);
+            runParticles = footsteps.GetComponent<ParticleSystem>();
+        }
     }
 
     private void Update() {
@@ -46,16 +52,22 @@ public class playerMovement : characterMovement
         {
             if (!isMoving) // Transition from not moving -> moving
             {
-                runParticles.Clear();
-                runParticles.Play();
+                if (runParticles)
+                {
+                    runParticles.Clear();
+                    runParticles.Play();
+                }
             }
             isMoving = true;
         }
         else
         {
             isMoving = false;
-            runParticles.Clear();
-            runParticles.Pause();
+            if (runParticles)
+            {
+                runParticles.Clear();
+                runParticles.Pause();
+            }
         }
         /* player movement animation */
         animator.SetFloat("Horizontal", moveDelta.x);
@@ -79,7 +91,7 @@ public class playerMovement : characterMovement
 
         //Debug.Log("PLAYER: " + GameObject.Find("Player").transform.position + "MOUSE: " + worldPosition);
 
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetButtonDown("Fire1"))
         {
             if(GameObject.Find("Player").transform.position.x > worldPosition.x)
             {
