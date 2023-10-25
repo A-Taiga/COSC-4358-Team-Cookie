@@ -32,7 +32,9 @@ public class playerMovement : characterMovement
 
     private void Update() {
 
-        
+        if (PauseManager.isPaused)
+            return;
+
         moveX = Input.GetAxisRaw("Horizontal");
         moveY = Input.GetAxisRaw("Vertical");
         run = Input.GetButton("Jump");
