@@ -130,8 +130,8 @@ TextureImporter:
         y: 809
         width: 724
         height: 808
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -151,8 +151,8 @@ TextureImporter:
         y: 811
         width: 674
         height: 806
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -172,8 +172,8 @@ TextureImporter:
         y: 1
         width: 776
         height: 806
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,6 +181,27 @@ TextureImporter:
       bones: []
       spriteID: bc905b6d5df0f4f05adec3329d21e28d
       internalID: -1152585006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet2_2
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 291
+        width: 6
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c50cdf2b04f94d1cada346bdebf7ec0
+      internalID: -1739488911
       vertices: []
       indices: 
       edges: []
