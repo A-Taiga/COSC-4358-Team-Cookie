@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 
 public class Pursue : AIAction
@@ -19,14 +18,8 @@ public class Pursue : AIAction
             {
                 if (ray.rigidbody != null && ray.rigidbody.tag == TagManager.PLAYER_TAG)
                 {
-                    Vector2 playerTarget = (ray.rigidbody.transform.position - transform.position);
-                    RaycastHit2D hit = Physics2D.Raycast(transform.position, playerTarget.normalized, playerTarget.magnitude, layerMask: LayerMask.GetMask(TagManager.BOUNDARY_TAG));
-
-                    if (hit.collider == null)
-                    {
-                        this.desire = 1;
-                        playerLocation = ray.rigidbody.position;
-                    }
+                    this.desire = 1;
+                    playerLocation = ray.rigidbody.position;
                     break;
                 }
             }

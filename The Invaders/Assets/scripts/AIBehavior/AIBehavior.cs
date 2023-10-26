@@ -7,12 +7,8 @@ public class AIBehavior : MonoBehaviour
 {
 
     //[SerializeField]
-    public GameObject owner;
     public float FollowDistance = 1f;
-    public float ActionFrequency = 0f;
-
-    protected float lastActionTime = 0f;
-    protected AIAction lastAction;
+    AIAction lastAction;
 
     void Start()
     {
@@ -22,7 +18,7 @@ public class AIBehavior : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(lastAction?.lockAction == true || lastActionTime + ActionFrequency > Time.time)
+        if(lastAction?.lockAction == true)
         {
             return;
         }
@@ -49,7 +45,6 @@ public class AIBehavior : MonoBehaviour
         if (lastAction?.desire != 0)
         {
             lastAction?.Execute();
-            lastActionTime = Time.time;
         }
     }
 }

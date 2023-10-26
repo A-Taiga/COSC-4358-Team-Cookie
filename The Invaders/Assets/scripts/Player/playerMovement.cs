@@ -20,27 +20,18 @@ public class playerMovement : characterMovement
 
     private bool isMoving = false;
 
-    public GameObject footsteps;
-    private ParticleSystem runParticles;
-
     protected override void Awake() {
 
         base.Awake();
         mainCam = Camera.main;
-        animator = GetComponent<Animator>();
-
-        if(footsteps)
-        {
-            footsteps.SetActive(true);
-            runParticles = footsteps.GetComponent<ParticleSystem>();
-        }
+        // animator = GetComponent<Animator>();
     }
+
+
 
     private void Update() {
 
-        if (PauseManager.isPaused)
-            return;
-
+        
         moveX = Input.GetAxisRaw("Horizontal");
         moveY = Input.GetAxisRaw("Vertical");
         run = Input.GetButton("Jump");
@@ -48,27 +39,15 @@ public class playerMovement : characterMovement
 
         // Debug.Log("X: " + moveDelta.x + "Y: " + moveDelta.y);
 
-        if (moveX != 0 || moveY != 0)
+        if(moveX != 0 || moveY != 0)
         {
-            if (!isMoving) // Transition from not moving -> moving
-            {
-                if (runParticles)
-                {
-                    runParticles.Clear();
-                    runParticles.Play();
-                }
-            }
             isMoving = true;
         }
         else
         {
             isMoving = false;
-            if (runParticles)
-            {
-                runParticles.Clear();
-                runParticles.Pause();
-            }
         }
+
         /* player movement animation */
         animator.SetFloat("Horizontal", moveDelta.x);
         animator.SetFloat("Vertical", moveDelta.y);
@@ -91,7 +70,7 @@ public class playerMovement : characterMovement
 
         //Debug.Log("PLAYER: " + GameObject.Find("Player").transform.position + "MOUSE: " + worldPosition);
 
-        if (Input.GetButtonDown("Fire1"))
+        if(Input.GetMouseButtonDown(0))
         {
             if(GameObject.Find("Player").transform.position.x > worldPosition.x)
             {

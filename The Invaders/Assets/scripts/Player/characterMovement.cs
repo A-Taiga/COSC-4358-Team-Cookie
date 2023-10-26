@@ -40,7 +40,7 @@ public class characterMovement : MonoBehaviour
     protected virtual void HandleMovement(float x, float y, bool run = false) {
 
         if (run && !runLocked) {
-            Events<RunPlayerEvent>.Instance.Trigger?.Invoke(0.125f);
+            Events<RunPlayerEvent>.Instance.Trigger?.Invoke(1f);
             moveDelta = new Vector3(x * xSpeed * runMultipler, y * ySpeed * runMultipler, 0f);
         }
         else
