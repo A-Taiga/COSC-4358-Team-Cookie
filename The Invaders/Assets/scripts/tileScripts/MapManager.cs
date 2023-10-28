@@ -49,7 +49,7 @@ public class MapManager : MonoBehaviour
 		playerPos = tilemap.WorldToCell(GameObject.Find("Player").transform.position);
 		tile = tilemap.GetTile(Vector3Int.FloorToInt(playerPos));
 
-		print("Tile under player: " + tile.name);
+		// print("Tile under player: " + tile.name);
 
 		 if (player.getIsMoving())
         {
@@ -57,7 +57,7 @@ public class MapManager : MonoBehaviour
             if (Time.time - timeSinceLastFootstep >= Random.Range(minTimeBetweenFootsteps, maxTimeBetweenFootsteps))
             {
 				/* make sound based on current tile below player */
-				switch(tile.name)
+				switch(tile?.name)
 				{
 					case "TILE_3 inner corner_4":
 						footstepSound = footstepSounds[0];
@@ -75,7 +75,7 @@ public class MapManager : MonoBehaviour
 						footstepSound = footstepSounds[2];
 						break;
 					default: 
-						footstepSound = null;
+						footstepSound = footstepSounds[0];
 						break;
 				}
                 audioSource.PlayOneShot(footstepSound);

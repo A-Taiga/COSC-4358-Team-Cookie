@@ -15,7 +15,7 @@ public class HealthBar : MonoBehaviour
     void OnEnable()
     {
         Events<TakeDamageEvent>.Instance.Register(damage => {
-            Debug.Log($"{damage} damage taken.");
+            // Debug.Log($"{damage} damage taken.");
             if (this.health < damage)
             {
                 SetHealth(100 - damage);

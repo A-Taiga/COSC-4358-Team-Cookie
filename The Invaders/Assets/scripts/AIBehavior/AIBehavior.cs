@@ -10,6 +10,8 @@ public class AIBehavior : MonoBehaviour
     public float FollowDistance = 1f;
     AIAction lastAction;
 
+    public Animator animator;
+
     void Start()
     {
         lastAction = null;
@@ -45,6 +47,10 @@ public class AIBehavior : MonoBehaviour
         if (lastAction?.desire != 0)
         {
             lastAction?.Execute();
+        }
+        else 
+        {
+            animator.SetFloat("Speed", 0f);
         }
     }
 }
