@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Blocking
   - Enemy
+  - Sword
   layers:
   - Default
   - TransparentFX
@@ -40,6 +41,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Sword
+    uniqueID: 3933707727
+    locked: 0
+  - name: Entity
+    uniqueID: 2674697583
+    locked: 0
   - name: Blocking
     uniqueID: 351006285
     locked: 0

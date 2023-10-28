@@ -85,12 +85,17 @@ public class playerMovement : characterMovement
         {
             animator.SetBool("AttackLeft", false);
             animator.SetBool("AttackRight", false);
-
         }
-
-
-
     }
+
+    public  void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Orb"))
+        {
+            print("Orb");
+        }
+    }
+
     void HandlePlayerAnimation(float x, float y) {}
 
     public bool getIsMoving() {
