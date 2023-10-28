@@ -18,8 +18,14 @@ public class Pursue : AIAction
             {
                 if (ray.rigidbody != null && ray.rigidbody.tag == TagManager.PLAYER_TAG)
                 {
-                    this.desire = 1;
-                    playerLocation = ray.rigidbody.position;
+                    Vector2 playerTarget = (ray.rigidbody.transform.position - transform.position);
+                    RaycastHit2D hit = Physics2D.Raycast(transform.position, playerTarget.normalized, playerTarget.magnitude, layerMask: LayerMask.GetMask(TagManager.BOUNDARY_TAG));
+
+                    if (hit.collider == null)
+                    {
+                        this.desire = 1;
+                        playerLocation = ray.rigidbody.position;
+                    }
                     break;
                 }
             }
