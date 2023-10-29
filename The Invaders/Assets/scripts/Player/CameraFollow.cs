@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
@@ -10,12 +10,18 @@ public class CameraFollow : MonoBehaviour
     private Vector3 deltaPos;
     private float deltaX, deltaY;
 
-    private void Start() {
+    public float CameraSpeed = 5f;
+
+
+    void Awake()
+    {
         playerTransform = GameObject.FindGameObjectWithTag(TagManager.PLAYER_TAG).transform;
     }
 
     private void LateUpdate() {
-
+        Follow();
+    }
+    private void Follow() { 
         if(!playerTransform) {
             return;
         }
@@ -40,7 +46,8 @@ public class CameraFollow : MonoBehaviour
                 deltaPos.y = deltaY + boundY;
             }
         }
-        deltaPos.z = 0;
-        transform.position += deltaPos;
+        Vector3 targetPos = playerTransform.position + deltaPos;
+        targetPos.z = transform.position.z;
+        transform.position = Vector3.Lerp(transform.position, targetPos, CameraSpeed * Time.deltaTime);
     }
 }
