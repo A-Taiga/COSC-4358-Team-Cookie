@@ -58,13 +58,7 @@ public class AIBehavior : MonoBehaviour
             if(action.Desire(hits) > (lastAction?.desire ?? 0))
             {
                 lastAction = action;
-                // Instantiate(projectile, launchOffset.position, transform.rotation);
             }
-            // if(action?.shoot == true)
-            // {
-            //     print("SHOOTING");
-            //     // Instantiate(projectile, launchOffset.position, transform.rotation);
-            // }
         }
         if (lastAction?.desire != 0)
         {
