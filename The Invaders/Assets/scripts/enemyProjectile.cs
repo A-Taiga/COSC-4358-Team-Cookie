@@ -15,27 +15,31 @@ public class enemyProjectile : MonoBehaviour
     [SerializeField]
     private CircleCollider2D circel;
 
+    [SerializeField]
+    private float halfLife;
+    private float startTime;
+
     private Vector3 direction;
     void Start()
     {
-        // body = GetComponent<Rigidbody2D>();
-        // circel = GetComponent<CircleCollider2D>();
+        startTime = Time.time;
         target = GameObject.FindGameObjectWithTag("Player").transform.position;
         direction = (target - transform.position).normalized * speed;
-
     }
-    
     void Update()
     {
         transform.Translate(direction * Time.deltaTime);
+        if(startTime + halfLife <= Time.time)
+            Destroy(gameObject);
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
-    { 
+    {
+        print(collision.gameObject.tag);
         if(collision.gameObject.CompareTag("Player"))
         {
+            Events<TakeDamageEvent>.Instance.Trigger?.Invoke(5f);
             Destroy(gameObject);
         }
     }
-
 }

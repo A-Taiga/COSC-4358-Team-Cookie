@@ -15,12 +15,29 @@ public class Range : MonoBehaviour
         shoot = false;
     }
 
+    void Update()
+    {
+
+        if(GameObject.Find("Player").GetComponent<Transform>().position.x > transform.position.x && shoot == true)
+        {
+            animator.SetBool("AttackRight", true);
+            animator.SetBool("AttackLeft", false);
+        }
+        else if(GameObject.Find("Player").GetComponent<Transform>().position.x < transform.position.x && shoot == true)
+        {
+            animator.SetBool("AttackRight", false);
+            animator.SetBool("AttackLeft", true);
+        }
+    }
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            animator.SetBool("Attack", true);
+            if(collision.gameObject.transform.position.x > transform.position.x)
+                animator.SetBool("AttackRight", true);
+            else 
+                animator.SetBool("AttackLeft", true);
             shoot = true;
         }
     }
@@ -28,7 +45,8 @@ public class Range : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            animator.SetBool("Attack", false);
+            animator.SetBool("AttackRight", false);
+            animator.SetBool("AttackLeft", false);
             shoot = false;
         }
     }

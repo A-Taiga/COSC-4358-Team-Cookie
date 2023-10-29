@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7526234624086626063}
   - component: {fileID: 8546356640530608791}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: orb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 6371555405535247483}
   - component: {fileID: 4107041671598381790}
   - component: {fileID: 6012388278793941881}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Projectile
   m_TagString: Orb
   m_Icon: {fileID: 0}
@@ -196,3 +196,4 @@ MonoBehaviour:
   speed: 1
   body: {fileID: 6371555405535247483}
   circel: {fileID: 4107041671598381790}
+  halfLife: 5

@@ -35,13 +35,12 @@ public class AIBehavior : MonoBehaviour
 
         if(range.shoot == true)
         {
+            animator.SetFloat("Speed", 0f);
             if (timeWhenAllowedNextShoot <= Time.time)
             {
                 Instantiate(projectile, launchOffset.position, Quaternion.identity);
                 timeWhenAllowedNextShoot = Time.time + timeBetweenShooting;
             }
-            
-
         }
 
         Vector2 fVector = new Vector2(FollowDistance * 2, FollowDistance * 2);
@@ -61,11 +60,11 @@ public class AIBehavior : MonoBehaviour
                 lastAction = action;
                 // Instantiate(projectile, launchOffset.position, transform.rotation);
             }
-            if(action?.shoot == true)
-            {
-                print("SHOOTING");
-                // Instantiate(projectile, launchOffset.position, transform.rotation);
-            }
+            // if(action?.shoot == true)
+            // {
+            //     print("SHOOTING");
+            //     // Instantiate(projectile, launchOffset.position, transform.rotation);
+            // }
         }
         if (lastAction?.desire != 0)
         {
