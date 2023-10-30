@@ -13,6 +13,9 @@ public class SetVolume : MonoBehaviour
 
     void Start()
     {
+        volume = PlayerPrefs.GetFloat("volume", 1f);
+        slider.value = volume;
+        Events<VolumeChangeEvent>.Instance.Trigger(volume);
         slider.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
     }
 
@@ -21,6 +24,7 @@ public class SetVolume : MonoBehaviour
     {
         volume = slider.value;
         Events<VolumeChangeEvent>.Instance.Trigger(slider.value);
+        PlayerPrefs.SetFloat("volume", volume);
     }
 
 }
