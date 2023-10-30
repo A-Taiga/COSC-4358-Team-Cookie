@@ -175,6 +175,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9142951921985792856, guid: 5ba29027c34974a9eabee4eec294aecd, type: 3}
+      propertyPath: tilemap
+      value: 
+      objectReference: {fileID: 533078600}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -190,6 +194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 18840545}
   - component: {fileID: 18840544}
+  - component: {fileID: 18840546}
   m_Layer: 3
   m_Name: tree2 (13)
   m_TagString: Untagged
@@ -258,12 +263,24 @@ Transform:
   m_GameObject: {fileID: 18840543}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 69.6, y: -11.5, z: 0}
+  m_LocalPosition: {x: 69.6, y: -15.922074, z: 0}
   m_LocalScale: {x: -0.7678954, y: 0.91883767, z: 0.7803436}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &18840546
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18840543}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &26496097
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,6 +291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 26496099}
   - component: {fileID: 26496098}
+  - component: {fileID: 26496100}
   m_Layer: 3
   m_Name: tree2 (1)
   m_TagString: Untagged
@@ -342,12 +360,24 @@ Transform:
   m_GameObject: {fileID: 26496097}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.765825, y: -9.16701, z: 0}
+  m_LocalPosition: {x: 17.765825, y: -13.589085, z: 0}
   m_LocalScale: {x: -1.0169014, y: 0.84124774, z: 0.7803436}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &26496100
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26496097}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &30655583
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,6 +388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 30655584}
   - component: {fileID: 30655585}
+  - component: {fileID: 30655586}
   m_Layer: 3
   m_Name: tree3 (29)
   m_TagString: Untagged
@@ -374,7 +405,7 @@ Transform:
   m_GameObject: {fileID: 30655583}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 47.383, y: 44.2, z: 0}
+  m_LocalPosition: {x: 47.383, y: 39.777927, z: 0}
   m_LocalScale: {x: -0.84918773, y: 0.78804964, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -432,6 +463,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &30655586
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30655583}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &31879414
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,6 +485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 31879416}
   - component: {fileID: 31879415}
+  - component: {fileID: 31879417}
   m_Layer: 3
   m_Name: tree2 (16)
   m_TagString: Untagged
@@ -510,12 +554,24 @@ Transform:
   m_GameObject: {fileID: 31879414}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 55.997013, y: 14.68, z: 0}
+  m_LocalPosition: {x: 55.997013, y: 10.257926, z: 0}
   m_LocalScale: {x: -0.8094097, y: 0.60969156, z: 0.7803436}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &31879417
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31879414}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &39071925
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,6 +582,7 @@ GameObject:
   m_Component:
   - component: {fileID: 39071927}
   - component: {fileID: 39071926}
+  - component: {fileID: 39071928}
   m_Layer: 3
   m_Name: tree2 (14)
   m_TagString: Untagged
@@ -594,12 +651,24 @@ Transform:
   m_GameObject: {fileID: 39071925}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 70.2719, y: 22.015858, z: 0}
+  m_LocalPosition: {x: 70.2719, y: 17.593784, z: 0}
   m_LocalScale: {x: 1.1914092, y: 0.66159976, z: 0.7803436}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &39071928
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39071925}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &54659885
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,6 +679,7 @@ GameObject:
   m_Component:
   - component: {fileID: 54659886}
   - component: {fileID: 54659887}
+  - component: {fileID: 54659888}
   m_Layer: 3
   m_Name: mushroom1 (7)
   m_TagString: Untagged
@@ -684,6 +754,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &54659888
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54659885}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &55373191
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,6 +776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 55373192}
   - component: {fileID: 55373193}
+  - component: {fileID: 55373194}
   m_Layer: 3
   m_Name: tree1 (25)
   m_TagString: Untagged
@@ -710,7 +793,7 @@ Transform:
   m_GameObject: {fileID: 55373191}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 82.2697, y: 60.965515, z: 0}
+  m_LocalPosition: {x: 82.2697, y: 56.54344, z: 0}
   m_LocalScale: {x: -0.6559224, y: 0.63898146, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -768,6 +851,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &55373194
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55373191}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &56375174
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,6 +873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 56375176}
   - component: {fileID: 56375175}
+  - component: {fileID: 56375177}
   m_Layer: 3
   m_Name: tree3 (8)
   m_TagString: Untagged
@@ -846,12 +942,24 @@ Transform:
   m_GameObject: {fileID: 56375174}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 42.8181, y: -7.0255375, z: 0}
+  m_LocalPosition: {x: 42.8181, y: -11.447612, z: 0}
   m_LocalScale: {x: 0.7187978, y: 0.9838536, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &56375177
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56375174}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &61355498
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,6 +970,7 @@ GameObject:
   m_Component:
   - component: {fileID: 61355500}
   - component: {fileID: 61355499}
+  - component: {fileID: 61355501}
   m_Layer: 3
   m_Name: tree3 (10)
   m_TagString: Untagged
@@ -930,12 +1039,24 @@ Transform:
   m_GameObject: {fileID: 61355498}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 78.56808, y: -3.756972, z: 0}
+  m_LocalPosition: {x: 78.56808, y: -8.179047, z: 0}
   m_LocalScale: {x: -0.6393707, y: 1.0173047, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &61355501
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61355498}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &72393581
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,6 +1067,7 @@ GameObject:
   m_Component:
   - component: {fileID: 72393583}
   - component: {fileID: 72393582}
+  - component: {fileID: 72393584}
   m_Layer: 3
   m_Name: tree1 (5)
   m_TagString: Untagged
@@ -1014,12 +1136,24 @@ Transform:
   m_GameObject: {fileID: 72393581}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 51.673725, y: -6.096061, z: 0}
+  m_LocalPosition: {x: 51.673725, y: -10.518135, z: 0}
   m_LocalScale: {x: -0.6252963, y: 0.93345547, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &72393584
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72393581}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &73033316
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,6 +1164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 73033317}
   - component: {fileID: 73033318}
+  - component: {fileID: 73033319}
   m_Layer: 3
   m_Name: tree1 (37)
   m_TagString: Untagged
@@ -1046,7 +1181,7 @@ Transform:
   m_GameObject: {fileID: 73033316}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.58, y: 29.23, z: 0}
+  m_LocalPosition: {x: -1.58, y: 24.807926, z: 0}
   m_LocalScale: {x: -0.52107227, y: 0.66095954, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1104,6 +1239,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &73033319
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73033316}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &79274927
 GameObject:
   m_ObjectHideFlags: 0
@@ -1114,6 +1261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 79274928}
   - component: {fileID: 79274929}
+  - component: {fileID: 79274930}
   m_Layer: 3
   m_Name: bush (15)
   m_TagString: Untagged
@@ -1188,6 +1336,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &79274930
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79274927}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &83011168
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,6 +1358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 83011169}
   - component: {fileID: 83011170}
+  - component: {fileID: 83011171}
   m_Layer: 3
   m_Name: mushroom2 (8)
   m_TagString: Untagged
@@ -1272,6 +1433,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &83011171
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83011168}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &91908396
 GameObject:
   m_ObjectHideFlags: 0
@@ -1282,6 +1455,7 @@ GameObject:
   m_Component:
   - component: {fileID: 91908398}
   - component: {fileID: 91908397}
+  - component: {fileID: 91908399}
   m_Layer: 3
   m_Name: tree1 (2)
   m_TagString: Untagged
@@ -1350,12 +1524,24 @@ Transform:
   m_GameObject: {fileID: 91908396}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.370022, y: -7.2509537, z: 0}
+  m_LocalPosition: {x: 24.370022, y: -11.673028, z: 0}
   m_LocalScale: {x: 0.73656076, y: 0.88368875, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &91908399
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91908396}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &96613299
 GameObject:
   m_ObjectHideFlags: 0
@@ -1366,6 +1552,7 @@ GameObject:
   m_Component:
   - component: {fileID: 96613301}
   - component: {fileID: 96613300}
+  - component: {fileID: 96613302}
   m_Layer: 3
   m_Name: tree3 (6)
   m_TagString: Untagged
@@ -1434,12 +1621,24 @@ Transform:
   m_GameObject: {fileID: 96613299}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 34.05799, y: -1.3149381, z: 0}
+  m_LocalPosition: {x: 34.05799, y: -5.7370124, z: 0}
   m_LocalScale: {x: -0.84894055, y: 1.056317, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &96613302
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96613299}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &110376771
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,6 +1649,7 @@ GameObject:
   m_Component:
   - component: {fileID: 110376772}
   - component: {fileID: 110376773}
+  - component: {fileID: 110376774}
   m_Layer: 3
   m_Name: tree2 (26)
   m_TagString: Untagged
@@ -1466,7 +1666,7 @@ Transform:
   m_GameObject: {fileID: 110376771}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.475368, y: 62.06518, z: 0}
+  m_LocalPosition: {x: 18.475368, y: 57.64311, z: 0}
   m_LocalScale: {x: -0.9051545, y: 0.62467, z: 0.7803436}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1524,6 +1724,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &110376774
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110376771}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &113561029
 GameObject:
   m_ObjectHideFlags: 0
@@ -1534,6 +1746,7 @@ GameObject:
   m_Component:
   - component: {fileID: 113561031}
   - component: {fileID: 113561030}
+  - component: {fileID: 113561032}
   m_Layer: 3
   m_Name: tree1 (8)
   m_TagString: Untagged
@@ -1602,12 +1815,24 @@ Transform:
   m_GameObject: {fileID: 113561029}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 32.420586, y: -7.7202024, z: 0}
+  m_LocalPosition: {x: 32.420586, y: -12.142277, z: 0}
   m_LocalScale: {x: -0.6252963, y: 0.93345547, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &113561032
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113561029}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &125822390
 GameObject:
   m_ObjectHideFlags: 0
@@ -1618,6 +1843,7 @@ GameObject:
   m_Component:
   - component: {fileID: 125822391}
   - component: {fileID: 125822392}
+  - component: {fileID: 125822393}
   m_Layer: 3
   m_Name: mushroom3 (8)
   m_TagString: Untagged
@@ -1692,6 +1918,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &125822393
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125822390}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &137113947
 GameObject:
   m_ObjectHideFlags: 0
@@ -1702,6 +1940,7 @@ GameObject:
   m_Component:
   - component: {fileID: 137113948}
   - component: {fileID: 137113949}
+  - component: {fileID: 137113950}
   m_Layer: 3
   m_Name: tree2 (22)
   m_TagString: Untagged
@@ -1718,7 +1957,7 @@ Transform:
   m_GameObject: {fileID: 137113947}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 70.10816, y: 46.24833, z: 0}
+  m_LocalPosition: {x: 70.10816, y: 41.826256, z: 0}
   m_LocalScale: {x: 1.1914092, y: 0.66159976, z: 0.7803436}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1776,6 +2015,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &137113950
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137113947}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &164048448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1786,6 +2037,7 @@ GameObject:
   m_Component:
   - component: {fileID: 164048449}
   - component: {fileID: 164048450}
+  - component: {fileID: 164048451}
   m_Layer: 3
   m_Name: bush (10)
   m_TagString: Untagged
@@ -1860,6 +2112,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &164048451
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164048448}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &165580457
 GameObject:
   m_ObjectHideFlags: 0
@@ -1870,6 +2134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 165580458}
   - component: {fileID: 165580459}
+  - component: {fileID: 165580460}
   m_Layer: 3
   m_Name: bush (17)
   m_TagString: Untagged
@@ -1944,6 +2209,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &165580460
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165580457}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &172694401
 GameObject:
   m_ObjectHideFlags: 0
@@ -1954,6 +2231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 172694402}
   - component: {fileID: 172694403}
+  - component: {fileID: 172694404}
   m_Layer: 3
   m_Name: rock1 (7)
   m_TagString: Untagged
@@ -2028,6 +2306,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &172694404
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172694401}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &173339420
 GameObject:
   m_ObjectHideFlags: 0
@@ -2038,6 +2328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 173339422}
   - component: {fileID: 173339421}
+  - component: {fileID: 173339423}
   m_Layer: 3
   m_Name: tree1 (21)
   m_TagString: Untagged
@@ -2106,12 +2397,24 @@ Transform:
   m_GameObject: {fileID: 173339420}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.11959, y: 36.176636, z: 0}
+  m_LocalPosition: {x: 23.11959, y: 31.754562, z: 0}
   m_LocalScale: {x: 0.5449637, y: 0.7259724, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &173339423
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173339420}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &191670069
 GameObject:
   m_ObjectHideFlags: 0
@@ -2122,6 +2425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 191670070}
   - component: {fileID: 191670071}
+  - component: {fileID: 191670072}
   m_Layer: 3
   m_Name: tree3 (31)
   m_TagString: Untagged
@@ -2138,7 +2442,7 @@ Transform:
   m_GameObject: {fileID: 191670069}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 95.64255, y: 61.451633, z: 0}
+  m_LocalPosition: {x: 95.64255, y: 57.02956, z: 0}
   m_LocalScale: {x: -0.84894055, y: 0.82456106, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2196,6 +2500,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &191670072
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191670069}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &201858197
 GameObject:
   m_ObjectHideFlags: 0
@@ -2206,6 +2522,7 @@ GameObject:
   m_Component:
   - component: {fileID: 201858198}
   - component: {fileID: 201858199}
+  - component: {fileID: 201858200}
   m_Layer: 3
   m_Name: tree3 (30)
   m_TagString: Untagged
@@ -2222,7 +2539,7 @@ Transform:
   m_GameObject: {fileID: 201858197}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.56, y: 48.2, z: 0}
+  m_LocalPosition: {x: 10.56, y: 43.777927, z: 0}
   m_LocalScale: {x: 0.64542574, y: 0.5939138, z: 0.882}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2280,6 +2597,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &201858200
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201858197}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &228893589
 GameObject:
   m_ObjectHideFlags: 0
@@ -2290,6 +2619,7 @@ GameObject:
   m_Component:
   - component: {fileID: 228893591}
   - component: {fileID: 228893590}
+  - component: {fileID: 228893592}
   m_Layer: 3
   m_Name: tree1 (10)
   m_TagString: Untagged
@@ -2358,12 +2688,24 @@ Transform:
   m_GameObject: {fileID: 228893589}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.896357, y: -0.5259738, z: 0}
+  m_LocalPosition: {x: 22.896357, y: -4.948048, z: 0}
   m_LocalScale: {x: 0.7262529, y: 0.89153045, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &228893592
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228893589}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &230161747
 GameObject:
   m_ObjectHideFlags: 0
@@ -2374,6 +2716,7 @@ GameObject:
   m_Component:
   - component: {fileID: 230161748}
   - component: {fileID: 230161749}
+  - component: {fileID: 230161750}
   m_Layer: 3
   m_Name: mushroom2 (3)
   m_TagString: Untagged
@@ -2448,6 +2791,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &230161750
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230161747}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &249907420
 GameObject:
   m_ObjectHideFlags: 0
@@ -2458,6 +2813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 249907421}
   - component: {fileID: 249907422}
+  - component: {fileID: 249907423}
   m_Layer: 3
   m_Name: tree2 (20)
   m_TagString: Untagged
@@ -2474,7 +2830,7 @@ Transform:
   m_GameObject: {fileID: 249907420}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44.654995, y: 60.277615, z: 0}
+  m_LocalPosition: {x: 44.654995, y: 55.85554, z: 0}
   m_LocalScale: {x: 1.0971687, y: 0.60926723, z: 0.7186184}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2532,6 +2888,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &249907423
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249907420}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &258671473
 GameObject:
   m_ObjectHideFlags: 0
@@ -2542,6 +2910,7 @@ GameObject:
   m_Component:
   - component: {fileID: 258671475}
   - component: {fileID: 258671474}
+  - component: {fileID: 258671476}
   m_Layer: 3
   m_Name: tree3 (5)
   m_TagString: Untagged
@@ -2610,12 +2979,24 @@ Transform:
   m_GameObject: {fileID: 258671473}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.182802, y: -1.9911942, z: 0}
+  m_LocalPosition: {x: 30.182802, y: -6.4132686, z: 0}
   m_LocalScale: {x: 0.7187978, y: 0.9838536, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &258671476
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258671473}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &266027162
 GameObject:
   m_ObjectHideFlags: 0
@@ -2626,6 +3007,7 @@ GameObject:
   m_Component:
   - component: {fileID: 266027163}
   - component: {fileID: 266027164}
+  - component: {fileID: 266027165}
   m_Layer: 3
   m_Name: tree1 (33)
   m_TagString: Untagged
@@ -2642,7 +3024,7 @@ Transform:
   m_GameObject: {fileID: 266027162}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 40.47, y: 46.73, z: 0}
+  m_LocalPosition: {x: 40.47, y: 42.307926, z: 0}
   m_LocalScale: {x: -0.5713244, y: 0.4758943, z: 0.7205247}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2700,6 +3082,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &266027165
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266027162}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &274636655
 GameObject:
   m_ObjectHideFlags: 0
@@ -2710,6 +3104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 274636656}
   - component: {fileID: 274636657}
+  - component: {fileID: 274636658}
   m_Layer: 3
   m_Name: tree3 (21)
   m_TagString: Untagged
@@ -2726,7 +3121,7 @@ Transform:
   m_GameObject: {fileID: 274636655}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 75.93841, y: 61.112408, z: 0}
+  m_LocalPosition: {x: 75.93841, y: 56.690334, z: 0}
   m_LocalScale: {x: 0.51843715, y: 0.68304455, z: 0.8988999}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2784,6 +3179,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &274636658
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274636655}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &278292996
 GameObject:
   m_ObjectHideFlags: 0
@@ -2794,6 +3201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 278292997}
   - component: {fileID: 278292998}
+  - component: {fileID: 278292999}
   m_Layer: 3
   m_Name: tree3 (24)
   m_TagString: Untagged
@@ -2810,7 +3218,7 @@ Transform:
   m_GameObject: {fileID: 278292996}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.253036, y: 40.76315, z: 0}
+  m_LocalPosition: {x: 26.253036, y: 36.341076, z: 0}
   m_LocalScale: {x: 0.76869243, y: 0.67536396, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2868,6 +3276,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &278292999
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278292996}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &278546848
 GameObject:
   m_ObjectHideFlags: 0
@@ -2878,6 +3298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 278546850}
   - component: {fileID: 278546849}
+  - component: {fileID: 278546851}
   m_Layer: 3
   m_Name: tree1 (20)
   m_TagString: Untagged
@@ -2946,12 +3367,24 @@ Transform:
   m_GameObject: {fileID: 278546848}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.22384, y: 24.45789, z: 0}
+  m_LocalPosition: {x: 23.22384, y: 20.035816, z: 0}
   m_LocalScale: {x: 0.54096055, y: 0.7259724, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &278546851
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278546848}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &286661480
 GameObject:
   m_ObjectHideFlags: 0
@@ -2962,6 +3395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 286661481}
   - component: {fileID: 286661482}
+  - component: {fileID: 286661483}
   m_Layer: 3
   m_Name: mushroom1 (4)
   m_TagString: Untagged
@@ -3036,6 +3470,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &286661483
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286661480}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &291435108
 GameObject:
   m_ObjectHideFlags: 0
@@ -3046,6 +3492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 291435109}
   - component: {fileID: 291435110}
+  - component: {fileID: 291435111}
   m_Layer: 3
   m_Name: bush (9)
   m_TagString: Untagged
@@ -3120,6 +3567,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &291435111
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291435108}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &298394036
 GameObject:
   m_ObjectHideFlags: 0
@@ -3130,6 +3589,7 @@ GameObject:
   m_Component:
   - component: {fileID: 298394037}
   - component: {fileID: 298394038}
+  - component: {fileID: 298394039}
   m_Layer: 3
   m_Name: tree1 (27)
   m_TagString: Untagged
@@ -3146,7 +3606,7 @@ Transform:
   m_GameObject: {fileID: 298394036}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 95.8, y: 31.14, z: 0}
+  m_LocalPosition: {x: 95.8, y: 26.717926, z: 0}
   m_LocalScale: {x: 0.73656076, y: 0.88368875, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3204,6 +3664,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &298394039
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298394036}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &300392612
 GameObject:
   m_ObjectHideFlags: 0
@@ -3402,6 +3874,7 @@ GameObject:
   m_Component:
   - component: {fileID: 310666083}
   - component: {fileID: 310666084}
+  - component: {fileID: 310666085}
   m_Layer: 3
   m_Name: tree1 (30)
   m_TagString: Untagged
@@ -3418,7 +3891,7 @@ Transform:
   m_GameObject: {fileID: 310666082}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.03, y: 58.4, z: 0}
+  m_LocalPosition: {x: 26.03, y: 53.97793, z: 0}
   m_LocalScale: {x: -0.5247455, y: 0.7061534, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3476,6 +3949,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &310666085
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310666082}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &336994420
 GameObject:
   m_ObjectHideFlags: 0
@@ -3486,6 +3971,7 @@ GameObject:
   m_Component:
   - component: {fileID: 336994422}
   - component: {fileID: 336994421}
+  - component: {fileID: 336994423}
   m_Layer: 3
   m_Name: tree1
   m_TagString: Untagged
@@ -3554,12 +4040,24 @@ Transform:
   m_GameObject: {fileID: 336994420}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.081869446, y: -7.6642227, z: 0}
+  m_LocalPosition: {x: 0.081869446, y: -12.086297, z: 0}
   m_LocalScale: {x: 0.73656076, y: 0.88368875, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &336994423
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336994420}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &339228635
 GameObject:
   m_ObjectHideFlags: 0
@@ -3570,6 +4068,7 @@ GameObject:
   m_Component:
   - component: {fileID: 339228636}
   - component: {fileID: 339228637}
+  - component: {fileID: 339228638}
   m_Layer: 3
   m_Name: bush (8)
   m_TagString: Untagged
@@ -3644,6 +4143,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &339228638
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339228635}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &339878960
 GameObject:
   m_ObjectHideFlags: 0
@@ -3654,6 +4165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 339878961}
   - component: {fileID: 339878962}
+  - component: {fileID: 339878963}
   m_Layer: 3
   m_Name: bush (14)
   m_TagString: Untagged
@@ -3728,6 +4240,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &339878963
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339878960}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &346206506
 GameObject:
   m_ObjectHideFlags: 0
@@ -3738,6 +4262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 346206508}
   - component: {fileID: 346206507}
+  - component: {fileID: 346206509}
   m_Layer: 3
   m_Name: tree1 (6)
   m_TagString: Untagged
@@ -3806,12 +4331,24 @@ Transform:
   m_GameObject: {fileID: 346206506}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 68.77095, y: -0.8641019, z: 0}
+  m_LocalPosition: {x: 68.77095, y: -5.286176, z: 0}
   m_LocalScale: {x: 0.7262529, y: 0.89153045, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &346206509
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346206506}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &347516498
 GameObject:
   m_ObjectHideFlags: 0
@@ -3822,6 +4359,7 @@ GameObject:
   m_Component:
   - component: {fileID: 347516500}
   - component: {fileID: 347516499}
+  - component: {fileID: 347516501}
   m_Layer: 3
   m_Name: mushroom1
   m_TagString: Untagged
@@ -3896,6 +4434,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 533078598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &347516501
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347516498}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &350485816
 GameObject:
   m_ObjectHideFlags: 0
@@ -3906,6 +4456,7 @@ GameObject:
   m_Component:
   - component: {fileID: 350485817}
   - component: {fileID: 350485818}
+  - component: {fileID: 350485819}
   m_Layer: 3
   m_Name: tree1 (34)
   m_TagString: Untagged
@@ -3922,7 +4473,7 @@ Transform:
   m_GameObject: {fileID: 350485816}
   serializedVersion: 2
   m_LocalRotation: {x: 0.00000018725318, y: 4.80903e-10, z: 0.0069897454, w: -0.99997556}
-  m_LocalPosition: {x: -4.18, y: 48.71, z: 0}
+  m_LocalPosition: {x: -4.18, y: 44.287926, z: 0}
   m_LocalScale: {x: -0.52213335, y: 0.7147028, z: 0.7205247}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3980,6 +4531,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &350485819
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350485816}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &359345183
 GameObject:
   m_ObjectHideFlags: 0
@@ -3990,6 +4553,7 @@ GameObject:
   m_Component:
   - component: {fileID: 359345184}
   - component: {fileID: 359345185}
+  - component: {fileID: 359345186}
   m_Layer: 3
   m_Name: tree1 (41)
   m_TagString: Untagged
@@ -4006,7 +4570,7 @@ Transform:
   m_GameObject: {fileID: 359345183}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 86.11, y: 48.37, z: 0}
+  m_LocalPosition: {x: 86.11, y: 43.947926, z: 0}
   m_LocalScale: {x: -0.6559224, y: 0.63898146, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4064,6 +4628,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &359345186
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359345183}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &380483414
 GameObject:
   m_ObjectHideFlags: 0
@@ -4074,6 +4650,7 @@ GameObject:
   m_Component:
   - component: {fileID: 380483416}
   - component: {fileID: 380483415}
+  - component: {fileID: 380483417}
   m_Layer: 3
   m_Name: tree2 (3)
   m_TagString: Untagged
@@ -4142,12 +4719,24 @@ Transform:
   m_GameObject: {fileID: 380483414}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 49.1, y: -11.6, z: 0}
+  m_LocalPosition: {x: 49.1, y: -16.022076, z: 0}
   m_LocalScale: {x: -1.0206639, y: 0.84124774, z: 0.7803436}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &380483417
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380483414}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &383054094
 GameObject:
   m_ObjectHideFlags: 0
@@ -4158,6 +4747,7 @@ GameObject:
   m_Component:
   - component: {fileID: 383054096}
   - component: {fileID: 383054095}
+  - component: {fileID: 383054097}
   m_Layer: 3
   m_Name: mushroom2 (2)
   m_TagString: Untagged
@@ -4232,6 +4822,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 533078598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -4.771}
+--- !u!210 &383054097
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383054094}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &385009503
 GameObject:
   m_ObjectHideFlags: 0
@@ -4242,6 +4844,7 @@ GameObject:
   m_Component:
   - component: {fileID: 385009504}
   - component: {fileID: 385009505}
+  - component: {fileID: 385009506}
   m_Layer: 3
   m_Name: tree3 (27)
   m_TagString: Untagged
@@ -4258,7 +4861,7 @@ Transform:
   m_GameObject: {fileID: 385009503}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.769638, y: 62.703865, z: 0}
+  m_LocalPosition: {x: 23.769638, y: 58.28179, z: 0}
   m_LocalScale: {x: -0.86211, y: 0.66958344, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4316,6 +4919,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &385009506
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385009503}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &385551763
 GameObject:
   m_ObjectHideFlags: 0
@@ -4326,6 +4941,7 @@ GameObject:
   m_Component:
   - component: {fileID: 385551764}
   - component: {fileID: 385551765}
+  - component: {fileID: 385551766}
   m_Layer: 3
   m_Name: tree1 (23)
   m_TagString: Untagged
@@ -4342,7 +4958,7 @@ Transform:
   m_GameObject: {fileID: 385551763}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 47.72049, y: 61.078228, z: 0}
+  m_LocalPosition: {x: 47.72049, y: 56.656155, z: 0}
   m_LocalScale: {x: 0.9654838, y: 0.69338334, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4400,6 +5016,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &385551766
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385551763}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &397527319
 GameObject:
   m_ObjectHideFlags: 0
@@ -4410,6 +5038,7 @@ GameObject:
   m_Component:
   - component: {fileID: 397527320}
   - component: {fileID: 397527321}
+  - component: {fileID: 397527322}
   m_Layer: 3
   m_Name: bush (16)
   m_TagString: Untagged
@@ -4484,6 +5113,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &397527322
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397527319}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &406020575
 GameObject:
   m_ObjectHideFlags: 0
@@ -4494,6 +5135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 406020577}
   - component: {fileID: 406020576}
+  - component: {fileID: 406020578}
   m_Layer: 3
   m_Name: tree1 (1)
   m_TagString: Untagged
@@ -4562,12 +5204,24 @@ Transform:
   m_GameObject: {fileID: 406020575}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.670412, y: -0.9016724, z: 0}
+  m_LocalPosition: {x: 10.670412, y: -5.3237467, z: 0}
   m_LocalScale: {x: -0.85548156, y: 0.8439989, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &406020578
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406020575}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &422596451
 GameObject:
   m_ObjectHideFlags: 0
@@ -4578,6 +5232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 422596453}
   - component: {fileID: 422596452}
+  - component: {fileID: 422596454}
   m_Layer: 3
   m_Name: tree2 (2)
   m_TagString: Untagged
@@ -4646,12 +5301,24 @@ Transform:
   m_GameObject: {fileID: 422596451}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 36.83312, y: -5.8725224, z: 0}
+  m_LocalPosition: {x: 36.83312, y: -10.294597, z: 0}
   m_LocalScale: {x: 1.2930152, y: 1.048263, z: 0.7803436}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &422596454
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422596451}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &426017140
 GameObject:
   m_ObjectHideFlags: 0
@@ -4662,6 +5329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 426017142}
   - component: {fileID: 426017141}
+  - component: {fileID: 426017143}
   m_Layer: 3
   m_Name: tree2 (17)
   m_TagString: Untagged
@@ -4730,12 +5398,24 @@ Transform:
   m_GameObject: {fileID: 426017140}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.66502, y: 13.6637335, z: 0}
+  m_LocalPosition: {x: 30.66502, y: 9.241659, z: 0}
   m_LocalScale: {x: 1.0971687, y: 0.60926723, z: 0.7186184}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &426017143
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426017140}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &439775108
 GameObject:
   m_ObjectHideFlags: 0
@@ -4746,6 +5426,7 @@ GameObject:
   m_Component:
   - component: {fileID: 439775110}
   - component: {fileID: 439775109}
+  - component: {fileID: 439775111}
   m_Layer: 3
   m_Name: tree2 (4)
   m_TagString: Untagged
@@ -4814,12 +5495,24 @@ Transform:
   m_GameObject: {fileID: 439775108}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 71.58182, y: -8.002347, z: 0}
+  m_LocalPosition: {x: 71.58182, y: -12.424421, z: 0}
   m_LocalScale: {x: -1.0195923, y: 0.9540739, z: 0.7803436}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &439775111
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439775108}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &445765820
 GameObject:
   m_ObjectHideFlags: 0
@@ -4830,6 +5523,7 @@ GameObject:
   m_Component:
   - component: {fileID: 445765821}
   - component: {fileID: 445765822}
+  - component: {fileID: 445765823}
   m_Layer: 3
   m_Name: rock2 (3)
   m_TagString: Untagged
@@ -4904,6 +5598,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &445765823
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445765820}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &452394632
 GameObject:
   m_ObjectHideFlags: 0
@@ -4914,6 +5620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 452394633}
   - component: {fileID: 452394634}
+  - component: {fileID: 452394635}
   m_Layer: 3
   m_Name: mushroom2 (6)
   m_TagString: Untagged
@@ -4988,6 +5695,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &452394635
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452394632}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &458211529
 GameObject:
   m_ObjectHideFlags: 0
@@ -4998,6 +5717,7 @@ GameObject:
   m_Component:
   - component: {fileID: 458211530}
   - component: {fileID: 458211531}
+  - component: {fileID: 458211532}
   m_Layer: 3
   m_Name: mushroom3 (5)
   m_TagString: Untagged
@@ -5072,6 +5792,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &458211532
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458211529}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &478697102
 GameObject:
   m_ObjectHideFlags: 0
@@ -5082,6 +5814,7 @@ GameObject:
   m_Component:
   - component: {fileID: 478697104}
   - component: {fileID: 478697103}
+  - component: {fileID: 478697105}
   m_Layer: 3
   m_Name: rock2 (1)
   m_TagString: Untagged
@@ -5156,6 +5889,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 533078598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &478697105
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478697102}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &484704341
 GameObject:
   m_ObjectHideFlags: 0
@@ -5166,6 +5911,7 @@ GameObject:
   m_Component:
   - component: {fileID: 484704343}
   - component: {fileID: 484704342}
+  - component: {fileID: 484704344}
   m_Layer: 3
   m_Name: tree2 (18)
   m_TagString: Untagged
@@ -5234,12 +5980,24 @@ Transform:
   m_GameObject: {fileID: 484704341}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.370022, y: 26.75265, z: 0}
+  m_LocalPosition: {x: 24.370022, y: 22.330574, z: 0}
   m_LocalScale: {x: 0.7465136, y: 0.6165175, z: 0.7186184}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &484704344
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484704341}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &493654239
 GameObject:
   m_ObjectHideFlags: 0
@@ -5250,6 +6008,7 @@ GameObject:
   m_Component:
   - component: {fileID: 493654240}
   - component: {fileID: 493654241}
+  - component: {fileID: 493654242}
   m_Layer: 3
   m_Name: tree1 (36)
   m_TagString: Untagged
@@ -5266,7 +6025,7 @@ Transform:
   m_GameObject: {fileID: 493654239}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 42.17, y: 27.65, z: 0}
+  m_LocalPosition: {x: 42.17, y: 23.227924, z: 0}
   m_LocalScale: {x: -0.5713244, y: 0.4758943, z: 0.7205247}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5324,6 +6083,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &493654242
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493654239}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &496269313
 GameObject:
   m_ObjectHideFlags: 0
@@ -5334,6 +6105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 496269314}
   - component: {fileID: 496269315}
+  - component: {fileID: 496269316}
   m_Layer: 3
   m_Name: mushroom3 (10)
   m_TagString: Untagged
@@ -5408,6 +6180,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &496269316
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496269313}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &508912874
 GameObject:
   m_ObjectHideFlags: 0
@@ -5418,6 +6202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 508912875}
   - component: {fileID: 508912876}
+  - component: {fileID: 508912877}
   m_Layer: 3
   m_Name: tree3 (22)
   m_TagString: Untagged
@@ -5434,7 +6219,7 @@ Transform:
   m_GameObject: {fileID: 508912874}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 68.22514, y: 54.626377, z: 0}
+  m_LocalPosition: {x: 68.22514, y: 50.204304, z: 0}
   m_LocalScale: {x: -0.84894055, y: 0.82456106, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5492,6 +6277,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &508912877
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508912874}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &522870083
 GameObject:
   m_ObjectHideFlags: 0
@@ -5502,6 +6299,7 @@ GameObject:
   m_Component:
   - component: {fileID: 522870084}
   - component: {fileID: 522870085}
+  - component: {fileID: 522870086}
   m_Layer: 3
   m_Name: tree3 (33)
   m_TagString: Untagged
@@ -5518,7 +6316,7 @@ Transform:
   m_GameObject: {fileID: 522870083}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.06, y: 5.9, z: 0}
+  m_LocalPosition: {x: -4.06, y: 1.4779258, z: 0}
   m_LocalScale: {x: -0.7613408, y: 0.7834095, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5576,6 +6374,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &522870086
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522870083}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &525338934
 GameObject:
   m_ObjectHideFlags: 0
@@ -5586,6 +6396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 525338935}
   - component: {fileID: 525338936}
+  - component: {fileID: 525338937}
   m_Layer: 3
   m_Name: tree3 (25)
   m_TagString: Untagged
@@ -5602,7 +6413,7 @@ Transform:
   m_GameObject: {fileID: 525338934}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.062004, y: 47.22514, z: 0}
+  m_LocalPosition: {x: 26.062004, y: 42.803066, z: 0}
   m_LocalScale: {x: 0.76869243, y: 0.67536396, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5660,6 +6471,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &525338937
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525338934}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &533078597
 GameObject:
   m_ObjectHideFlags: 0
@@ -5804,8 +6627,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1710794449
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -14929,6 +15752,7 @@ GameObject:
   m_Component:
   - component: {fileID: 544115073}
   - component: {fileID: 544115072}
+  - component: {fileID: 544115074}
   m_Layer: 3
   m_Name: tree3 (11)
   m_TagString: Untagged
@@ -14997,12 +15821,24 @@ Transform:
   m_GameObject: {fileID: 544115071}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 68.19785, y: 31.055883, z: 0}
+  m_LocalPosition: {x: 68.19785, y: 26.633808, z: 0}
   m_LocalScale: {x: -0.84894055, y: 0.82456106, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &544115074
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544115071}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &552065465
 GameObject:
   m_ObjectHideFlags: 0
@@ -15013,6 +15849,7 @@ GameObject:
   m_Component:
   - component: {fileID: 552065466}
   - component: {fileID: 552065467}
+  - component: {fileID: 552065468}
   m_Layer: 3
   m_Name: tree1 (28)
   m_TagString: Untagged
@@ -15029,7 +15866,7 @@ Transform:
   m_GameObject: {fileID: 552065465}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 76.24842, y: 54.626377, z: 0}
+  m_LocalPosition: {x: 76.24842, y: 50.204304, z: 0}
   m_LocalScale: {x: 0.73656076, y: 0.88368875, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15087,6 +15924,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &552065468
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552065465}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &558070180
 GameObject:
   m_ObjectHideFlags: 0
@@ -15097,6 +15946,7 @@ GameObject:
   m_Component:
   - component: {fileID: 558070182}
   - component: {fileID: 558070181}
+  - component: {fileID: 558070183}
   m_Layer: 3
   m_Name: mushroom3 (3)
   m_TagString: Untagged
@@ -15171,6 +16021,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 533078598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &558070183
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558070180}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &560698250
 GameObject:
   m_ObjectHideFlags: 0
@@ -15181,6 +16043,7 @@ GameObject:
   m_Component:
   - component: {fileID: 560698252}
   - component: {fileID: 560698251}
+  - component: {fileID: 560698253}
   m_Layer: 3
   m_Name: tree2 (5)
   m_TagString: Untagged
@@ -15249,12 +16112,24 @@ Transform:
   m_GameObject: {fileID: 560698250}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 45.165043, y: -4.6586447, z: 0}
+  m_LocalPosition: {x: 45.165043, y: -9.080719, z: 0}
   m_LocalScale: {x: -1.097693, y: 1.1072983, z: 0.7803436}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &560698253
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560698250}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &586862881
 GameObject:
   m_ObjectHideFlags: 0
@@ -15265,6 +16140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 586862883}
   - component: {fileID: 586862882}
+  - component: {fileID: 586862884}
   m_Layer: 3
   m_Name: wood board
   m_TagString: Untagged
@@ -15310,8 +16186,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1710794449
+  m_SortingLayer: -3
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 8fa91653201c6d840860a92c45142383, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -15323,7 +16199,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!4 &586862883
 Transform:
   m_ObjectHideFlags: 0
@@ -15339,6 +16215,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 533078598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &586862884
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586862881}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &589992376
 GameObject:
   m_ObjectHideFlags: 0
@@ -15349,6 +16237,7 @@ GameObject:
   m_Component:
   - component: {fileID: 589992377}
   - component: {fileID: 589992378}
+  - component: {fileID: 589992379}
   m_Layer: 3
   m_Name: tree2 (23)
   m_TagString: Untagged
@@ -15365,7 +16254,7 @@ Transform:
   m_GameObject: {fileID: 589992376}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 95.24, y: -3, z: 0}
+  m_LocalPosition: {x: 95.24, y: -7.4220743, z: 0}
   m_LocalScale: {x: 0.8895406, y: 1.0453277, z: 0.7803436}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15423,6 +16312,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &589992379
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589992376}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &628616727
 GameObject:
   m_ObjectHideFlags: 0
@@ -15433,6 +16334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 628616729}
   - component: {fileID: 628616728}
+  - component: {fileID: 628616730}
   m_Layer: 3
   m_Name: tree3 (18)
   m_TagString: Untagged
@@ -15501,12 +16403,24 @@ Transform:
   m_GameObject: {fileID: 628616727}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.253036, y: 40.76315, z: 0}
+  m_LocalPosition: {x: 26.253036, y: 36.341076, z: 0}
   m_LocalScale: {x: 0.76869243, y: 0.67536396, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &628616730
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628616727}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &654918585
 GameObject:
   m_ObjectHideFlags: 0
@@ -15517,6 +16431,7 @@ GameObject:
   m_Component:
   - component: {fileID: 654918587}
   - component: {fileID: 654918586}
+  - component: {fileID: 654918588}
   m_Layer: 3
   m_Name: mushroom3 (1)
   m_TagString: Untagged
@@ -15591,6 +16506,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 533078598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &654918588
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654918585}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &672422608
 GameObject:
   m_ObjectHideFlags: 0
@@ -15601,6 +16528,7 @@ GameObject:
   m_Component:
   - component: {fileID: 672422609}
   - component: {fileID: 672422610}
+  - component: {fileID: 672422611}
   m_Layer: 3
   m_Name: mushroom3 (6)
   m_TagString: Untagged
@@ -15675,6 +16603,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &672422611
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672422608}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &672781792
 GameObject:
   m_ObjectHideFlags: 0
@@ -15685,6 +16625,7 @@ GameObject:
   m_Component:
   - component: {fileID: 672781793}
   - component: {fileID: 672781794}
+  - component: {fileID: 672781795}
   m_Layer: 3
   m_Name: mushroom2 (5)
   m_TagString: Untagged
@@ -15759,6 +16700,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &672781795
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672781792}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &683875763
 GameObject:
   m_ObjectHideFlags: 0
@@ -15769,6 +16722,7 @@ GameObject:
   m_Component:
   - component: {fileID: 683875765}
   - component: {fileID: 683875764}
+  - component: {fileID: 683875766}
   m_Layer: 3
   m_Name: tree1 (12)
   m_TagString: Untagged
@@ -15837,12 +16791,24 @@ Transform:
   m_GameObject: {fileID: 683875763}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 58, y: -10.6, z: 0}
+  m_LocalPosition: {x: 58, y: -15.022075, z: 0}
   m_LocalScale: {x: 0.55620104, y: 0.96519303, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &683875766
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683875763}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &688490509
 GameObject:
   m_ObjectHideFlags: 0
@@ -15853,6 +16819,7 @@ GameObject:
   m_Component:
   - component: {fileID: 688490511}
   - component: {fileID: 688490510}
+  - component: {fileID: 688490512}
   m_Layer: 3
   m_Name: tree1 (4)
   m_TagString: Untagged
@@ -15921,12 +16888,24 @@ Transform:
   m_GameObject: {fileID: 688490509}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 77.6675, y: -9.918404, z: 0}
+  m_LocalPosition: {x: 77.6675, y: -14.340478, z: 0}
   m_LocalScale: {x: -0.6252963, y: 0.93345547, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &688490512
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688490509}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &703354988
 GameObject:
   m_ObjectHideFlags: 0
@@ -15937,6 +16916,7 @@ GameObject:
   m_Component:
   - component: {fileID: 703354989}
   - component: {fileID: 703354990}
+  - component: {fileID: 703354991}
   m_Layer: 3
   m_Name: tree2 (19)
   m_TagString: Untagged
@@ -15953,7 +16933,7 @@ Transform:
   m_GameObject: {fileID: 703354988}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 63.767857, y: 59.874493, z: 0}
+  m_LocalPosition: {x: 63.767857, y: 55.45242, z: 0}
   m_LocalScale: {x: 1.0971687, y: 0.60926723, z: 0.7186184}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16011,6 +16991,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &703354991
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703354988}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &710515642
 GameObject:
   m_ObjectHideFlags: 0
@@ -16021,6 +17013,7 @@ GameObject:
   m_Component:
   - component: {fileID: 710515643}
   - component: {fileID: 710515644}
+  - component: {fileID: 710515645}
   m_Layer: 3
   m_Name: tree1 (39)
   m_TagString: Untagged
@@ -16037,7 +17030,7 @@ Transform:
   m_GameObject: {fileID: 710515642}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 95.34, y: 52.66, z: 0}
+  m_LocalPosition: {x: 95.34, y: 48.237926, z: 0}
   m_LocalScale: {x: 0.73656076, y: 0.88368875, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16095,6 +17088,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &710515645
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710515642}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &748243889
 GameObject:
   m_ObjectHideFlags: 0
@@ -16105,6 +17110,7 @@ GameObject:
   m_Component:
   - component: {fileID: 748243891}
   - component: {fileID: 748243890}
+  - component: {fileID: 748243892}
   m_Layer: 3
   m_Name: tree3 (2)
   m_TagString: Untagged
@@ -16173,12 +17179,24 @@ Transform:
   m_GameObject: {fileID: 748243889}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 53.73412, y: -1.1646594, z: 0}
+  m_LocalPosition: {x: 53.73412, y: -5.586734, z: 0}
   m_LocalScale: {x: -0.8467, y: 0.93139994, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &748243892
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748243889}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &761544494
 GameObject:
   m_ObjectHideFlags: 0
@@ -16189,6 +17207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 761544496}
   - component: {fileID: 761544495}
+  - component: {fileID: 761544497}
   m_Layer: 3
   m_Name: tree1 (3)
   m_TagString: Untagged
@@ -16257,12 +17276,24 @@ Transform:
   m_GameObject: {fileID: 761544494}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 42.92726, y: -1.9089159, z: 0}
+  m_LocalPosition: {x: 42.92726, y: -6.3309903, z: 0}
   m_LocalScale: {x: -0.85548156, y: 0.8990276, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &761544497
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761544494}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &784559512
 GameObject:
   m_ObjectHideFlags: 0
@@ -16273,6 +17304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 784559513}
   - component: {fileID: 784559514}
+  - component: {fileID: 784559515}
   m_Layer: 3
   m_Name: bush
   m_TagString: Untagged
@@ -16347,6 +17379,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &784559515
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784559512}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &814192531
 GameObject:
   m_ObjectHideFlags: 0
@@ -16357,6 +17401,7 @@ GameObject:
   m_Component:
   - component: {fileID: 814192533}
   - component: {fileID: 814192532}
+  - component: {fileID: 814192534}
   m_Layer: 3
   m_Name: tree2 (15)
   m_TagString: Untagged
@@ -16425,12 +17470,24 @@ Transform:
   m_GameObject: {fileID: 814192531}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 49.77788, y: 13.260611, z: 0}
+  m_LocalPosition: {x: 49.77788, y: 8.838536, z: 0}
   m_LocalScale: {x: 1.0971687, y: 0.60926723, z: 0.7186184}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &814192534
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814192531}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &816042311
 GameObject:
   m_ObjectHideFlags: 0
@@ -16441,6 +17498,7 @@ GameObject:
   m_Component:
   - component: {fileID: 816042313}
   - component: {fileID: 816042312}
+  - component: {fileID: 816042314}
   m_Layer: 3
   m_Name: tree1 (9)
   m_TagString: Untagged
@@ -16509,12 +17567,24 @@ Transform:
   m_GameObject: {fileID: 816042311}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.710439, y: -7.4425616, z: 0}
+  m_LocalPosition: {x: 8.710439, y: -11.864635, z: 0}
   m_LocalScale: {x: -0.6252963, y: 0.93345547, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &816042314
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816042311}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &826018856
 GameObject:
   m_ObjectHideFlags: 0
@@ -16525,6 +17595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 826018858}
   - component: {fileID: 826018857}
+  - component: {fileID: 826018859}
   m_Layer: 3
   m_Name: tree3 (14)
   m_TagString: Untagged
@@ -16593,12 +17664,24 @@ Transform:
   m_GameObject: {fileID: 826018856}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 61.948433, y: 14.498532, z: 0}
+  m_LocalPosition: {x: 61.948433, y: 10.076458, z: 0}
   m_LocalScale: {x: 0.51843715, y: 0.68304455, z: 0.8988999}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &826018859
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826018856}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &850248582
 GameObject:
   m_ObjectHideFlags: 0
@@ -16609,6 +17692,7 @@ GameObject:
   m_Component:
   - component: {fileID: 850248584}
   - component: {fileID: 850248583}
+  - component: {fileID: 850248585}
   m_Layer: 3
   m_Name: tree3 (1)
   m_TagString: Untagged
@@ -16677,12 +17761,24 @@ Transform:
   m_GameObject: {fileID: 850248582}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.796928, y: -1.4276463, z: 0}
+  m_LocalPosition: {x: 23.796928, y: -5.8497205, z: 0}
   m_LocalScale: {x: -0.8467, y: 0.93139994, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &850248585
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850248582}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &854974197
 GameObject:
   m_ObjectHideFlags: 0
@@ -16693,6 +17789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 854974198}
   - component: {fileID: 854974199}
+  - component: {fileID: 854974200}
   m_Layer: 3
   m_Name: tree3 (26)
   m_TagString: Untagged
@@ -16709,7 +17806,7 @@ Transform:
   m_GameObject: {fileID: 854974197}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.14, y: 62.328167, z: 0}
+  m_LocalPosition: {x: 9.14, y: 57.906094, z: 0}
   m_LocalScale: {x: -0.86211, y: 0.66958344, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16767,6 +17864,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &854974200
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854974197}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &863751087
 GameObject:
   m_ObjectHideFlags: 0
@@ -16777,6 +17886,7 @@ GameObject:
   m_Component:
   - component: {fileID: 863751088}
   - component: {fileID: 863751089}
+  - component: {fileID: 863751090}
   m_Layer: 3
   m_Name: tree1 (26)
   m_TagString: Untagged
@@ -16793,7 +17903,7 @@ Transform:
   m_GameObject: {fileID: 863751087}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 40.379463, y: 61.078228, z: 0}
+  m_LocalPosition: {x: 40.379463, y: 56.656155, z: 0}
   m_LocalScale: {x: -0.6559224, y: 0.63898146, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16851,6 +17961,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &863751090
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863751087}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &865939575
 GameObject:
   m_ObjectHideFlags: 0
@@ -16861,6 +17983,7 @@ GameObject:
   m_Component:
   - component: {fileID: 865939577}
   - component: {fileID: 865939576}
+  - component: {fileID: 865939578}
   m_Layer: 3
   m_Name: tree2 (10)
   m_TagString: Untagged
@@ -16929,12 +18052,24 @@ Transform:
   m_GameObject: {fileID: 865939575}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.112865, y: -9.30827, z: 0}
+  m_LocalPosition: {x: 19.112865, y: -13.730345, z: 0}
   m_LocalScale: {x: 0.86328876, y: 0.8886244, z: 0.7803436}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &865939578
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865939575}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &930712759
 GameObject:
   m_ObjectHideFlags: 0
@@ -16945,6 +18080,7 @@ GameObject:
   m_Component:
   - component: {fileID: 930712761}
   - component: {fileID: 930712760}
+  - component: {fileID: 930712762}
   m_Layer: 3
   m_Name: tree2 (7)
   m_TagString: Untagged
@@ -17013,12 +18149,24 @@ Transform:
   m_GameObject: {fileID: 930712759}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 38.642723, y: -9.542709, z: 0}
+  m_LocalPosition: {x: 38.642723, y: -13.964784, z: 0}
   m_LocalScale: {x: 0.86328876, y: 0.8886244, z: 0.7803436}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &930712762
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930712759}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &961132325
 GameObject:
   m_ObjectHideFlags: 0
@@ -17029,6 +18177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 961132326}
   - component: {fileID: 961132327}
+  - component: {fileID: 961132328}
   m_Layer: 3
   m_Name: mushroom2 (4)
   m_TagString: Untagged
@@ -17103,6 +18252,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &961132328
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961132325}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &974456350
 GameObject:
   m_ObjectHideFlags: 0
@@ -17113,6 +18274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 974456351}
   - component: {fileID: 974456352}
+  - component: {fileID: 974456353}
   m_Layer: 3
   m_Name: tree1 (29)
   m_TagString: Untagged
@@ -17129,7 +18291,7 @@ Transform:
   m_GameObject: {fileID: 974456350}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 95.34, y: 10.26, z: 0}
+  m_LocalPosition: {x: 95.34, y: 5.837926, z: 0}
   m_LocalScale: {x: -0.6559224, y: 0.63898146, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17187,6 +18349,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &974456353
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974456350}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &979697504
 GameObject:
   m_ObjectHideFlags: 0
@@ -17197,6 +18371,7 @@ GameObject:
   m_Component:
   - component: {fileID: 979697506}
   - component: {fileID: 979697505}
+  - component: {fileID: 979697507}
   m_Layer: 3
   m_Name: tree2 (8)
   m_TagString: Untagged
@@ -17265,12 +18440,24 @@ Transform:
   m_GameObject: {fileID: 979697504}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28.1, y: -11.1, z: 0}
+  m_LocalPosition: {x: 28.1, y: -15.522075, z: 0}
   m_LocalScale: {x: -1.0195923, y: 0.9540739, z: 0.7803436}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &979697507
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979697504}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &984836310
 GameObject:
   m_ObjectHideFlags: 0
@@ -17281,6 +18468,7 @@ GameObject:
   m_Component:
   - component: {fileID: 984836312}
   - component: {fileID: 984836311}
+  - component: {fileID: 984836313}
   m_Layer: 3
   m_Name: tree1 (14)
   m_TagString: Untagged
@@ -17349,12 +18537,24 @@ Transform:
   m_GameObject: {fileID: 984836310}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 75.51, y: 19.66, z: 0}
+  m_LocalPosition: {x: 75.51, y: 15.237926, z: 0}
   m_LocalScale: {x: 0.73656076, y: 0.88368875, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &984836313
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984836310}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &985613319
 GameObject:
   m_ObjectHideFlags: 0
@@ -17365,6 +18565,7 @@ GameObject:
   m_Component:
   - component: {fileID: 985613320}
   - component: {fileID: 985613321}
+  - component: {fileID: 985613322}
   m_Layer: 3
   m_Name: bush (21)
   m_TagString: Untagged
@@ -17439,6 +18640,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &985613322
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985613319}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1010140818
 GameObject:
   m_ObjectHideFlags: 0
@@ -17449,6 +18662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1010140819}
   - component: {fileID: 1010140820}
+  - component: {fileID: 1010140821}
   m_Layer: 3
   m_Name: tree3 (20)
   m_TagString: Untagged
@@ -17465,7 +18679,7 @@ Transform:
   m_GameObject: {fileID: 1010140818}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 36.968204, y: 62.58101, z: 0}
+  m_LocalPosition: {x: 36.968204, y: 58.158936, z: 0}
   m_LocalScale: {x: -0.91507304, y: 0.77335584, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17523,6 +18737,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1010140821
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010140818}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1010409689
 GameObject:
   m_ObjectHideFlags: 0
@@ -17533,6 +18759,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1010409690}
   - component: {fileID: 1010409691}
+  - component: {fileID: 1010409692}
   m_Layer: 3
   m_Name: mushroom1 (5)
   m_TagString: Untagged
@@ -17607,6 +18834,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1010409692
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010409689}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1049521666
 GameObject:
   m_ObjectHideFlags: 0
@@ -17617,6 +18856,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1049521668}
   - component: {fileID: 1049521667}
+  - component: {fileID: 1049521669}
   m_Layer: 3
   m_Name: tree2
   m_TagString: Untagged
@@ -17685,12 +18925,24 @@ Transform:
   m_GameObject: {fileID: 1049521666}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.6412168, y: -7.70179, z: 0}
+  m_LocalPosition: {x: 7.6412168, y: -12.123864, z: 0}
   m_LocalScale: {x: 1.2010174, y: 0.90320784, z: 0.7803436}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1049521669
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049521666}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1050517997
 GameObject:
   m_ObjectHideFlags: 0
@@ -17701,6 +18953,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1050517998}
   - component: {fileID: 1050517999}
+  - component: {fileID: 1050518000}
   m_Layer: 3
   m_Name: tree1 (35)
   m_TagString: Untagged
@@ -17717,7 +18970,7 @@ Transform:
   m_GameObject: {fileID: 1050517997}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 36.171, y: 29.895, z: 0}
+  m_LocalPosition: {x: 36.171, y: 25.472927, z: 0}
   m_LocalScale: {x: -0.52107227, y: 0.66095954, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17775,6 +19028,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1050518000
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050517997}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1051748486
 GameObject:
   m_ObjectHideFlags: 0
@@ -17785,6 +19050,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1051748487}
   - component: {fileID: 1051748488}
+  - component: {fileID: 1051748489}
   m_Layer: 3
   m_Name: bush (2)
   m_TagString: Untagged
@@ -17859,6 +19125,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1051748489
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051748486}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1067986496
 GameObject:
   m_ObjectHideFlags: 0
@@ -17869,6 +19147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1067986498}
   - component: {fileID: 1067986497}
+  - component: {fileID: 1067986499}
   m_Layer: 3
   m_Name: tree3 (16)
   m_TagString: Untagged
@@ -17937,12 +19216,24 @@ Transform:
   m_GameObject: {fileID: 1067986496}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.652653, y: 20.556274, z: 0}
+  m_LocalPosition: {x: 25.652653, y: 16.134201, z: 0}
   m_LocalScale: {x: -0.91507304, y: 0.7704171, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1067986499
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067986496}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1095960138
 GameObject:
   m_ObjectHideFlags: 0
@@ -17953,6 +19244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1095960139}
   - component: {fileID: 1095960140}
+  - component: {fileID: 1095960141}
   m_Layer: 3
   m_Name: bush (13)
   m_TagString: Untagged
@@ -18027,6 +19319,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1095960141
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095960138}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1137796687
 GameObject:
   m_ObjectHideFlags: 0
@@ -18037,6 +19341,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1137796688}
   - component: {fileID: 1137796689}
+  - component: {fileID: 1137796690}
   m_Layer: 3
   m_Name: rock1 (5)
   m_TagString: Untagged
@@ -18111,6 +19416,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1137796690
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137796687}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1140802539
 GameObject:
   m_ObjectHideFlags: 0
@@ -18121,6 +19438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1140802540}
   - component: {fileID: 1140802541}
+  - component: {fileID: 1140802542}
   m_Layer: 3
   m_Name: bush (7)
   m_TagString: Untagged
@@ -18195,6 +19513,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1140802542
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140802539}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1158957453
 GameObject:
   m_ObjectHideFlags: 0
@@ -18205,6 +19535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1158957455}
   - component: {fileID: 1158957454}
+  - component: {fileID: 1158957456}
   m_Layer: 3
   m_Name: tree1 (11)
   m_TagString: Untagged
@@ -18273,12 +19604,24 @@ Transform:
   m_GameObject: {fileID: 1158957453}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.2470675, y: -1.6414217, z: 0}
+  m_LocalPosition: {x: -2.2470675, y: -6.063496, z: 0}
   m_LocalScale: {x: 0.7262529, y: 0.94965816, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1158957456
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158957453}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1161453072
 GameObject:
   m_ObjectHideFlags: 0
@@ -18289,6 +19632,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1161453073}
   - component: {fileID: 1161453074}
+  - component: {fileID: 1161453075}
   m_Layer: 3
   m_Name: tree1 (24)
   m_TagString: Untagged
@@ -18305,7 +19649,7 @@ Transform:
   m_GameObject: {fileID: 1161453072}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 32.50246, y: 61.61435, z: 0}
+  m_LocalPosition: {x: 32.50246, y: 57.192276, z: 0}
   m_LocalScale: {x: 0.9654838, y: 0.69338334, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18363,6 +19707,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1161453075
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161453072}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1165986298
 GameObject:
   m_ObjectHideFlags: 0
@@ -18373,6 +19729,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1165986299}
   - component: {fileID: 1165986300}
+  - component: {fileID: 1165986301}
   m_Layer: 3
   m_Name: rock2 (2)
   m_TagString: Untagged
@@ -18447,6 +19804,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1165986301
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165986298}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1001 &1173964349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18459,6 +19828,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3925055068404567579, guid: 0c1c91e6bc46f40e2b25307b50b4945b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925055068404567579, guid: 0c1c91e6bc46f40e2b25307b50b4945b, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5166881977443746867, guid: 0c1c91e6bc46f40e2b25307b50b4945b, type: 3}
+      propertyPath: m_Mass
+      value: 0.42420757
+      objectReference: {fileID: 0}
     - target: {fileID: 7573667702047402372, guid: 0c1c91e6bc46f40e2b25307b50b4945b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.2
@@ -18469,15 +19850,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7573667702047402372, guid: 0c1c91e6bc46f40e2b25307b50b4945b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.64
+      value: -9.44
       objectReference: {fileID: 0}
     - target: {fileID: 7573667702047402372, guid: 0c1c91e6bc46f40e2b25307b50b4945b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.54
+      value: 4.79
       objectReference: {fileID: 0}
     - target: {fileID: 7573667702047402372, guid: 0c1c91e6bc46f40e2b25307b50b4945b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7573667702047402372, guid: 0c1c91e6bc46f40e2b25307b50b4945b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18522,6 +19903,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1180624292}
   - component: {fileID: 1180624291}
+  - component: {fileID: 1180624293}
   m_Layer: 3
   m_Name: mushroom1 (3)
   m_TagString: Untagged
@@ -18596,6 +19978,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 533078598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -17.156}
+--- !u!210 &1180624293
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180624290}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1192113289
 GameObject:
   m_ObjectHideFlags: 0
@@ -18606,6 +20000,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1192113290}
   - component: {fileID: 1192113291}
+  - component: {fileID: 1192113292}
   m_Layer: 3
   m_Name: tree1 (32)
   m_TagString: Untagged
@@ -18622,7 +20017,7 @@ Transform:
   m_GameObject: {fileID: 1192113289}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 48.12, y: 35.8, z: 0}
+  m_LocalPosition: {x: 48.12, y: 31.377926, z: 0}
   m_LocalScale: {x: -0.5247455, y: 0.7061534, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18680,6 +20075,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1192113292
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192113289}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1197823616
 GameObject:
   m_ObjectHideFlags: 0
@@ -18690,6 +20097,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1197823617}
   - component: {fileID: 1197823618}
+  - component: {fileID: 1197823619}
   m_Layer: 3
   m_Name: bush (19)
   m_TagString: Untagged
@@ -18764,6 +20172,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1197823619
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197823616}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1200050564
 GameObject:
   m_ObjectHideFlags: 0
@@ -18774,6 +20194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1200050566}
   - component: {fileID: 1200050565}
+  - component: {fileID: 1200050567}
   m_Layer: 3
   m_Name: tree3 (9)
   m_TagString: Untagged
@@ -18842,12 +20263,24 @@ Transform:
   m_GameObject: {fileID: 1200050564}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 57.854927, y: -1.4652169, z: 0}
+  m_LocalPosition: {x: 57.854927, y: -5.887291, z: 0}
   m_LocalScale: {x: 0.7551326, y: 1.0922318, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1200050567
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200050564}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1221404055
 GameObject:
   m_ObjectHideFlags: 0
@@ -18858,6 +20291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1221404056}
   - component: {fileID: 1221404057}
+  - component: {fileID: 1221404058}
   m_Layer: 3
   m_Name: tree2 (25)
   m_TagString: Untagged
@@ -18874,7 +20308,7 @@ Transform:
   m_GameObject: {fileID: 1221404055}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.19, y: 61.56, z: 0}
+  m_LocalPosition: {x: 2.9, y: 57.6, z: 0}
   m_LocalScale: {x: -0.9051545, y: 0.62467, z: 0.7803436}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18918,8 +20352,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1710794449
+  m_SortingLayer: -3
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 554402244dd744819b02b46ec441c335, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -18931,7 +20365,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
+--- !u!210 &1221404058
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221404055}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1233216738
 GameObject:
   m_ObjectHideFlags: 0
@@ -18942,6 +20388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1233216739}
   - component: {fileID: 1233216740}
+  - component: {fileID: 1233216741}
   m_Layer: 3
   m_Name: bush (18)
   m_TagString: Untagged
@@ -19016,6 +20463,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1233216741
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233216738}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1259277345
 GameObject:
   m_ObjectHideFlags: 0
@@ -19026,6 +20485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1259277346}
   - component: {fileID: 1259277347}
+  - component: {fileID: 1259277348}
   m_Layer: 3
   m_Name: bush (5)
   m_TagString: Untagged
@@ -19100,6 +20560,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1259277348
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259277345}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1283059529
 GameObject:
   m_ObjectHideFlags: 0
@@ -19110,6 +20582,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1283059531}
   - component: {fileID: 1283059530}
+  - component: {fileID: 1283059532}
   m_Layer: 3
   m_Name: rock1 (4)
   m_TagString: Untagged
@@ -19184,6 +20657,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 533078598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1283059532
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283059529}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1295552147
 GameObject:
   m_ObjectHideFlags: 0
@@ -19194,6 +20679,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1295552148}
   - component: {fileID: 1295552149}
+  - component: {fileID: 1295552150}
   m_Layer: 3
   m_Name: mushroom3 (9)
   m_TagString: Untagged
@@ -19268,6 +20754,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1295552150
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295552147}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1299797071
 GameObject:
   m_ObjectHideFlags: 0
@@ -19278,6 +20776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1299797072}
   - component: {fileID: 1299797073}
+  - component: {fileID: 1299797074}
   m_Layer: 3
   m_Name: rock2 (4)
   m_TagString: Untagged
@@ -19352,6 +20851,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1299797074
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299797071}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1300234816
 GameObject:
   m_ObjectHideFlags: 0
@@ -19362,6 +20873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1300234817}
   - component: {fileID: 1300234818}
+  - component: {fileID: 1300234819}
   m_Layer: 3
   m_Name: bush (11)
   m_TagString: Untagged
@@ -19436,6 +20948,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1300234819
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300234816}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1379546815
 GameObject:
   m_ObjectHideFlags: 0
@@ -19446,6 +20970,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1379546816}
   - component: {fileID: 1379546817}
+  - component: {fileID: 1379546818}
   m_Layer: 3
   m_Name: rock2 (6)
   m_TagString: Untagged
@@ -19520,6 +21045,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1379546818
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379546815}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1396419980
 GameObject:
   m_ObjectHideFlags: 0
@@ -19530,6 +21067,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1396419982}
   - component: {fileID: 1396419981}
+  - component: {fileID: 1396419983}
   m_Layer: 3
   m_Name: mushroom3 (4)
   m_TagString: Untagged
@@ -19604,6 +21142,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 533078598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1396419983
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396419980}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1407243414
 GameObject:
   m_ObjectHideFlags: 0
@@ -19614,6 +21164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1407243415}
   - component: {fileID: 1407243416}
+  - component: {fileID: 1407243417}
   m_Layer: 3
   m_Name: bush (23)
   m_TagString: Untagged
@@ -19688,6 +21239,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1407243417
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407243414}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1418710629
 GameObject:
   m_ObjectHideFlags: 0
@@ -19698,6 +21261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1418710631}
   - component: {fileID: 1418710630}
+  - component: {fileID: 1418710632}
   m_Layer: 3
   m_Name: tree3 (4)
   m_TagString: Untagged
@@ -19766,12 +21330,24 @@ Transform:
   m_GameObject: {fileID: 1418710629}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 62.194046, y: -2.6298797, z: 0}
+  m_LocalPosition: {x: 62.194046, y: -7.0519543, z: 0}
   m_LocalScale: {x: 0.7187978, y: 0.9838536, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1418710632
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418710629}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1430727820
 GameObject:
   m_ObjectHideFlags: 0
@@ -19782,6 +21358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1430727822}
   - component: {fileID: 1430727821}
+  - component: {fileID: 1430727823}
   m_Layer: 3
   m_Name: tree1 (16)
   m_TagString: Untagged
@@ -19850,12 +21427,24 @@ Transform:
   m_GameObject: {fileID: 1430727820}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 33.73051, y: 14.464344, z: 0}
+  m_LocalPosition: {x: 33.73051, y: 10.04227, z: 0}
   m_LocalScale: {x: 0.9654838, y: 0.69338334, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1430727823
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430727820}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1438431088
 GameObject:
   m_ObjectHideFlags: 0
@@ -19866,6 +21455,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1438431089}
   - component: {fileID: 1438431090}
+  - component: {fileID: 1438431091}
   m_Layer: 3
   m_Name: bush (1)
   m_TagString: Untagged
@@ -19940,6 +21530,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1438431091
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438431088}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1450776358
 GameObject:
   m_ObjectHideFlags: 0
@@ -19950,6 +21552,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1450776359}
   - component: {fileID: 1450776360}
+  - component: {fileID: 1450776361}
   m_Layer: 3
   m_Name: tree2 (21)
   m_TagString: Untagged
@@ -19966,7 +21569,7 @@ Transform:
   m_GameObject: {fileID: 1450776358}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 69.98699, y: 60.626637, z: 0}
+  m_LocalPosition: {x: 69.98699, y: 56.204563, z: 0}
   m_LocalScale: {x: -0.8094097, y: 0.60969156, z: 0.7803436}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20024,6 +21627,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1450776361
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450776358}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1451518424
 GameObject:
   m_ObjectHideFlags: 0
@@ -20034,6 +21649,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1451518426}
   - component: {fileID: 1451518425}
+  - component: {fileID: 1451518427}
   m_Layer: 3
   m_Name: mushroom1 (1)
   m_TagString: Untagged
@@ -20108,6 +21724,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 533078598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -16.834}
+--- !u!210 &1451518427
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451518424}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1469049892
 GameObject:
   m_ObjectHideFlags: 0
@@ -20118,6 +21746,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1469049893}
   - component: {fileID: 1469049894}
+  - component: {fileID: 1469049895}
   m_Layer: 3
   m_Name: tree1 (40)
   m_TagString: Untagged
@@ -20134,7 +21763,7 @@ Transform:
   m_GameObject: {fileID: 1469049892}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 85.71, y: 55.86, z: 0}
+  m_LocalPosition: {x: 85.71, y: 51.437927, z: 0}
   m_LocalScale: {x: 0.73656076, y: 0.88368875, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20192,6 +21821,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1469049895
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469049892}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1476493388
 GameObject:
   m_ObjectHideFlags: 0
@@ -20202,6 +21843,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1476493390}
   - component: {fileID: 1476493389}
+  - component: {fileID: 1476493391}
   m_Layer: 3
   m_Name: tree3 (17)
   m_TagString: Untagged
@@ -20270,12 +21912,24 @@ Transform:
   m_GameObject: {fileID: 1476493388}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.83977, y: 30.893583, z: 0}
+  m_LocalPosition: {x: 26.83977, y: 26.471508, z: 0}
   m_LocalScale: {x: -0.79830974, y: 0.6943189, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1476493391
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476493388}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1488160262
 GameObject:
   m_ObjectHideFlags: 0
@@ -20286,6 +21940,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1488160263}
   - component: {fileID: 1488160264}
+  - component: {fileID: 1488160265}
   m_Layer: 3
   m_Name: bush (12)
   m_TagString: Untagged
@@ -20360,6 +22015,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1488160265
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488160262}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1535026368
 GameObject:
   m_ObjectHideFlags: 0
@@ -20370,6 +22037,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1535026369}
   - component: {fileID: 1535026370}
+  - component: {fileID: 1535026371}
   m_Layer: 3
   m_Name: tree1 (31)
   m_TagString: Untagged
@@ -20386,7 +22054,7 @@ Transform:
   m_GameObject: {fileID: 1535026368}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.563157, y: 62.929283, z: 0}
+  m_LocalPosition: {x: 13.563157, y: 58.50721, z: 0}
   m_LocalScale: {x: -0.63667667, y: 0.67106116, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20444,6 +22112,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1535026371
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535026368}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1537762850
 GameObject:
   m_ObjectHideFlags: 0
@@ -20454,6 +22134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1537762851}
   - component: {fileID: 1537762852}
+  - component: {fileID: 1537762853}
   m_Layer: 3
   m_Name: bush (4)
   m_TagString: Untagged
@@ -20528,6 +22209,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1537762853
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537762850}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1540414124
 GameObject:
   m_ObjectHideFlags: 0
@@ -20538,6 +22231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1540414126}
   - component: {fileID: 1540414125}
+  - component: {fileID: 1540414127}
   m_Layer: 3
   m_Name: tree2 (9)
   m_TagString: Untagged
@@ -20606,12 +22300,24 @@ Transform:
   m_GameObject: {fileID: 1540414124}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.9263103, y: -9.5, z: 0}
+  m_LocalPosition: {x: 2.9263103, y: -13.922074, z: 0}
   m_LocalScale: {x: -1.097693, y: 1.1072983, z: 0.7803436}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1540414127
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540414124}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1579429889
 GameObject:
   m_ObjectHideFlags: 0
@@ -20622,6 +22328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1579429891}
   - component: {fileID: 1579429890}
+  - component: {fileID: 1579429892}
   m_Layer: 3
   m_Name: mushroom3 (2)
   m_TagString: Untagged
@@ -20696,6 +22403,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 533078598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1579429892
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579429889}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1590323484
 GameObject:
   m_ObjectHideFlags: 0
@@ -20706,6 +22425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1590323486}
   - component: {fileID: 1590323485}
+  - component: {fileID: 1590323487}
   m_Layer: 3
   m_Name: tree3 (3)
   m_TagString: Untagged
@@ -20774,12 +22494,24 @@ Transform:
   m_GameObject: {fileID: 1590323484}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 75.62075, y: -1.577925, z: 0}
+  m_LocalPosition: {x: 75.62075, y: -6, z: 0}
   m_LocalScale: {x: -0.84894055, y: 1.056317, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1590323487
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590323484}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1591382439
 GameObject:
   m_ObjectHideFlags: 0
@@ -20835,6 +22567,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1608968150}
   - component: {fileID: 1608968149}
+  - component: {fileID: 1608968151}
   m_Layer: 3
   m_Name: tree1 (17)
   m_TagString: Untagged
@@ -20903,12 +22636,24 @@ Transform:
   m_GameObject: {fileID: 1608968148}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 68.279724, y: 14.351636, z: 0}
+  m_LocalPosition: {x: 68.279724, y: 9.929562, z: 0}
   m_LocalScale: {x: -0.6559224, y: 0.63898146, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1608968151
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608968148}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1638583902
 GameObject:
   m_ObjectHideFlags: 0
@@ -20919,6 +22664,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1638583904}
   - component: {fileID: 1638583903}
+  - component: {fileID: 1638583905}
   m_Layer: 3
   m_Name: tree3 (7)
   m_TagString: Untagged
@@ -20987,12 +22733,24 @@ Transform:
   m_GameObject: {fileID: 1638583902}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.9927025, y: -1.1327246, z: 0}
+  m_LocalPosition: {x: 13.9927025, y: -5.554799, z: 0}
   m_LocalScale: {x: 0.7187978, y: 0.9838536, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1638583905
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638583902}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1650259232
 GameObject:
   m_ObjectHideFlags: 0
@@ -21003,6 +22761,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1650259233}
   - component: {fileID: 1650259234}
+  - component: {fileID: 1650259235}
   m_Layer: 3
   m_Name: mushroom2 (7)
   m_TagString: Untagged
@@ -21077,6 +22836,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1650259235
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650259232}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1726071177
 GameObject:
   m_ObjectHideFlags: 0
@@ -21087,6 +22858,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1726071178}
   - component: {fileID: 1726071179}
+  - component: {fileID: 1726071180}
   m_Layer: 3
   m_Name: bush (3)
   m_TagString: Untagged
@@ -21161,6 +22933,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1726071180
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726071177}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1740396346
 GameObject:
   m_ObjectHideFlags: 0
@@ -21171,6 +22955,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1740396348}
   - component: {fileID: 1740396347}
+  - component: {fileID: 1740396349}
   m_Layer: 3
   m_Name: tree2 (12)
   m_TagString: Untagged
@@ -21239,12 +23024,24 @@ Transform:
   m_GameObject: {fileID: 1740396346}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 62.958164, y: -8.453187, z: 0}
+  m_LocalPosition: {x: 62.958164, y: -12.875261, z: 0}
   m_LocalScale: {x: 0.9069274, y: 0.9865125, z: 0.7803436}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1740396349
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740396346}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1743370410
 GameObject:
   m_ObjectHideFlags: 0
@@ -21255,6 +23052,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1743370412}
   - component: {fileID: 1743370411}
+  - component: {fileID: 1743370413}
   m_Layer: 3
   m_Name: mushroom1 (2)
   m_TagString: Untagged
@@ -21329,6 +23127,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 533078598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1743370413
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743370410}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1745871223
 GameObject:
   m_ObjectHideFlags: 0
@@ -21339,6 +23149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1745871225}
   - component: {fileID: 1745871224}
+  - component: {fileID: 1745871226}
   m_Layer: 3
   m_Name: rock1 (2)
   m_TagString: Untagged
@@ -21413,6 +23224,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 533078598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1745871226
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745871223}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1752868517
 GameObject:
   m_ObjectHideFlags: 0
@@ -21423,6 +23246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1752868518}
   - component: {fileID: 1752868519}
+  - component: {fileID: 1752868520}
   m_Layer: 3
   m_Name: tree3 (32)
   m_TagString: Untagged
@@ -21439,7 +23263,7 @@ Transform:
   m_GameObject: {fileID: 1752868517}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.08, y: 42.02, z: 0}
+  m_LocalPosition: {x: -5.08, y: 37.597927, z: 0}
   m_LocalScale: {x: 0.64542574, y: 0.5939138, z: 0.882}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21497,6 +23321,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1752868520
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752868517}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1756507344
 GameObject:
   m_ObjectHideFlags: 0
@@ -21507,6 +23343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1756507346}
   - component: {fileID: 1756507345}
+  - component: {fileID: 1756507347}
   m_Layer: 3
   m_Name: rock1 (1)
   m_TagString: Untagged
@@ -21581,6 +23418,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 533078598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1756507347
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756507344}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1762619414
 GameObject:
   m_ObjectHideFlags: 0
@@ -21591,6 +23440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1762619416}
   - component: {fileID: 1762619415}
+  - component: {fileID: 1762619417}
   m_Layer: 3
   m_Name: mushroom3
   m_TagString: Untagged
@@ -21665,6 +23515,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 533078598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1762619417
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762619414}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1763954122
 GameObject:
   m_ObjectHideFlags: 0
@@ -21675,6 +23537,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1763954124}
   - component: {fileID: 1763954123}
+  - component: {fileID: 1763954125}
   m_Layer: 3
   m_Name: rock1 (3)
   m_TagString: Untagged
@@ -21749,6 +23612,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 533078598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1763954125
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763954122}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1780210573
 GameObject:
   m_ObjectHideFlags: 0
@@ -21759,6 +23634,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1780210575}
   - component: {fileID: 1780210574}
+  - component: {fileID: 1780210576}
   m_Layer: 3
   m_Name: tree1 (13)
   m_TagString: Untagged
@@ -21827,12 +23703,24 @@ Transform:
   m_GameObject: {fileID: 1780210573}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 63.940605, y: -1.4276463, z: 0}
+  m_LocalPosition: {x: 63.940605, y: -5.8497205, z: 0}
   m_LocalScale: {x: -0.646002, y: 0.9218425, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1780210576
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780210573}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1798522203
 GameObject:
   m_ObjectHideFlags: 0
@@ -21843,6 +23731,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1798522204}
   - component: {fileID: 1798522205}
+  - component: {fileID: 1798522206}
   m_Layer: 3
   m_Name: rock2 (5)
   m_TagString: Untagged
@@ -21917,6 +23806,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1798522206
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798522203}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1806861640
 GameObject:
   m_ObjectHideFlags: 0
@@ -21927,6 +23828,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1806861642}
   - component: {fileID: 1806861641}
+  - component: {fileID: 1806861643}
   m_Layer: 3
   m_Name: rock2
   m_TagString: Untagged
@@ -22001,6 +23903,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 533078598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1806861643
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806861640}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1827647326
 GameObject:
   m_ObjectHideFlags: 0
@@ -22011,6 +23925,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1827647327}
   - component: {fileID: 1827647328}
+  - component: {fileID: 1827647329}
   m_Layer: 3
   m_Name: rock1 (6)
   m_TagString: Untagged
@@ -22085,6 +24000,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1827647329
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827647326}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1834042359
 GameObject:
   m_ObjectHideFlags: 0
@@ -22095,6 +24022,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1834042361}
   - component: {fileID: 1834042360}
+  - component: {fileID: 1834042362}
   m_Layer: 3
   m_Name: tree3 (12)
   m_TagString: Untagged
@@ -22163,12 +24091,24 @@ Transform:
   m_GameObject: {fileID: 1834042359}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 68.82552, y: 17.995897, z: 0}
+  m_LocalPosition: {x: 68.82552, y: 13.573823, z: 0}
   m_LocalScale: {x: -0.84894055, y: 0.82456106, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1834042362
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834042359}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1838049705
 GameObject:
   m_ObjectHideFlags: 0
@@ -22179,6 +24119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1838049706}
   - component: {fileID: 1838049707}
+  - component: {fileID: 1838049708}
   m_Layer: 3
   m_Name: tree3 (34)
   m_TagString: Untagged
@@ -22195,7 +24136,7 @@ Transform:
   m_GameObject: {fileID: 1838049705}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.72, y: 28.96, z: 0}
+  m_LocalPosition: {x: -4.72, y: 24.537926, z: 0}
   m_LocalScale: {x: 0.5137589, y: 0.6746861, z: 0.882}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22253,6 +24194,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1838049708
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838049705}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1856256209
 GameObject:
   m_ObjectHideFlags: 0
@@ -22263,6 +24216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1856256211}
   - component: {fileID: 1856256210}
+  - component: {fileID: 1856256212}
   m_Layer: 3
   m_Name: tree3 (15)
   m_TagString: Untagged
@@ -22331,12 +24285,24 @@ Transform:
   m_GameObject: {fileID: 1856256209}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.97823, y: 15.9671335, z: 0}
+  m_LocalPosition: {x: 22.97823, y: 11.545059, z: 0}
   m_LocalScale: {x: -0.91507304, y: 0.77335584, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1856256212
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856256209}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1870153502
 GameObject:
   m_ObjectHideFlags: 0
@@ -22347,6 +24313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1870153504}
   - component: {fileID: 1870153503}
+  - component: {fileID: 1870153505}
   m_Layer: 3
   m_Name: tree1 (22)
   m_TagString: Untagged
@@ -22415,12 +24382,24 @@ Transform:
   m_GameObject: {fileID: 1870153502}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.231665, y: 42.942192, z: 0}
+  m_LocalPosition: {x: 21.231665, y: 38.52012, z: 0}
   m_LocalScale: {x: -0.5247455, y: 0.7061534, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1870153505
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870153502}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1877749966
 GameObject:
   m_ObjectHideFlags: 0
@@ -22431,6 +24410,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1877749967}
   - component: {fileID: 1877749968}
+  - component: {fileID: 1877749969}
   m_Layer: 3
   m_Name: bush (22)
   m_TagString: Untagged
@@ -22505,6 +24485,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1877749969
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877749966}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1877820302
 GameObject:
   m_ObjectHideFlags: 0
@@ -22515,6 +24507,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1877820303}
   - component: {fileID: 1877820304}
+  - component: {fileID: 1877820305}
   m_Layer: 3
   m_Name: tree2 (24)
   m_TagString: Untagged
@@ -22531,7 +24524,7 @@ Transform:
   m_GameObject: {fileID: 1877820302}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 96.44, y: 15.55, z: 0}
+  m_LocalPosition: {x: 96.44, y: 11.127926, z: 0}
   m_LocalScale: {x: 0.8895406, y: 1.0453277, z: 0.7803436}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22589,6 +24582,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1877820305
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877820302}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1880475957
 GameObject:
   m_ObjectHideFlags: 0
@@ -22599,6 +24604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1880475958}
   - component: {fileID: 1880475959}
+  - component: {fileID: 1880475960}
   m_Layer: 3
   m_Name: tree3 (19)
   m_TagString: Untagged
@@ -22615,7 +24621,7 @@ Transform:
   m_GameObject: {fileID: 1880475957}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 55.235077, y: 61.31378, z: 0}
+  m_LocalPosition: {x: 55.235077, y: 56.89171, z: 0}
   m_LocalScale: {x: -0.91507304, y: 0.77335584, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22673,6 +24679,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1880475960
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880475957}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1921801460
 GameObject:
   m_ObjectHideFlags: 0
@@ -22683,6 +24701,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1921801461}
   - component: {fileID: 1921801462}
+  - component: {fileID: 1921801463}
   m_Layer: 3
   m_Name: mushroom1 (6)
   m_TagString: Untagged
@@ -22757,6 +24776,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1921801463
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921801460}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1925288148
 GameObject:
   m_ObjectHideFlags: 0
@@ -22767,6 +24798,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1925288150}
   - component: {fileID: 1925288149}
+  - component: {fileID: 1925288151}
   m_Layer: 3
   m_Name: tree1 (7)
   m_TagString: Untagged
@@ -22835,12 +24867,24 @@ Transform:
   m_GameObject: {fileID: 1925288148}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 40.71622, y: -0.29492155, z: 0}
+  m_LocalPosition: {x: 40.71622, y: -4.7169957, z: 0}
   m_LocalScale: {x: 0.7262529, y: 0.94965816, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1925288151
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925288148}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1934799685
 GameObject:
   m_ObjectHideFlags: 0
@@ -22851,6 +24895,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1934799686}
   - component: {fileID: 1934799687}
+  - component: {fileID: 1934799688}
   m_Layer: 3
   m_Name: mushroom3 (11)
   m_TagString: Untagged
@@ -22925,6 +24970,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1934799688
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934799685}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1958306884
 GameObject:
   m_ObjectHideFlags: 0
@@ -22935,6 +24992,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1958306886}
   - component: {fileID: 1958306885}
+  - component: {fileID: 1958306887}
   m_Layer: 3
   m_Name: tree3 (13)
   m_TagString: Untagged
@@ -23003,12 +25061,24 @@ Transform:
   m_GameObject: {fileID: 1958306884}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 41.245102, y: 14.699907, z: 0}
+  m_LocalPosition: {x: 41.245102, y: 10.277833, z: 0}
   m_LocalScale: {x: -0.91507304, y: 0.77335584, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1958306887
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958306884}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1001 &1963619766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23023,11 +25093,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2153106099783500500, guid: 1c61a56bc0a484bea9f96a432c2d5de5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.3
+      value: -16.69
       objectReference: {fileID: 0}
     - target: {fileID: 2153106099783500500, guid: 1c61a56bc0a484bea9f96a432c2d5de5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.23
+      value: 6.34
       objectReference: {fileID: 0}
     - target: {fileID: 2153106099783500500, guid: 1c61a56bc0a484bea9f96a432c2d5de5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23061,6 +25131,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6347538072251643961, guid: 1c61a56bc0a484bea9f96a432c2d5de5, type: 3}
+      propertyPath: orthographic size
+      value: 4.09
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23077,6 +25151,10 @@ PrefabInstance:
     - target: {fileID: 157552687904810636, guid: 16f41eb5e159745e6b19b3e0fd41486a, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364531167353957771, guid: 16f41eb5e159745e6b19b3e0fd41486a, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2653981410420592695, guid: 16f41eb5e159745e6b19b3e0fd41486a, type: 3}
       propertyPath: m_AnchorMax.x
@@ -23189,6 +25267,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1978984900}
   - component: {fileID: 1978984899}
+  - component: {fileID: 1978984901}
   m_Layer: 3
   m_Name: mushroom2
   m_TagString: Untagged
@@ -23263,6 +25342,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 533078598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1978984901
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978984898}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &2001107583
 GameObject:
   m_ObjectHideFlags: 0
@@ -23273,6 +25364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2001107584}
   - component: {fileID: 2001107585}
+  - component: {fileID: 2001107586}
   m_Layer: 3
   m_Name: mushroom1 (8)
   m_TagString: Untagged
@@ -23347,6 +25439,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &2001107586
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001107583}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &2011222802
 GameObject:
   m_ObjectHideFlags: 0
@@ -23357,6 +25461,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2011222803}
   - component: {fileID: 2011222804}
+  - component: {fileID: 2011222805}
   m_Layer: 3
   m_Name: bush (20)
   m_TagString: Untagged
@@ -23431,6 +25536,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &2011222805
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011222802}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &2016072736
 GameObject:
   m_ObjectHideFlags: 0
@@ -23441,6 +25558,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2016072738}
   - component: {fileID: 2016072737}
+  - component: {fileID: 2016072739}
   m_Layer: 3
   m_Name: tree1 (18)
   m_TagString: Untagged
@@ -23509,12 +25627,24 @@ Transform:
   m_GameObject: {fileID: 2016072736}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.374035, y: 14.464344, z: 0}
+  m_LocalPosition: {x: 16.374035, y: 10.04227, z: 0}
   m_LocalScale: {x: 0.9654838, y: 0.69338334, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &2016072739
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016072736}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &2019009731
 GameObject:
   m_ObjectHideFlags: 0
@@ -23525,6 +25655,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2019009732}
   - component: {fileID: 2019009733}
+  - component: {fileID: 2019009734}
   m_Layer: 3
   m_Name: tree1 (42)
   m_TagString: Untagged
@@ -23541,7 +25672,7 @@ Transform:
   m_GameObject: {fileID: 2019009731}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 96.33, y: 41.61, z: 0}
+  m_LocalPosition: {x: 96.33, y: 37.187927, z: 0}
   m_LocalScale: {x: -0.6559224, y: 0.63898146, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23599,6 +25730,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &2019009734
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019009731}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &2019122486
 GameObject:
   m_ObjectHideFlags: 0
@@ -23609,6 +25752,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2019122488}
   - component: {fileID: 2019122487}
+  - component: {fileID: 2019122489}
   m_Layer: 3
   m_Name: tree2 (11)
   m_TagString: Untagged
@@ -23677,12 +25821,24 @@ Transform:
   m_GameObject: {fileID: 2019122486}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.8, y: -11.3, z: 0}
+  m_LocalPosition: {x: 13.8, y: -15.7220745, z: 0}
   m_LocalScale: {x: 0.86328876, y: 0.8886244, z: 0.7803436}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &2019122489
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019122486}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &2024208683
 GameObject:
   m_ObjectHideFlags: 0
@@ -23693,6 +25849,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2024208685}
   - component: {fileID: 2024208684}
+  - component: {fileID: 2024208686}
   m_Layer: 3
   m_Name: tree1 (15)
   m_TagString: Untagged
@@ -23761,12 +25918,24 @@ Transform:
   m_GameObject: {fileID: 2024208683}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 76.05739, y: 29.116535, z: 0}
+  m_LocalPosition: {x: 76.05739, y: 24.694462, z: 0}
   m_LocalScale: {x: 0.73656076, y: 0.88368875, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &2024208686
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024208683}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &2024791623
 GameObject:
   m_ObjectHideFlags: 0
@@ -23777,6 +25946,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2024791624}
   - component: {fileID: 2024791625}
+  - component: {fileID: 2024791626}
   m_Layer: 3
   m_Name: rock1 (8)
   m_TagString: Untagged
@@ -23851,6 +26021,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &2024791626
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024791623}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &2031210495
 GameObject:
   m_ObjectHideFlags: 0
@@ -23861,6 +26043,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2031210496}
   - component: {fileID: 2031210497}
+  - component: {fileID: 2031210498}
   m_Layer: 3
   m_Name: tree3 (23)
   m_TagString: Untagged
@@ -23877,7 +26060,7 @@ Transform:
   m_GameObject: {fileID: 2031210495}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 90.95, y: 59.17, z: 0}
+  m_LocalPosition: {x: 90.95, y: 54.747925, z: 0}
   m_LocalScale: {x: -0.84894055, y: 0.82456106, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23935,6 +26118,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &2031210498
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031210495}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &2041084600
 GameObject:
   m_ObjectHideFlags: 0
@@ -23945,6 +26140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2041084601}
   - component: {fileID: 2041084602}
+  - component: {fileID: 2041084603}
   m_Layer: 3
   m_Name: tree1 (38)
   m_TagString: Untagged
@@ -23961,7 +26157,7 @@ Transform:
   m_GameObject: {fileID: 2041084600}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.178993, y: 27.65, z: 0}
+  m_LocalPosition: {x: 5.178993, y: 23.227924, z: 0}
   m_LocalScale: {x: -0.5713244, y: 0.4758943, z: 0.7205247}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24019,6 +26215,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &2041084603
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041084600}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &2052182280
 GameObject:
   m_ObjectHideFlags: 0
@@ -24029,6 +26237,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2052182281}
   - component: {fileID: 2052182282}
+  - component: {fileID: 2052182283}
   m_Layer: 3
   m_Name: mushroom3 (7)
   m_TagString: Untagged
@@ -24103,6 +26312,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &2052182283
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052182280}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &2054701951
 GameObject:
   m_ObjectHideFlags: 0
@@ -24113,6 +26334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2054701953}
   - component: {fileID: 2054701952}
+  - component: {fileID: 2054701954}
   m_Layer: 3
   m_Name: tree2 (6)
   m_TagString: Untagged
@@ -24181,12 +26403,24 @@ Transform:
   m_GameObject: {fileID: 2054701951}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 62.07615, y: -7.9617743, z: 0}
+  m_LocalPosition: {x: 62.07615, y: -12.383848, z: 0}
   m_LocalScale: {x: 0.86328876, y: 0.8886244, z: 0.7803436}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &2054701954
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054701951}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &2060288791
 GameObject:
   m_ObjectHideFlags: 0
@@ -24197,6 +26431,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2060288792}
   - component: {fileID: 2060288793}
+  - component: {fileID: 2060288794}
   m_Layer: 3
   m_Name: bush (6)
   m_TagString: Untagged
@@ -24271,6 +26506,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &2060288794
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060288791}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &2064733404
 GameObject:
   m_ObjectHideFlags: 0
@@ -24281,6 +26528,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2064733405}
   - component: {fileID: 2064733406}
+  - component: {fileID: 2064733407}
   m_Layer: 3
   m_Name: tree3 (28)
   m_TagString: Untagged
@@ -24297,7 +26545,7 @@ Transform:
   m_GameObject: {fileID: 2064733404}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35.27, y: 45.9, z: 0}
+  m_LocalPosition: {x: 35.27, y: 41.47793, z: 0}
   m_LocalScale: {x: 0.76869243, y: 0.67536396, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24355,6 +26603,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &2064733407
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064733404}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &2065924131
 GameObject:
   m_ObjectHideFlags: 0
@@ -24365,6 +26625,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2065924132}
   - component: {fileID: 2065924133}
+  - component: {fileID: 2065924134}
   m_Layer: 3
   m_Name: rock1 (9)
   m_TagString: Untagged
@@ -24439,6 +26700,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &2065924134
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065924131}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &2066578662
 GameObject:
   m_ObjectHideFlags: 0
@@ -24449,6 +26722,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2066578664}
   - component: {fileID: 2066578663}
+  - component: {fileID: 2066578665}
   m_Layer: 3
   m_Name: mushroom2 (1)
   m_TagString: Untagged
@@ -24523,6 +26797,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 533078598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 20.758}
+--- !u!210 &2066578665
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066578662}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &2132901096
 GameObject:
   m_ObjectHideFlags: 0
@@ -24533,6 +26819,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2132901098}
   - component: {fileID: 2132901097}
+  - component: {fileID: 2132901099}
   m_Layer: 3
   m_Name: rock1
   m_TagString: Untagged
@@ -24607,6 +26894,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 533078598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &2132901099
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132901096}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &2146219785
 GameObject:
   m_ObjectHideFlags: 0
@@ -24617,6 +26916,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2146219787}
   - component: {fileID: 2146219786}
+  - component: {fileID: 2146219788}
   m_Layer: 3
   m_Name: tree1 (19)
   m_TagString: Untagged
@@ -24685,12 +26985,24 @@ Transform:
   m_GameObject: {fileID: 2146219785}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.389486, y: 14.464344, z: 0}
+  m_LocalPosition: {x: 26.389486, y: 10.04227, z: 0}
   m_LocalScale: {x: -0.6559224, y: 0.63898146, z: 0.9483334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300392614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &2146219788
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146219785}
+  m_Enabled: 1
+  m_SortingLayerID: 1327400861
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
