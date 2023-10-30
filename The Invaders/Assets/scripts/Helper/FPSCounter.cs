@@ -19,6 +19,8 @@ public class FPSCounter : MonoBehaviour
 
     void Awake()
     {
+        _currentAveraged = 0;
+        _averageCounter = 0;
         // Cache strings and create array
         {
             for (int i = 0; i < _cacheNumbersAmount; i++)
