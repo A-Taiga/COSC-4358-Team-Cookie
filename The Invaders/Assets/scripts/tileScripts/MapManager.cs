@@ -39,7 +39,11 @@ public class MapManager : MonoBehaviour
 				dataFromTiles.Add(tile, tileData);
 			}
 		}
-	}
+
+        Events<VolumeChangeEvent>.Instance.Register(v => {
+			audioSource.volume = v;
+        });
+    }
 
 	private void Update()
 	{

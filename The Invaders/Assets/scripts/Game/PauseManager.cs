@@ -6,10 +6,19 @@ using UnityEngine.SceneManagement;
 public class PauseManager : MonoBehaviour
 {
     public GUIController uiController;
+    public GameObject MainPause;
+    public GameObject Settings;
     public static bool isPaused;
+    
     void Start()
     {
+        Reset();
+    }
+    void Reset()
+    {
         isPaused = false;
+        MainPause?.SetActive(false);
+        Settings?.SetActive(false);
     }
     public void PauseGame()
     {
@@ -20,6 +29,7 @@ public class PauseManager : MonoBehaviour
         if (uiController)
         {
             uiController.SetPauseScreen(true);
+            MainPause?.SetActive(true);
         }
         isPaused = true;
     }
@@ -33,7 +43,7 @@ public class PauseManager : MonoBehaviour
         {
             uiController.SetPauseScreen(false);
         }
-        isPaused = false;
+        Reset();
     }
     public void RestartLevel()
     {
@@ -42,11 +52,13 @@ public class PauseManager : MonoBehaviour
     }
     public void ShowSettings()
     {
-        if (uiController)
-        {
-            //uiController.ShowSettings(true);
-            Debug.Log("No settings yet.");
-        }
+        MainPause.SetActive(false);
+        Settings?.SetActive(true);
+    }
+    public void CloseSettings()
+    {
+        MainPause?.SetActive(true);
+        Settings?.SetActive(false);
     }
     public void QuitToMenu()
     {
@@ -58,7 +70,6 @@ public class PauseManager : MonoBehaviour
     {
         if (Input.GetButtonDown("Cancel"))
         {
-            Debug.Log("Escape pressed.");
             if (isPaused)
             {
                 ResumeGame();
