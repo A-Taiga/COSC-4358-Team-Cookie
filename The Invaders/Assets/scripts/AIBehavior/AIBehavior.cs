@@ -33,7 +33,7 @@ public class AIBehavior : MonoBehaviour
             return;
         }
 
-        if(range.shoot == true)
+        if(range?.shoot == true)
         {
             animator.SetFloat("Speed", 0f);
             if (timeWhenAllowedNextShoot <= Time.time)

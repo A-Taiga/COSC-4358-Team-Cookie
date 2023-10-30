@@ -13,10 +13,11 @@ public class playerMovement : characterMovement
     private Vector3 tempScale;
 
     public Animator animator;
-
     public Vector3 screenPosition;
     public Vector3 worldPosition;
 
+    private int atkCombo;
+    public AudioSource[] attackSounds;
 
     private bool isMoving = false;
 
@@ -24,13 +25,31 @@ public class playerMovement : characterMovement
 
         base.Awake();
         mainCam = Camera.main;
+
+        foreach (var sound in attackSounds)
+        {
+            sound.volume = PlayerPrefs.GetFloat("volume", 1f);
+        }
         // animator = GetComponent<Animator>();
+    }
+
+    public void OnEnable()
+    {
+        Events<VolumeChangeEvent>.Instance.Register(v => {
+            foreach (var sound in attackSounds)
+            {
+                sound.volume = v;
+            }
+        });
     }
 
 
 
     private void Update() {
-
+        if(PauseManager.isPaused)
+        {
+            return;
+        }
         
         moveX = Input.GetAxisRaw("Horizontal");
         moveY = Input.GetAxisRaw("Vertical");
@@ -79,6 +98,11 @@ public class playerMovement : characterMovement
             else
             {
                 animator.SetBool("AttackRight", true);
+            }
+            attackSounds[atkCombo++]?.Play();
+            if (atkCombo == attackSounds.Length)
+            {
+                atkCombo = 0;
             }
         }
         else

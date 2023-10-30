@@ -26,9 +26,20 @@ public class MapManager : MonoBehaviour
 
 	private AudioClip footstepSound = null;
 
+	void OnEnable()
+	{
+        Events<VolumeChangeEvent>.Instance.Register(v => {
+            if (audioSource != null)
+            {
+                audioSource.volume = v;
+            }
+        });
+    }
+
 	protected void Awake()
 	{
 		audioSource = GetComponent<AudioSource>(); 
+		audioSource.volume = PlayerPrefs.GetFloat("volume", 1f);
 		player = GameObject.Find("Player").GetComponent<playerMovement>();
 		dataFromTiles = new Dictionary<TileBase, TileData>();
 
@@ -39,7 +50,7 @@ public class MapManager : MonoBehaviour
 				dataFromTiles.Add(tile, tileData);
 			}
 		}
-	}
+    }
 
 	private void Update()
 	{
