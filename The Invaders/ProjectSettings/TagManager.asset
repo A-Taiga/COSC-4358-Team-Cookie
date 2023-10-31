@@ -59,6 +59,9 @@ TagManager:
     uniqueID: 1707714941
     locked: 0
   - name: Player
+    uniqueID: 3557212259
+    locked: 0
+  - name: Vegetation
     uniqueID: 1327400861
     locked: 0
   - name: Default
