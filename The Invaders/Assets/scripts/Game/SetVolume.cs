@@ -13,18 +13,20 @@ public class SetVolume : MonoBehaviour
 
     void Start()
     {
-        volume = PlayerPrefs.GetFloat("volume", 1f);
-        slider.value = volume;
-        Events<VolumeChangeEvent>.Instance.Trigger(volume);
+        slider.value = PlayerPrefs.GetFloat("volume", 1f);
         slider.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
     }
 
-
     public void ValueChangeCheck()
     {
-        volume = slider.value;
+        volume = Mathf.Log10(slider.value) * 20;
+        if (volume == 0.0f)
+        {
+            volume = -80.0f;
+        }
+
         Events<VolumeChangeEvent>.Instance.Trigger(slider.value);
-        PlayerPrefs.SetFloat("volume", volume);
+        PlayerPrefs.SetFloat("volume", slider.value);
     }
 
 }

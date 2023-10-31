@@ -11,7 +11,7 @@ public class BGM : MonoBehaviour
         Events<VolumeChangeEvent>.Instance.Register(v => {
             if (audioSource != null)
             {
-                audioSource.volume = v * 0.2f;
+                audioSource.volume = v;
             }
         });
     }
