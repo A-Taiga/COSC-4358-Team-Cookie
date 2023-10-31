@@ -21,6 +21,14 @@ public class playerMovement : characterMovement
 
     private bool isMoving = false;
 
+    void volChanger(float v) 
+    {
+        foreach (var sound in attackSounds)
+        {
+            sound.volume = v;
+        }
+    }
+
     protected override void Awake() {
 
         base.Awake();
@@ -35,12 +43,12 @@ public class playerMovement : characterMovement
 
     public void OnEnable()
     {
-        Events<VolumeChangeEvent>.Instance.Register(v => {
-            foreach (var sound in attackSounds)
-            {
-                sound.volume = v;
-            }
-        });
+        Events<VolumeChangeEvent>.Instance.Register(volChanger);
+    }
+
+    public void OnDisable()
+    {
+        Events<VolumeChangeEvent>.Instance.Unregister(volChanger);
     }
 
 
