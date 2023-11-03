@@ -55,11 +55,11 @@ TagManager:
   - name: Map
     uniqueID: 2584172847
     locked: 0
-  - name: Enemy
-    uniqueID: 1707714941
-    locked: 0
   - name: Vegetation
     uniqueID: 1327400861
+    locked: 0
+  - name: Enemy
+    uniqueID: 1707714941
     locked: 0
   - name: Player
     uniqueID: 3557212259
