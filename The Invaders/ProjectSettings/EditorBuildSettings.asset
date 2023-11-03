@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SunsetBay.unity
     guid: c959f2d8976b747f0a1436d416eb01e4
+  - enabled: 1
+    path: Assets/Scenes/InsideShop.unity
+    guid: cfeb22e3135434e3b9cd87322efc6cdf
   m_configObjects: {}
