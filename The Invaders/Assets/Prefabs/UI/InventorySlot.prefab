@@ -113,3 +113,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecefcfd538b7641a2b7e85ca9c45af43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 8395998922446839919}
+  selectedColor: {r: 1, g: 0, b: 0, a: 1}
+  notSelectedColor: {r: 1, g: 1, b: 1, a: 1}
+  inventoryManagerPrefab: {fileID: 7150270992270069087, guid: ea6f2001fbb6f49e3bae18ef20a1ef7f, type: 3}
+  slotIndex: 0
