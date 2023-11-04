@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Blocking
   - Enemy
+  - Sword
+  - Range
+  - Orb
   layers:
   - Default
   - TransparentFX
@@ -14,8 +17,8 @@ TagManager:
   - Water
   - UI
   - Blocking
-  - 
-  - 
+  - Entity
+  - Orb
   - 
   - 
   - 
@@ -40,6 +43,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Sword
+    uniqueID: 3933707727
+    locked: 0
+  - name: Entity
+    uniqueID: 2674697583
+    locked: 0
   - name: Blocking
     uniqueID: 351006285
     locked: 0
@@ -50,6 +59,9 @@ TagManager:
     uniqueID: 1707714941
     locked: 0
   - name: Player
+    uniqueID: 3557212259
+    locked: 0
+  - name: Vegetation
     uniqueID: 1327400861
     locked: 0
   - name: Default

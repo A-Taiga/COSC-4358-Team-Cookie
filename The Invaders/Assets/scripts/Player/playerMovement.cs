@@ -13,24 +13,51 @@ public class playerMovement : characterMovement
     private Vector3 tempScale;
 
     public Animator animator;
-
     public Vector3 screenPosition;
     public Vector3 worldPosition;
 
+    private int atkCombo;
+    public AudioSource[] attackSounds;
 
     private bool isMoving = false;
+
+    void volChanger(float v) 
+    {
+        foreach (var sound in attackSounds)
+        {
+            sound.volume = v;
+        }
+    }
 
     protected override void Awake() {
 
         base.Awake();
         mainCam = Camera.main;
+
+        foreach (var sound in attackSounds)
+        {
+            sound.volume = PlayerPrefs.GetFloat("volume", 1f);
+        }
         // animator = GetComponent<Animator>();
+    }
+
+    public void OnEnable()
+    {
+        Events<VolumeChangeEvent>.Instance.Register(volChanger);
+    }
+
+    public void OnDisable()
+    {
+        Events<VolumeChangeEvent>.Instance.Unregister(volChanger);
     }
 
 
 
     private void Update() {
-
+        if(PauseManager.isPaused)
+        {
+            return;
+        }
         
         moveX = Input.GetAxisRaw("Horizontal");
         moveY = Input.GetAxisRaw("Vertical");
@@ -80,17 +107,27 @@ public class playerMovement : characterMovement
             {
                 animator.SetBool("AttackRight", true);
             }
+            attackSounds[atkCombo++]?.Play();
+            if (atkCombo == attackSounds.Length)
+            {
+                atkCombo = 0;
+            }
         }
         else
         {
             animator.SetBool("AttackLeft", false);
             animator.SetBool("AttackRight", false);
-
         }
-
-
-
     }
+
+    public  void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Orb"))
+        {
+            print("Orb");
+        }
+    }
+
     void HandlePlayerAnimation(float x, float y) {}
 
     public bool getIsMoving() {

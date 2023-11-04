@@ -26,9 +26,20 @@ public class MapManager : MonoBehaviour
 
 	private AudioClip footstepSound = null;
 
+	void OnEnable()
+	{
+        Events<VolumeChangeEvent>.Instance.Register(v => {
+            if (audioSource != null)
+            {
+                audioSource.volume = v;
+            }
+        });
+    }
+
 	protected void Awake()
 	{
 		audioSource = GetComponent<AudioSource>(); 
+		audioSource.volume = PlayerPrefs.GetFloat("volume", 1f);
 		player = GameObject.Find("Player").GetComponent<playerMovement>();
 		dataFromTiles = new Dictionary<TileBase, TileData>();
 
@@ -39,7 +50,7 @@ public class MapManager : MonoBehaviour
 				dataFromTiles.Add(tile, tileData);
 			}
 		}
-	}
+    }
 
 	private void Update()
 	{
@@ -49,7 +60,7 @@ public class MapManager : MonoBehaviour
 		playerPos = tilemap.WorldToCell(GameObject.Find("Player").transform.position);
 		tile = tilemap.GetTile(Vector3Int.FloorToInt(playerPos));
 
-		print("Tile under player: " + tile.name);
+		// print("Tile under player: " + tile.name);
 
 		 if (player.getIsMoving())
         {
@@ -57,7 +68,7 @@ public class MapManager : MonoBehaviour
             if (Time.time - timeSinceLastFootstep >= Random.Range(minTimeBetweenFootsteps, maxTimeBetweenFootsteps))
             {
 				/* make sound based on current tile below player */
-				switch(tile.name)
+				switch(tile?.name)
 				{
 					case "TILE_3 inner corner_4":
 						footstepSound = footstepSounds[0];
@@ -75,7 +86,7 @@ public class MapManager : MonoBehaviour
 						footstepSound = footstepSounds[2];
 						break;
 					default: 
-						footstepSound = null;
+						footstepSound = footstepSounds[0];
 						break;
 				}
                 audioSource.PlayOneShot(footstepSound);

@@ -9,21 +9,39 @@ public class AIBehavior : MonoBehaviour
     //[SerializeField]
     public float FollowDistance = 1f;
     AIAction lastAction;
+    public enemyProjectile projectile;
+    public Transform launchOffset;
+
+    private Range range;
+    public Animator animator;
+
+    private float timeWhenAllowedNextShoot = 0f;
+    private float timeBetweenShooting = 1f;
 
     void Start()
     {
         lastAction = null;
+        range = GetComponentInChildren<Range>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+
         if(lastAction?.lockAction == true)
         {
             return;
         }
 
-
+        if(range?.shoot == true)
+        {
+            animator.SetFloat("Speed", 0f);
+            if (timeWhenAllowedNextShoot <= Time.time)
+            {
+                Instantiate(projectile, launchOffset.position, Quaternion.identity);
+                timeWhenAllowedNextShoot = Time.time + timeBetweenShooting;
+            }
+        }
 
         Vector2 fVector = new Vector2(FollowDistance * 2, FollowDistance * 2);
         RaycastHit2D[] hits = new RaycastHit2D[5];
@@ -45,6 +63,10 @@ public class AIBehavior : MonoBehaviour
         if (lastAction?.desire != 0)
         {
             lastAction?.Execute();
+        }
+        else 
+        {
+            animator?.SetFloat("Speed", 0f);
         }
     }
 }
