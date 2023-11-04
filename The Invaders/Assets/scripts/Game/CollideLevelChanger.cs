@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class CollideLevelChanger : MonoBehaviour
 {
-    public Collider2D collider;
+    public Collider2D coll;
     public string newLevelName;
 
 
     public void Awake()
     {
-        collider = GetComponent<Collider2D>();
+        coll = GetComponent<Collider2D>();
     }
     void OnTriggerEnter2D(Collider2D col)
     {
