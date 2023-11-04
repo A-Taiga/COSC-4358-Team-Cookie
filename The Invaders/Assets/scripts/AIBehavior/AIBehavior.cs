@@ -11,10 +11,8 @@ public class AIBehavior : MonoBehaviour
     AIAction lastAction;
     public enemyProjectile projectile;
     public Transform launchOffset;
-
     private Range range;
     public Animator animator;
-
     private float timeWhenAllowedNextShoot = 0f;
     private float timeBetweenShooting = 1f;
 
@@ -33,7 +31,7 @@ public class AIBehavior : MonoBehaviour
             return;
         }
 
-        if(range?.shoot == true)
+        if(range.shoot == true)
         {
             animator.SetFloat("Speed", 0f);
             if (timeWhenAllowedNextShoot <= Time.time)

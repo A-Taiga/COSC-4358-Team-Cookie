@@ -19,14 +19,27 @@ public class GUIController : MonoBehaviour
 
     [Tooltip("the inventory screen")]
     public GameObject InventoryScreen;
-
-
+    
     // Start is called before the first frame update
     void Start()
     {
         SetPauseScreen(false);
         SetDeathScreen(false);
         SetInventoryScreen(false);
+    }
+    void Update()
+    {
+        if (Input.GetButtonDown("Inv"))
+        {
+            if (InventoryController.visible)
+            {
+                SetInventoryScreen(false);
+            }
+            else
+            {
+                SetInventoryScreen(true);
+            }
+        }
     }
 
     public virtual void SetHUDActive(bool state)
