@@ -38,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/InsideShop.unity
     guid: cfeb22e3135434e3b9cd87322efc6cdf
+  - enabled: 1
+    path: Assets/Scenes/GuardianHouse.unity
+    guid: 5e6de9bbb8c8a40e497e26054af3b0a0
   m_configObjects: {}
