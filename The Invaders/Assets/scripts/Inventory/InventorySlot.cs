@@ -38,6 +38,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler, IPointerDownHandler
         {
             InventoryItem inventoryItem = eventData.pointerDrag.GetComponent<InventoryItem>();
             inventoryItem.parentAfterDrag = transform;
+            inventoryManager.ChangeSelectedSlot(slotIndex);
         }
     }
 
