@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+public class ItemInfo : MonoBehaviour
+{
+
+
+    public Image image;
+    public TMP_Text itemName;
+<<<<<<< HEAD:The Invaders/Assets/scripts/Inventory/ItemInfo.cs
+
+
+    public void Start()
+    {
+            image.gameObject.SetActive(false);
+    }
+
+=======
+>>>>>>> 7dc394ab5262e34461e694cc1e734738781f3ade:The Invaders/Assets/scripts/Inventory 1/ItemInfo.cs
+   public void DisplaySelected(Image i, string name)
+   {
+        image.sprite = i.sprite;
+        image.preserveAspect = true;
+        itemName.text = name;
+<<<<<<< HEAD:The Invaders/Assets/scripts/Inventory/ItemInfo.cs
+        image.gameObject.SetActive(true);
+=======
+>>>>>>> 7dc394ab5262e34461e694cc1e734738781f3ade:The Invaders/Assets/scripts/Inventory 1/ItemInfo.cs
+   }
+}
