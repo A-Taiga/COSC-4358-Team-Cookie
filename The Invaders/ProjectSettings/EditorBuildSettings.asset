@@ -27,9 +27,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Lighthouse.unity
     guid: a39563272bec64eb681f74f5221bf2dd
   - enabled: 1
-    path: Assets/Scenes/volcano islands.unity
-    guid: 79dcbb790f8a04fccadc31d53023614e
-  - enabled: 1
     path: Assets/Scenes/wetlands.unity
     guid: da971b05462284de3b28837628f4fadd
   - enabled: 1
