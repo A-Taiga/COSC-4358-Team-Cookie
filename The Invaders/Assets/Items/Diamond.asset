@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 265465797cdec4eb986aef24d0dbc22a, type: 3}
   m_Name: Diamond
   m_EditorClassIdentifier: 
-  itemName: Diamon
+  itemName: Diamond
   tile: {fileID: 0}
   type: 1
   actionType: 2

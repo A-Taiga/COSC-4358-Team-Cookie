@@ -13,7 +13,7 @@ public class ItemInfo : MonoBehaviour
 
     public void Start()
     {
-            image.gameObject.SetActive(false);
+        image.gameObject.SetActive(false);
     }
 
    public void DisplaySelected(Image i, string name)

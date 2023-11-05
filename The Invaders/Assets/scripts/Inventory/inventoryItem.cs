@@ -18,6 +18,7 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     [HideInInspector] public int count = 1;
     [HideInInspector] public Transform parentAfterDrag;
 
+
    
     public void InitialiseItem(Item newItem)
     {
@@ -30,8 +31,8 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void RefreshCount()
     {
         countText.text = count.ToString();
-        bool textActive = count > 1;
-        countText.gameObject.SetActive(textActive);
+        // bool textActive = count > 1;
+        countText.gameObject.SetActive(true);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
