@@ -194,7 +194,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1640332503
-  m_SortingLayer: -3
+  m_SortingLayer: -2
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: e189dd21c1fb94f6380996075e25ccca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -445,7 +445,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1707714941
-  m_SortingLayer: -2
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -5495,6 +5495,14 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 835366966490400819, guid: 0c1c91e6bc46f40e2b25307b50b4945b, type: 3}
+      propertyPath: xSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 835366966490400819, guid: 0c1c91e6bc46f40e2b25307b50b4945b, type: 3}
+      propertyPath: ySpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 835366966490400819, guid: 0c1c91e6bc46f40e2b25307b50b4945b, type: 3}
       propertyPath: attackSounds.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -5676,7 +5684,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1327400861
-  m_SortingLayer: -4
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
