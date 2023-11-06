@@ -98270,10 +98270,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneBuildIndex: 5
-  useName: 0
-  sceneName: 
-  teleportOnLoad: 0
-  spawnPos: {x: 0, y: 0, z: 0}
+  useName: 1
+  sceneName: forrest
+  teleportOnLoad: 1
+  spawnPos: {x: 3.84, y: -2.516, z: 0}
 --- !u!61 &1805250705
 BoxCollider2D:
   m_ObjectHideFlags: 0
