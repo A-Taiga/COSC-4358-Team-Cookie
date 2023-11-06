@@ -225,7 +225,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 756761916779016623}
   countText: {fileID: 5388806656150185289}
-  contextMenu: {fileID: 4880655689902743743, guid: 5493ce86eac56431e9b73e0f9ebe5d07, type: 3}
   item: {fileID: 0}
   count: 1
   parentAfterDrag: {fileID: 0}

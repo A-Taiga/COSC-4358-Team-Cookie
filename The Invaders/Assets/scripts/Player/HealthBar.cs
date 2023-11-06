@@ -46,16 +46,6 @@ public class HealthBar : MonoBehaviour
         health = value;
         slider.value = health;
     }
-    public float GetHealth()
-    {
-        return health;
-    }
-
-    public void AddHealth(float value)
-    {
-        health += value;
-        slider.value = health;
-    }
 
 }
 

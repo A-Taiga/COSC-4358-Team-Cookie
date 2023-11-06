@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 4211193071327209839}
   - component: {fileID: 996313485166538738}
   - component: {fileID: 1877893364944001022}
-  - component: {fileID: 1981840821560982274}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -80,7 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1327400861
-  m_SortingLayer: -3
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 1158092027, guid: 20c3c85db20314affbf2e0829ff8e7cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -497,20 +496,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1981840821560982274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 620294447757300606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea13a800c4764344aa514112ead696fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentQuest: {fileID: 0}
-  gold: 0
 --- !u!1 &7683322016900983261
 GameObject:
   m_ObjectHideFlags: 0
