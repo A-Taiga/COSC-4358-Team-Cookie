@@ -910,19 +910,27 @@ MonoBehaviour:
 
 
 
-    Animators
+    Game Animators
 
 
 
-
-    Engineers
-
-
+    Narrative
+    Animator
 
 
-    Game
-    Designers
+    Lead Engineers
 
+
+
+    Junior Engineer
+
+
+    Game Designers
+
+
+
+    Audio
+    Manager
 
 
     Special Thanks'
@@ -988,7 +996,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -1.4041748, z: 112.33295, w: 0}
+  m_margin: {x: -11.659271, y: -1.4041748, z: 112.33295, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1037,7 +1045,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 208, y: 148.9}
+  m_AnchoredPosition: {x: 214, y: 150}
   m_SizeDelta: {x: 331.9912, y: 132.4315}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1983912210
@@ -1075,6 +1083,7 @@ MonoBehaviour:
 
     Anthony Polka
 
+
     Misbah Yasin
 
 
@@ -1083,15 +1092,20 @@ MonoBehaviour:
     Anthony
     Polka
 
+
     Misbah Yasin
 
 
-    Misbah  Yasin
-
     Dong Tran
 
+    Misbah Yasin
 
-    Professor Yun
+
+    Muhaimin Badar
+
+
+    Professor
+    Yun
 
 '
   m_isRightToLeft: 0
@@ -1156,7 +1170,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -1.4041748, z: 112.33295, w: 0}
+  m_margin: {x: 0, y: -1.4041672, z: 100.673706, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
