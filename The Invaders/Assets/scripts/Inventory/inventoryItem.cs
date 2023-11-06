@@ -11,9 +11,11 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
 
     [Header("UI")]
+    
     public Image image;
     // public TextMeshPro countText;
     public TMP_Text countText;
+
     [HideInInspector] public Item item;
     [HideInInspector] public int count = 1;
     [HideInInspector] public Transform parentAfterDrag;
@@ -30,8 +32,8 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void RefreshCount()
     {
         countText.text = count.ToString();
-        bool textActive = count > 1;
-        countText.gameObject.SetActive(textActive);
+        // bool textActive = count > 1;
+        countText.gameObject.SetActive(true);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
