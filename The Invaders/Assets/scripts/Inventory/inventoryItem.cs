@@ -11,13 +11,14 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
 
     [Header("UI")]
+    
     public Image image;
     // public TextMeshPro countText;
     public TMP_Text countText;
+
     [HideInInspector] public Item item;
     [HideInInspector] public int count = 1;
     [HideInInspector] public Transform parentAfterDrag;
-
 
    
     public void InitialiseItem(Item newItem)

@@ -9,7 +9,12 @@ public class InventorySlot : MonoBehaviour, IDropHandler, IPointerDownHandler
 	public Image image;
 	public Color selectedColor, notSelectedColor;
 	public InventoryManager inventoryManager;
+
+	public GameObject canvas;
 	public int slotIndex;
+
+
+    public ContextMenu contextMenu;
 
 	public void Awake()
 	{
@@ -32,12 +37,8 @@ public class InventorySlot : MonoBehaviour, IDropHandler, IPointerDownHandler
 			// Debug.Log("BUTTON: " + eventData.button);
 			if(eventData.button == PointerEventData.InputButton.Right)
 			{
-				inventoryItem.count--;
-				inventoryItem.RefreshCount();
-				if(inventoryItem.count <= 0)
-				{
-					Destroy(inventoryItem.gameObject);
-				}
+				Instantiate(contextMenu, Input.mousePosition, Quaternion.identity, canvas.GetComponentInChildren<RectTransform>().transform);
+				GameObject.Find("ContextMenu(Clone)").GetComponent<ContextMenu>().item = transform.GetChild(0).gameObject;
 			}
 			else if(eventData.button == PointerEventData.InputButton.Left)
 			{
