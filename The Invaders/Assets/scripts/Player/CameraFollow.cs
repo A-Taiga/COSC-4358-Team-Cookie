@@ -11,12 +11,10 @@ public class CameraFollow : MonoBehaviour
     private float deltaX, deltaY;
 
     public float CameraSpeed = 5f;
-    public static GameObject cameraHolder;
 
 
     void Awake()
     {
-        cameraHolder = this.gameObject;
         playerTransform = GameObject.FindGameObjectWithTag(TagManager.PLAYER_TAG).transform;
     }
 
