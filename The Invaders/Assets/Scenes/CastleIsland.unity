@@ -154,6 +154,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneBuildIndex: 14
+  useName: 0
+  sceneName: 
+  teleportOnLoad: 0
+  spawnPos: {x: 0, y: 0, z: 0}
 --- !u!61 &797260721
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -84119,6 +84123,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneBuildIndex: 12
+  useName: 1
+  sceneName: North Beach
+  teleportOnLoad: 1
+  spawnPos: {x: 2.06, y: 15.49, z: 0}
 --- !u!61 &1736649385
 BoxCollider2D:
   m_ObjectHideFlags: 0
