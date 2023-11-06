@@ -100627,10 +100627,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneBuildIndex: 4
-  useName: 0
-  sceneName: 
-  teleportOnLoad: 0
-  spawnPos: {x: 0, y: 0, z: 0}
+  useName: 1
+  sceneName: Village2
+  teleportOnLoad: 1
+  spawnPos: {x: 4.1609344, y: -0.021062762, z: 0}
 --- !u!61 &1514086175
 BoxCollider2D:
   m_ObjectHideFlags: 0
