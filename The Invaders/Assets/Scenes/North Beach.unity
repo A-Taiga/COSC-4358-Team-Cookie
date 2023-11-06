@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 9196728}
   - component: {fileID: 9196727}
   m_Layer: 0
-  m_Name: LevelMove (castle)
+  m_Name: LevelMove (castle island)
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0

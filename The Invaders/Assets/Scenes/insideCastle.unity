@@ -1325,7 +1325,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a02845bdc434010a15be6b42635ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIndex: 13
+  sceneBuildIndex: 12
+  useName: 0
+  sceneName: 
+  teleportOnLoad: 0
+  spawnPos: {x: 0, y: 0, z: 0}
 --- !u!61 &953262961
 BoxCollider2D:
   m_ObjectHideFlags: 0
