@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/insideCastle.unity
     guid: eb8f59fb68112447dbf1bd667db01463
+  - enabled: 1
+    path: Assets/Scenes/volcano islands.unity
+    guid: 79dcbb790f8a04fccadc31d53023614e
   m_configObjects: {}
