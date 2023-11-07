@@ -116,5 +116,7 @@ MonoBehaviour:
   image: {fileID: 8395998922446839919}
   selectedColor: {r: 1, g: 0, b: 0, a: 1}
   notSelectedColor: {r: 1, g: 1, b: 1, a: 1}
-  inventoryManagerPrefab: {fileID: 7150270992270069087, guid: ea6f2001fbb6f49e3bae18ef20a1ef7f, type: 3}
+  inventoryManager: {fileID: 0}
+  canvas: {fileID: 0}
   slotIndex: 0
+  contextMenu: {fileID: 0}

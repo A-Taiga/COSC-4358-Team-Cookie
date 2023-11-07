@@ -17,7 +17,7 @@ public class ContextMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public GameObject item;
 
 
-    public bool mouseExit = true;
+    public bool mouseExit = false;
 
     public void Update()
     {   
@@ -61,14 +61,20 @@ public class ContextMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void SplitButton()
     {
+        Debug.Log("NOT YET IMPLEMENTED");
         Destroy(gameObject);
     }
 
     public void DiscardButton()
     {
-        Debug.Log("Discard");
-        Destroy(item);
-        // Destroy();
+        item.gameObject.GetComponent<InventoryItem>().count--;
+        item.gameObject.GetComponent<InventoryItem>().RefreshCount();
+        Debug.Log("Discard 1");
+        if(item.gameObject.GetComponent<InventoryItem>().count == 0)
+        {
+            Destroy(item);
+        }
+        Destroy(gameObject);
     }
 }
 
