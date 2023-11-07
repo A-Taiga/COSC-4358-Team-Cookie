@@ -17,8 +17,12 @@ public abstract class AIAction : MonoBehaviour
 
     public bool shoot;
 
+    private FloatingHealthBar healthbar;
+
     void Awake()
     {
+        healthbar = GetComponentInChildren<FloatingHealthBar>();
+
         collidingPlayer = false;
         lockAction = false;
         shoot = false;
@@ -32,7 +36,8 @@ public abstract class AIAction : MonoBehaviour
         {
             print("HEALTH: " + health);
             health -= 20;
-            if(health <= 0)
+            healthbar.UpdateHealthBar(health);
+            if (health <= 0)
             {
                 Destroy(gameObject);
             }
