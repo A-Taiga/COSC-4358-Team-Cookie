@@ -3,6 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
+ public enum ItemType
+    {
+        Weapon,
+        Consumable,
+        Key,
+        Other
+    }
+    public enum ActionType
+    {
+        Attack,
+        Heal,
+        Other
+    }
+
+
 [CreateAssetMenu(menuName = "Scriptable objects/Item")]
 public class Item : ScriptableObject
 {
@@ -21,18 +36,6 @@ public class Item : ScriptableObject
     [Header("Both")]
     public Sprite image;
 
-    public enum ItemType
-    {
-        Weapon,
-        Consumable,
-        Key,
-        Other
-    }
-    public enum ActionType
-    {
-        Attack,
-        Heal,
-        Other
-    }
 
+   
 }

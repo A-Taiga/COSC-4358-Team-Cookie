@@ -10,7 +10,6 @@ public class ItemInfo : MonoBehaviour
     public Image image;
     public TMP_Text itemName;
 
-
     public void Start()
     {
         image.gameObject.SetActive(false);

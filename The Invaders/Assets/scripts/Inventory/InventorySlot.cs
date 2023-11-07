@@ -12,12 +12,12 @@ public class InventorySlot : MonoBehaviour, IDropHandler, IPointerDownHandler
 
 	public GameObject canvas;
 	public int slotIndex;
-
-
     public ContextMenu contextMenu;
 
 	public void Awake()
 	{
+		canvas = FindObjectOfType<Canvas>().gameObject;
+		inventoryManager = FindObjectOfType<InventoryManager>();
 		Deselect();
 	}
 	public void Select()

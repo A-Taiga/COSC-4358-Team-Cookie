@@ -14,37 +14,49 @@ public class ContextMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public Button splitButton;
     public Button discardButton;
 
-    private bool mouse_over = false;
-
     public GameObject item;
 
 
+    public bool mouseExit = true;
+
+    public void Update()
+    {   
+        if(mouseExit == true)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
-        mouse_over = true;
+        mouseExit = false;
         Debug.Log("Mouse enter");
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        mouse_over = false;
+        mouseExit = true;
         Debug.Log("Mouse exit");
         Destroy(gameObject);
     }
 
     public void UseButton()
     {
-        item.gameObject.GetComponent<InventoryItem>().count--;
-        item.gameObject.GetComponent<InventoryItem>().RefreshCount();
-        GameObject go = GameObject.Find("Healthbar");
-        HealthBar other = (HealthBar) go.GetComponent(typeof(HealthBar));
-        other.AddHealth(20);
-
-        if(item.gameObject.GetComponent<InventoryItem>().count == 0)
+        if(item.gameObject.GetComponent<InventoryItem>().item.type == ItemType.Consumable)
         {
-            Destroy(item);
+
+            item.gameObject.GetComponent<InventoryItem>().count--;
+            item.gameObject.GetComponent<InventoryItem>().RefreshCount();
+            GameObject go = GameObject.Find("Healthbar");
+            HealthBar other = (HealthBar) go.GetComponent(typeof(HealthBar));
+            other.AddHealth(20);
+
+            if(item.gameObject.GetComponent<InventoryItem>().count == 0)
+            {
+                Destroy(item);
+            }
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
     }
 
     public void SplitButton()

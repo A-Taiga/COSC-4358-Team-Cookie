@@ -788,6 +788,8 @@ MonoBehaviour:
   useButton: {fileID: 5919361937838599866}
   splitButton: {fileID: 5751450044846888966}
   discardButton: {fileID: 2906952200727221941}
+  item: {fileID: 0}
+  mouseExit: 1
 --- !u!1 &8719198860952781427
 GameObject:
   m_ObjectHideFlags: 0

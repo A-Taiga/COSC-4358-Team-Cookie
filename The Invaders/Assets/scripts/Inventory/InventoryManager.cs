@@ -12,14 +12,14 @@ public class InventoryManager : MonoBehaviour
     public ItemInfo itemInfo;
 
     int selectedSlot = -1;
-
+    
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     private void Start()
     {
         Debug.Log(inventorySlots);
-    }
-    private void Update()
-    {
-
     }
 
     public void ChangeSelectedSlot(int newValue)

@@ -19,8 +19,21 @@ public class GUIController : MonoBehaviour
 
     [Tooltip("the inventory screen")]
     public GameObject InventoryScreen;
-    
-    // Start is called before the first frame update
+
+
+    static public bool loaded = false;
+    void Awake()
+    {
+        if(!loaded)
+        {
+            DontDestroyOnLoad(gameObject);
+            loaded = true;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     void Start()
     {
         SetPauseScreen(false);
