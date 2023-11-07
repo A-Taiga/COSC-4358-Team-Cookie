@@ -26,15 +26,20 @@ public class MapManager : MonoBehaviour
 
 	private AudioClip footstepSound = null;
 
+	void OnVolumeChange(float v) {
+		if (audioSource != null)
+		{
+			audioSource.volume = v;
+		}
+	}
+
 	void OnEnable()
 	{
-        Events<VolumeChangeEvent>.Instance.Register(v => {
-            if (audioSource != null)
-            {
-                audioSource.volume = v;
-            }
-        });
+        Events<VolumeChangeEvent>.Instance.Register(OnVolumeChange);
     }
+	void OnDisable() {
+		Events<VolumeChangeEvent>.Instance.Unregister(OnVolumeChange);
+	}
 
 	protected void Awake()
 	{

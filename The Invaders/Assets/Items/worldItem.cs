@@ -16,6 +16,7 @@ public class WorldItem : MonoBehaviour
     void Start()
     {
         spriteRenderer.sprite = item.image;
+        inventoryManager = GameObject.Find("Canvas").GetComponentInChildren<InventoryManager>();
     }
     void OnCollisionEnter2D(Collision2D collision)
     {

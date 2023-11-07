@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,25 +11,29 @@ public class StaminaBar : MonoBehaviour
     public Slider slider;
     private float health;
     private float lastRan;
+    
+    void RunCheck(float cost)
+    {
+        lastRan = Time.time;
+        if (health >= 0f)
+        {
+            SetHealth(health - cost);
+        }
+        else
+        {
+            characterMovement.runLocked = true;
+        }
+    }
+
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     void OnEnable()
     {
-        Events<RunPlayerEvent>.Instance.Register(cost => {
-            lastRan = Time.time;
-            if (health >= 0f)
-            {
-                SetHealth(health - cost);
-            }
-            else
-            {
-                Events<SetPlayerRunEvent>.Instance.Trigger?.Invoke(true);
-            }
-        });
+        Events<RunPlayerEvent>.Instance.Register(RunCheck);
     }
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     void OnDisable()
     {
-        Events<RunPlayerEvent>.Instance.Unregister(Events<RunPlayerEvent>.Instance.Trigger);
+        Events<RunPlayerEvent>.Instance.Unregister(RunCheck);
     }
 
     void Awake()
@@ -55,7 +58,7 @@ public class StaminaBar : MonoBehaviour
     {
         if ((Time.time - lastRan) >= 2f && health < 100f)
         {
-            Events<SetPlayerRunEvent>.Instance.Trigger?.Invoke(false);
+            characterMovement.runLocked = false;
             SetHealth(health + 0.5f);
         }
     }

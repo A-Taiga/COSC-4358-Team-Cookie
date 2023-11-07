@@ -10,13 +10,16 @@ public class UISound : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler
     public AudioSource hoverSound;
 
 
+    void OnVolumeChange(float v) {
+        volume = v;
+    }
     void Start()
     {
         volume = PlayerPrefs.GetFloat("volume", 0.8f);
-
-        Events<VolumeChangeEvent>.Instance.Register(v => {
-            volume = v;
-        });
+        Events<VolumeChangeEvent>.Instance.Register(OnVolumeChange);
+    }
+    void OnDisable() {
+        Events<VolumeChangeEvent>.Instance.Register(OnVolumeChange);
     }
 
     public void OnPointerEnter(PointerEventData ped)

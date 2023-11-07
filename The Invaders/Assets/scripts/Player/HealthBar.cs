@@ -11,25 +11,26 @@ public class HealthBar : MonoBehaviour
     public Slider slider;
     private float health;
 
+    void OnTakeDamage(float damage) {
+        if (this.health < damage)
+        {
+            SetHealth(100 - damage);
+        }
+        else
+        {
+            SetHealth(health - damage);
+        }
+    }
+
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     void OnEnable()
     {
-        Events<TakeDamageEvent>.Instance.Register(damage => {
-            // Debug.Log($"{damage} damage taken.");
-            if (this.health < damage)
-            {
-                SetHealth(100 - damage);
-            }
-            else
-            {
-                SetHealth(health - damage);
-            }
-        });
+        Events<TakeDamageEvent>.Instance.Register(OnTakeDamage);
     }
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     void OnDisable()
     {
-        Events<TakeDamageEvent>.Instance.Unregister(Events<TakeDamageEvent>.Instance.Trigger);
+        Events<TakeDamageEvent>.Instance.Unregister(OnTakeDamage);
     }
     void Awake()
     {

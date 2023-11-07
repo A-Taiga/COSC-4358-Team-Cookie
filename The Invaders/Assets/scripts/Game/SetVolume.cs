@@ -17,6 +17,11 @@ public class SetVolume : MonoBehaviour
         slider.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
     }
 
+    public void NoSound()
+    {
+        slider.value = 0f;
+    }
+
     public void ValueChangeCheck()
     {
         volume = Mathf.Log10(slider.value) * 20;

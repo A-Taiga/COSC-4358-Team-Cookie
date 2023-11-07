@@ -6,14 +6,20 @@ public class BGM : MonoBehaviour
 {
     public AudioSource audioSource;
     // Start is called before the first frame update
+
+    void OnVolumeChange(float v) {
+        if (audioSource != null)
+        {
+            audioSource.volume = v;
+        }
+    }
+
     void OnEnable()
     {
-        Events<VolumeChangeEvent>.Instance.Register(v => {
-            if (audioSource != null)
-            {
-                audioSource.volume = v;
-            }
-        });
+        Events<VolumeChangeEvent>.Instance.Register(OnVolumeChange);
+    }
+    void OnDisable() {
+        Events<VolumeChangeEvent>.Instance.Unregister(OnVolumeChange);
     }
     void Awake()
     {

@@ -15,21 +15,8 @@ public class characterMovement : MonoBehaviour
     private Rigidbody2D rb;
     private BoxCollider2D bc;
     private RaycastHit2D movementHit;
-    
-    private bool runLocked;
 
-    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-    void OnEnable()
-    {
-        Events<SetPlayerRunEvent>.Instance.Register(v => {
-            runLocked = v;
-        });
-    }
-    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-    void OnDisable()
-    {
-        Events<SetPlayerRunEvent>.Instance.Unregister(Events<SetPlayerRunEvent>.Instance.Trigger);
-    }
+    public static bool runLocked;
 
     protected virtual void Awake() {
         runLocked = false;
@@ -70,5 +57,6 @@ public class characterMovement : MonoBehaviour
     public Vector3 GetMoveDelta() {
         return moveDelta;
     }
+
 
 }

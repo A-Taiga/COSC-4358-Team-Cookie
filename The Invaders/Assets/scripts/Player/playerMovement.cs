@@ -18,6 +18,7 @@ public class playerMovement : characterMovement
 
     private int atkCombo;
     public AudioSource[] attackSounds;
+    public ParticleSystem runParticles;
 
     private bool isMoving = false;
 
@@ -61,7 +62,7 @@ public class playerMovement : characterMovement
         
         moveX = Input.GetAxisRaw("Horizontal");
         moveY = Input.GetAxisRaw("Vertical");
-        run = Input.GetButton("Jump");
+        run = Input.GetButton("Jump") && isMoving;
         HandleMovement(moveX, moveY, run);
 
         // Debug.Log("X: " + moveDelta.x + "Y: " + moveDelta.y);
@@ -69,6 +70,15 @@ public class playerMovement : characterMovement
         if(moveX != 0 || moveY != 0)
         {
             isMoving = true;
+            if(run && !runLocked)
+            {
+                runParticles.Play();
+            } 
+            else
+            {
+                runParticles.Clear();
+                runParticles.Pause();
+            }
         }
         else
         {
@@ -120,7 +130,7 @@ public class playerMovement : characterMovement
         }
     }
 
-    public  void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Orb"))
         {
