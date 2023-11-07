@@ -6,32 +6,44 @@ using UnityEngine.UI;
 public class UIDamageFlash : MonoBehaviour
 {
     private Color startColor;
-    public SpriteRenderer heartSprite;
-    void OnTakeDamage(float amount)
+    public Image heartSprite;
+
+    bool active;
+
+    void Awake()
     {
-        if(heartSprite) {
+        active = false;
+        heartSprite = GetComponent<Image>();
+    }
+
+    public void OnTakeDamage(float amount)
+    {
+        Debug.Log("damage !");
+        if(heartSprite && !active) {
             startColor = heartSprite.color;
             StartCoroutine(flashHeart());
         }
     }
-    public void onEnable()
+    public void OnEnable()
     {
         Events<TakeDamageEvent>.Instance.Register(OnTakeDamage);
     }
-    public void onDisable()
+    public void OnDisable()
     {
         Events<TakeDamageEvent>.Instance.Unregister(OnTakeDamage);
     }
 
     IEnumerator flashHeart()
     {
-        for (int i = 0; i <= 2; i++)
+        active = true;
+        for (int i = 0; i <= 3; i++)
         {
-            heartSprite.color = Color.red;
-            yield return new WaitForSeconds(0.1f);
+            heartSprite.color = Color.white;
+            yield return new WaitForSeconds(0.08f);
             heartSprite.color = startColor;
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.08f);
         }
+        active = false;
     }
     
 }

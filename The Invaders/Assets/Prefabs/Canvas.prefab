@@ -231,6 +231,7 @@ GameObject:
   - component: {fileID: 450478431323576429}
   - component: {fileID: 269224326265047587}
   - component: {fileID: 2274095253964476714}
+  - component: {fileID: 1628043114549997568}
   m_Layer: 5
   m_Name: Heart
   m_TagString: Untagged
@@ -310,6 +311,19 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &1628043114549997568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166546617496225653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 833936784a7bb604b9b012871104da87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heartSprite: {fileID: 269224326265047587}
 --- !u!1 &697725998540135954
 GameObject:
   m_ObjectHideFlags: 0
