@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/VIllage.unity
+    path: Assets/Scenes/VIllage2.unity
     guid: 56f9ecac661123045ab5eb6aa27dc1c9
   - enabled: 1
     path: Assets/Scenes/forrest.unity
