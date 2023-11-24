@@ -55,6 +55,17 @@ public class AIBehavior : MonoBehaviour
         {
             if(action.Desire(hits) > (lastAction?.desire ?? 0))
             {
+                animator.SetFloat("Speed", 0f);
+                if(GameObject.Find("Player").GetComponent<Transform>().position.x > transform.position.x)
+                {
+                    animator.SetBool("AttackRight", true);
+                    animator.SetBool("AttackLeft", false);
+                }
+                else if(GameObject.Find("Player").GetComponent<Transform>().position.x < transform.position.x)
+                {
+                    animator.SetBool("AttackRight", false);
+                    animator.SetBool("AttackLeft", true);
+                }
                 lastAction = action;
             }
         }
@@ -65,6 +76,8 @@ public class AIBehavior : MonoBehaviour
         else 
         {
             animator?.SetFloat("Speed", 0f);
+            animator.SetBool("AttackRight", false);
+            animator.SetBool("AttackLeft", false);
         }
     }
 }

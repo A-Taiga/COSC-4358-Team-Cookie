@@ -17,7 +17,9 @@ public class InventorySlot : MonoBehaviour, IDropHandler, IPointerDownHandler
 	public void Awake()
 	{
 		canvas = FindObjectOfType<Canvas>().gameObject;
-		inventoryManager = FindObjectOfType<InventoryManager>();
+		// inventoryManager = FindObjectOfType<InventoryManager>();
+        inventoryManager = GameObject.Find("Canvas").GetComponentInChildren<InventoryManager>();
+		
 		Deselect();
 	}
 	public void Select()

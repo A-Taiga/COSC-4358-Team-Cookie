@@ -22,6 +22,9 @@ public class MeleeAttack : AIAction
     SpriteRenderer sRenderer;
     Color defaultColor;
 
+    public Animator animator;
+
+
     private bool isShaking;
 
     void Awake()
@@ -29,6 +32,7 @@ public class MeleeAttack : AIAction
         isShaking = false;
         sRenderer = GetComponent<SpriteRenderer>();
         defaultColor = sRenderer.color;
+
     }
 
     public override float Desire(RaycastHit2D[] rays)
@@ -42,6 +46,7 @@ public class MeleeAttack : AIAction
 
     public override void Execute()
     {
+
         lockAction = true;
         isShaking = true;
         _startPos = transform.position;
@@ -73,6 +78,7 @@ public class MeleeAttack : AIAction
                 yield return null;
             }
         }
+
 
         transform.position = _startPos;
         isShaking = false;
