@@ -8,7 +8,7 @@ public class WorldItem : MonoBehaviour
 
 
     [SerializeField]
-    Item item;
+    public Item item;
     [SerializeField]
     public SpriteRenderer spriteRenderer;
     [SerializeField]
