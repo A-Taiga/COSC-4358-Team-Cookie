@@ -11,11 +11,13 @@ public class Player : MonoBehaviour
     private GameObject cameraHolder;
     private HealthBar healthbar;
     public Quest currentQuest;
-    public int gold; 
 
+    
+    // Game data, will fix persistence soon.
+    public static int progress = 0;
 
-    void Start() {
-
+    void Start()
+    {
         player = getPlayerObject();
         healthbar = GetComponent<HealthBar>();
         

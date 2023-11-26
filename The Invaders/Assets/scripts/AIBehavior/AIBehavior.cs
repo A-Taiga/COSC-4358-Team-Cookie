@@ -6,6 +6,8 @@ using UnityEngine;
 public class AIBehavior : MonoBehaviour
 {
 
+    private int health = 100;
+    
     //[SerializeField]
     public float FollowDistance = 1f;
     AIAction lastAction;
@@ -16,12 +18,37 @@ public class AIBehavior : MonoBehaviour
     private float timeWhenAllowedNextShoot = 0f;
     private float timeBetweenShooting = 1f;
 
+    private FloatingHealthBar healthbar;
+
     void Start()
     {
+        healthbar = GetComponentInChildren<FloatingHealthBar>();
         lastAction = null;
         range = GetComponentInChildren<Range>();
     }
 
+    
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Sword"))
+        {
+            print("HEALTH: " + health);
+            health -= 20;
+            healthbar.UpdateHealthBar(health);
+            if (health <= 0)
+            {
+                Destroy(gameObject);
+                if (Player.progress < 2)
+                {
+                    Player.progress = 2;
+                    Player.getPlayerObject()
+                        .GetComponentInChildren<PopupMessage>()
+                        .ShowPopup("I can now enter the Sunset Bay!", 5f);
+                }
+            }
+        }
+    }
+    
     // Update is called once per frame
     void FixedUpdate()
     {
