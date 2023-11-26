@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
 
 
     void Start() {
+
         player = getPlayerObject();
         healthbar = GetComponent<HealthBar>();
         
@@ -25,6 +26,13 @@ public class Player : MonoBehaviour
         }
         customSpawn = false;
         spawnPos = Vector3.zero;
+        // DontDestroyOnLoad(gameObject);
+        InventoryManager inventoryManager = GameObject.Find("Canvas").GetComponentInChildren<InventoryManager>();
+        if(inventoryManager.hasSword == true)
+        {
+            player.GetComponent<Animator>().SetTrigger("PickedUpSword");
+        }
+
     }
 
     public static void setCustomSpawn(Vector3 pos)

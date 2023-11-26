@@ -25,12 +25,10 @@ public class AIBehavior : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
         if(lastAction?.lockAction == true)
         {
             return;
         }
-
         if(range && range.shoot == true)
         {
             animator.SetFloat("Speed", 0f);
@@ -53,6 +51,7 @@ public class AIBehavior : MonoBehaviour
         AIAction[] actions = GetComponents<AIAction>();
         foreach (AIAction action in actions)
         {
+
             if(action.Desire(hits) > (lastAction?.desire ?? 0))
             {
                 animator.SetFloat("Speed", 0f);

@@ -11,6 +11,8 @@ public class InventoryManager : MonoBehaviour
 
     public ItemInfo itemInfo;
 
+    public bool hasSword = false;
+
     int selectedSlot = -1;
     
     void Awake()
@@ -19,7 +21,6 @@ public class InventoryManager : MonoBehaviour
     }
     private void Start()
     {
-        Debug.Log(inventorySlots);
     }
 
     public void ChangeSelectedSlot(int newValue)
@@ -65,7 +66,7 @@ public class InventoryManager : MonoBehaviour
         }
         return false;
     }
-    void SpawnNewItem(Item item, InventorySlot slot)
+    public void SpawnNewItem(Item item, InventorySlot slot)
     {
         GameObject newItemGo = Instantiate(inventoryItemPrefab, slot.transform);
         InventoryItem inventoryItem = newItemGo.GetComponent<InventoryItem>();

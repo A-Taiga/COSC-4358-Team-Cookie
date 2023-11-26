@@ -22,6 +22,13 @@ public class WorldItem : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
+            if(item.name == "sword")
+            {
+                collision.gameObject.GetComponent<Animator>().SetTrigger("PickedUpSword");
+                inventoryManager.hasSword = true;
+                Destroy(gameObject);
+                return;
+            }
             inventoryManager.AddItem(item);
             Destroy(gameObject);
         }

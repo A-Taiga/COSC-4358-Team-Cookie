@@ -17,18 +17,18 @@ public class InventorySlot : MonoBehaviour, IDropHandler, IPointerDownHandler
 	public void Awake()
 	{
 		canvas = FindObjectOfType<Canvas>().gameObject;
-		// inventoryManager = FindObjectOfType<InventoryManager>();
-        inventoryManager = GameObject.Find("Canvas").GetComponentInChildren<InventoryManager>();
-		
+		inventoryManager = FindObjectOfType<InventoryManager>();
 		Deselect();
 	}
 	public void Select()
 	{
-		image.color = selectedColor;
+		if(image != null)
+			image.color = selectedColor;
 	}
 	public void Deselect()
 	{
-		image.color = notSelectedColor;
+		if(image != null)
+			image.color = notSelectedColor;
 	}
 	public void OnPointerDown(PointerEventData eventData)
 	{

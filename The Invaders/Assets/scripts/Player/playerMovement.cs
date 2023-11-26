@@ -52,9 +52,8 @@ public class playerMovement : characterMovement
         Events<VolumeChangeEvent>.Instance.Unregister(volChanger);
     }
 
-
-
-    private void Update() {
+    private void Update() 
+    {
         if(PauseManager.isPaused)
         {
             return;

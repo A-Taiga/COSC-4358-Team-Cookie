@@ -88445,7 +88445,7 @@ SpriteRenderer:
   m_Size: {x: 18.84, y: 18.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
 --- !u!4 &1624544416
@@ -95544,11 +95544,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7573667702047402372, guid: 0c1c91e6bc46f40e2b25307b50b4945b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.448
+      value: -2.04
       objectReference: {fileID: 0}
     - target: {fileID: 7573667702047402372, guid: 0c1c91e6bc46f40e2b25307b50b4945b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.145
+      value: -0.35
       objectReference: {fileID: 0}
     - target: {fileID: 7573667702047402372, guid: 0c1c91e6bc46f40e2b25307b50b4945b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -95595,6 +95595,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 345465614856072473, guid: cc42f6cb45d5b4774a23acd3355009b0, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 345465614856072473, guid: cc42f6cb45d5b4774a23acd3355009b0, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046760943248035756, guid: cc42f6cb45d5b4774a23acd3355009b0, type: 3}
+      propertyPath: m_Size.x
+      value: 6.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046760943248035756, guid: cc42f6cb45d5b4774a23acd3355009b0, type: 3}
+      propertyPath: m_Size.y
+      value: 8.062121
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046760943248035756, guid: cc42f6cb45d5b4774a23acd3355009b0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1839684710, guid: 3620b5dd70d6b4c3fa367605e1bd3ddb, type: 3}
+    - target: {fileID: 4046760943248035756, guid: cc42f6cb45d5b4774a23acd3355009b0, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8009089986347887467, guid: cc42f6cb45d5b4774a23acd3355009b0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.136998
@@ -95638,6 +95662,10 @@ PrefabInstance:
     - target: {fileID: 8294010841462027185, guid: cc42f6cb45d5b4774a23acd3355009b0, type: 3}
       propertyPath: m_Name
       value: Enemy2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8294010841462027185, guid: cc42f6cb45d5b4774a23acd3355009b0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
