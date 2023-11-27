@@ -8,4 +8,5 @@ public class TagManager : MonoBehaviour
     public static string ENEMY_TAG = "Enemy";
     public static string BULLET_TAG = "Bullet";
     public static string BOUNDARY_TAG = "Blocking";
+    public static string ENTITY_TAG = "Entity";
 }

@@ -13,7 +13,7 @@ public class characterMovement : MonoBehaviour
 
     public Vector3 moveDelta;
     private Rigidbody2D rb;
-    private BoxCollider2D bc;
+    protected BoxCollider2D bc;
     private RaycastHit2D movementHit;
 
     public static bool runLocked;

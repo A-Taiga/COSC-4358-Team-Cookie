@@ -72,5 +72,9 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
+# Ignore .vs, .idea folder
+#*/.vs/*
+*/.idea/*
+
 #.DS_Store is for macOS
 .DS_Store 

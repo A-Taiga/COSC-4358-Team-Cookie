@@ -13,11 +13,34 @@ public class CameraFollow : MonoBehaviour
     public float CameraSpeed = 5f;
     public static GameObject cameraHolder;
 
+    private static bool seenIntro = false;
 
+    public bool enableDollyOnStart = false;
+    
+    public Camera mainCam;
+    public Camera dollyCam;
+
+    public float timeDolly = 10;
+
+    IEnumerator Start()
+    {
+        if (enableDollyOnStart && !seenIntro && dollyCam)
+        {
+            var pm = playerTransform.GetComponent<playerMovement>();
+            mainCam.enabled = false;
+            dollyCam.enabled = true;
+            pm.LockMovement();
+            yield return new WaitForSeconds(timeDolly);
+            dollyCam.enabled = false;
+            mainCam.enabled = true;
+            pm.UnlockMovement();
+            seenIntro = true;
+        }
+    }
     void Awake()
     {
         cameraHolder = this.gameObject;
-        playerTransform = GameObject.FindGameObjectWithTag(TagManager.PLAYER_TAG).transform;
+        playerTransform = Player.getPlayerObject().transform;
     }
 
     private void LateUpdate() {

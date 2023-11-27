@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using System;
+using System.Numerics;
+using Vector2 = UnityEngine.Vector2;
+using Vector3 = UnityEngine.Vector3;
+
 public class playerMovement : characterMovement
 {
     private float moveX, moveY;
@@ -20,7 +24,9 @@ public class playerMovement : characterMovement
     public AudioSource[] attackSounds;
     public ParticleSystem runParticles;
 
+    private bool movementLock = false;
     private bool isMoving = false;
+    public bool isAttacking { private set; get; } = false;
 
     void volChanger(float v) 
     {
@@ -52,9 +58,21 @@ public class playerMovement : characterMovement
         Events<VolumeChangeEvent>.Instance.Unregister(volChanger);
     }
 
+    public void UnlockMovement()
+    {
+        movementLock = false;
+    }
+    public void LockMovement()
+    {
+        movementLock = true;
+        runParticles.Clear();
+        runParticles.Pause();
+        isMoving = false;
+    }
+
     private void Update() 
     {
-        if(PauseManager.isPaused)
+        if(PauseManager.isPaused || movementLock)
         {
             return;
         }
@@ -102,7 +120,13 @@ public class playerMovement : characterMovement
         //         animator.SetBool("AttackLeft", true);
         //     }
         // }
-
+        
+        if(isAttacking && 
+           (!animator.GetCurrentAnimatorStateInfo(0).IsName("player_attack_left") 
+            && !animator.GetCurrentAnimatorStateInfo(0).IsName("player_attack_right")))
+        {
+            isAttacking = false;
+        } 
 
         //Debug.Log("PLAYER: " + GameObject.Find("Player").transform.position + "MOUSE: " + worldPosition);
 
@@ -110,17 +134,19 @@ public class playerMovement : characterMovement
         {
             if(GameObject.Find("Player").transform.position.x > worldPosition.x)
             {
-                animator.SetBool("AttackLeft", true);
+                AttackLeft();
             }
             else
             {
-                animator.SetBool("AttackRight", true);
+                AttackRight();
             }
             attackSounds[atkCombo++]?.Play();
             if (atkCombo == attackSounds.Length)
             {
                 atkCombo = 0;
             }
+
+            isAttacking = true;
         }
         else
         {
@@ -131,6 +157,7 @@ public class playerMovement : characterMovement
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
+
         if(collision.gameObject.CompareTag("Orb"))
         {
             print("Orb");
@@ -141,6 +168,30 @@ public class playerMovement : characterMovement
 
     public bool getIsMoving() {
         return isMoving;
+    }
+
+    void AttackLeft()
+    {
+        animator.SetBool("AttackLeft", true);
+        var enemyHit = BoxCastDrawer.BoxCastAndDraw(bc.bounds.center, bc.bounds.size, 0f,
+            Vector2.left, 0.1f,
+            LayerMask.GetMask(TagManager.ENEMY_TAG));
+        if (enemyHit)
+        {
+            enemyHit.transform.gameObject.GetComponent<AIBehavior>().TakeDamage(20f);
+        }
+    }
+
+    void AttackRight()
+    {
+        animator.SetBool("AttackRight", true);
+        var enemyHit = BoxCastDrawer.BoxCastAndDraw(bc.bounds.center, bc.bounds.size, 0f,
+            Vector2.right, 0.1f,
+            LayerMask.GetMask(TagManager.ENEMY_TAG));
+        if (enemyHit)
+        {
+            enemyHit.transform.gameObject.GetComponent<AIBehavior>().TakeDamage(20f);
+        }
     }
 
 }

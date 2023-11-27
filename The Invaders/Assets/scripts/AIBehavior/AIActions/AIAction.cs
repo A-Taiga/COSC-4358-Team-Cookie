@@ -4,8 +4,7 @@ using UnityEngine;
 
 public abstract class AIAction : MonoBehaviour
 {
-
-    private int health = 100;
+    
     public float desire { get; protected set; }
     public bool lockAction { get; protected set; }
     
@@ -16,12 +15,9 @@ public abstract class AIAction : MonoBehaviour
     protected bool collidingPlayer;
 
     public bool shoot;
-
-    private FloatingHealthBar healthbar;
-
+    
     void Awake()
     {
-        healthbar = GetComponentInChildren<FloatingHealthBar>();
 
         collidingPlayer = false;
         lockAction = false;
@@ -29,20 +25,7 @@ public abstract class AIAction : MonoBehaviour
         cc = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
     }
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.CompareTag("Sword"))
-        {
-            print("HEALTH: " + health);
-            health -= 20;
-            healthbar.UpdateHealthBar(health);
-            if (health <= 0)
-            {
-                Destroy(gameObject);
-            }
-        }
-    }
+    
     void OnTriggerExit2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Range"))
@@ -50,6 +33,7 @@ public abstract class AIAction : MonoBehaviour
             shoot = false;
         }
     }
+    
     void OnCollisionEnter2D(Collision2D collision)
     {
 
