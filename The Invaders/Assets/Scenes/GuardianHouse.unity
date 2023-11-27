@@ -58298,8 +58298,13 @@ PrefabInstance:
       value: guardian_npc
       objectReference: {fileID: 0}
     - target: {fileID: 5181163010671726938, guid: ed28159dcceef164f991d3e70281aeff, type: 3}
+      propertyPath: lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5181163010671726938, guid: ed28159dcceef164f991d3e70281aeff, type: 3}
       propertyPath: lines.Array.data[0]
-      value: "Thank you, stranger. You've saved us. Take this as a token of our appreciation.\r\n\r\r"
+      value: 'The time has come for you to embark on your heroic journey. Begin your
+        quest at the mystical Enchanted Forest, for there, your adventure unfolds. '
       objectReference: {fileID: 0}
     - target: {fileID: 5181163010671726938, guid: ed28159dcceef164f991d3e70281aeff, type: 3}
       propertyPath: lines.Array.data[1]
