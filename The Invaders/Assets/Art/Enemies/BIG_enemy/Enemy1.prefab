@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 5345820034867503245}
   - component: {fileID: 5515777702475959775}
   - component: {fileID: 8337622999123270850}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 7247929663969318630}
   - component: {fileID: 1536554381202121104}
   - component: {fileID: 6867349871591000123}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 2410564835918522879}
   - component: {fileID: 4054175890305498469}
   - component: {fileID: 519618058740104087}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Healthbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 416411033294052927}
   - component: {fileID: 2093148988727142702}
   - component: {fileID: 8171809064354225016}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -395,7 +395,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1333612036411712303}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,7 +438,7 @@ GameObject:
   - component: {fileID: 2979642857286848506}
   - component: {fileID: 1533476049195956590}
   - component: {fileID: 7517012485535607528}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Enemy1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -603,6 +603,7 @@ MonoBehaviour:
   projectile: {fileID: 6012388278793941881, guid: 52a50150cf7014374b31d6f63702b9fc, type: 3}
   launchOffset: {fileID: 5147925074951092600}
   animator: {fileID: 7517012485535607528}
+  enemyType: 
 --- !u!114 &2979642857286848506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -637,6 +638,7 @@ MonoBehaviour:
   _time: 1
   _distance: 0.015
   _delayBetweenShakes: 0
+  animator: {fileID: 0}
 --- !u!95 &7517012485535607528
 Animator:
   serializedVersion: 5
@@ -668,7 +670,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8363052023652446849}
   - component: {fileID: 63141704041783235}
-  - component: {fileID: 2294567725230057009}
   - component: {fileID: 6742907735512502506}
   m_Layer: 7
   m_Name: Range
@@ -737,33 +738,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 40, y: 40}
   m_EdgeRadius: 0
---- !u!50 &2294567725230057009
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7858714130233270227}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.0001
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 0
 --- !u!114 &6742907735512502506
 MonoBehaviour:
   m_ObjectHideFlags: 0

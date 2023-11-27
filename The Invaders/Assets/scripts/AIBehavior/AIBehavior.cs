@@ -71,7 +71,7 @@ public class AIBehavior : MonoBehaviour
             animator.SetFloat("Speed", 0f);
             if (timeWhenAllowedNextShoot <= Time.time)
             {
-                Instantiate(projectile, launchOffset.position, Quaternion.identity);
+                Instantiate(projectile, launchOffset.transform.position, Quaternion.identity);
                 timeWhenAllowedNextShoot = Time.time + timeBetweenShooting;
             }
         }

@@ -178,7 +178,6 @@ public class playerMovement : characterMovement
             LayerMask.GetMask(TagManager.ENEMY_TAG));
         if (enemyHit)
         {
-            Debug.Log("WE HIT LEFT");
             enemyHit.transform.gameObject.GetComponent<AIBehavior>().TakeDamage(20f);
         }
     }
@@ -191,7 +190,6 @@ public class playerMovement : characterMovement
             LayerMask.GetMask(TagManager.ENEMY_TAG));
         if (enemyHit)
         {
-            Debug.Log("WE HIT RIGHT");
             enemyHit.transform.gameObject.GetComponent<AIBehavior>().TakeDamage(20f);
         }
     }
