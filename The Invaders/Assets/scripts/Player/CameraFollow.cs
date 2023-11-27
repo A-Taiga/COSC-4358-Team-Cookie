@@ -13,6 +13,8 @@ public class CameraFollow : MonoBehaviour
     public float CameraSpeed = 5f;
     public static GameObject cameraHolder;
 
+    private static bool seenIntro = false;
+    
     public Camera mainCam;
     public Camera dollyCam;
 
@@ -20,7 +22,7 @@ public class CameraFollow : MonoBehaviour
 
     IEnumerator Start()
     {
-        if (dollyCam)
+        if (!seenIntro && dollyCam)
         {
             var pm = playerTransform.GetComponent<playerMovement>();
             mainCam.enabled = false;
@@ -30,6 +32,7 @@ public class CameraFollow : MonoBehaviour
             dollyCam.enabled = false;
             mainCam.enabled = true;
             pm.UnlockMovement();
+            seenIntro = true;
         }
     }
     void Awake()
