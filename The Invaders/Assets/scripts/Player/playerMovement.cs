@@ -20,7 +20,9 @@ public class playerMovement : characterMovement
     public AudioSource[] attackSounds;
     public ParticleSystem runParticles;
 
+    private bool movementLock = false;
     private bool isMoving = false;
+    public bool isAttacking { private set; get; } = false;
 
     void volChanger(float v) 
     {
@@ -52,9 +54,21 @@ public class playerMovement : characterMovement
         Events<VolumeChangeEvent>.Instance.Unregister(volChanger);
     }
 
+    public void UnlockMovement()
+    {
+        movementLock = false;
+    }
+    public void LockMovement()
+    {
+        movementLock = true;
+        runParticles.Clear();
+        runParticles.Pause();
+        isMoving = false;
+    }
+
     private void Update() 
     {
-        if(PauseManager.isPaused)
+        if(PauseManager.isPaused || movementLock)
         {
             return;
         }
@@ -121,16 +135,26 @@ public class playerMovement : characterMovement
             {
                 atkCombo = 0;
             }
+
+            isAttacking = true;
         }
         else
         {
             animator.SetBool("AttackLeft", false);
             animator.SetBool("AttackRight", false);
         }
+
+        if(isAttacking && 
+           (!animator.GetCurrentAnimatorStateInfo(0).IsName("player_attack_left") 
+            && !animator.GetCurrentAnimatorStateInfo(0).IsName("player_attack_right")))
+        {
+            isAttacking = false;
+        } 
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
+
         if(collision.gameObject.CompareTag("Orb"))
         {
             print("Orb");

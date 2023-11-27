@@ -32,16 +32,22 @@ public class SceneTransition : MonoBehaviour
 
     IEnumerator LoadLevel(int sceneIdx)
     {
+        var pm = Player.getPlayerObject().GetComponent<playerMovement>();
+        pm.LockMovement();
         transitionAnim.SetTrigger("End");
         yield return new WaitForSeconds(1);
         SceneManager.LoadSceneAsync(sceneIdx);
         transitionAnim.SetTrigger("Start");
+        pm.UnlockMovement();
     }
     IEnumerator LoadLevel(string name)
     {
+        var pm = Player.getPlayerObject().GetComponent<playerMovement>();
+        pm.LockMovement();
         transitionAnim.SetTrigger("End");
         yield return new WaitForSeconds(1);
         SceneManager.LoadSceneAsync(name);
         transitionAnim.SetTrigger("Start");
+        pm.UnlockMovement();
     }
 }

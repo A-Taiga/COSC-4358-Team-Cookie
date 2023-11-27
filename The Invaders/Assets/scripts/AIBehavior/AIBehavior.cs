@@ -5,21 +5,22 @@ using UnityEngine;
 
 public class AIBehavior : MonoBehaviour
 {
-
-    private int health = 100;
     
     //[SerializeField]
     public float FollowDistance = 1f;
     AIAction lastAction;
     public enemyProjectile projectile;
     public Transform launchOffset;
-    private Range range;
     public Animator animator;
+    public string enemyType;
+    
+    
+    private Range range;
     private float timeWhenAllowedNextShoot = 0f;
     private float timeBetweenShooting = 1f;
-
     private FloatingHealthBar healthbar;
-
+    private float health = 100;
+    private Player player;
     void Start()
     {
         healthbar = GetComponentInChildren<FloatingHealthBar>();
@@ -27,27 +28,36 @@ public class AIBehavior : MonoBehaviour
         range = GetComponentInChildren<Range>();
     }
 
-    
-    void OnTriggerEnter2D(Collider2D collision)
+    void Awake()
     {
-        if(collision.gameObject.CompareTag("Sword"))
+        player = Player.getPlayerObject().GetComponent<Player>();
+    }
+
+    public void TakeDamage(float damage)
+    {
+        print("HEALTH: " + damage);
+        health -= damage;
+        healthbar.UpdateHealthBar(health);
+        if (health <= 0)
         {
-            print("HEALTH: " + health);
-            health -= 20;
-            healthbar.UpdateHealthBar(health);
-            if (health <= 0)
+            Destroy(gameObject);
+            if (enemyType.Equals("forest_enemy2") && Player.progress < 2)
             {
-                Destroy(gameObject);
-                if (Player.progress < 2)
-                {
-                    Player.progress = 2;
-                    Player.getPlayerObject()
-                        .GetComponentInChildren<PopupMessage>()
-                        .ShowPopup("I can now enter the Sunset Bay!", 5f);
-                }
+                Player.progress = 2;
+                player.gameObject
+                    .GetComponentInChildren<PopupMessage>()
+                    .ShowPopup("I can now enter the Sunset Bay!", 5f);
             }
         }
     }
+    
+    /*void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Sword"))
+        {
+            TakeDamage(20f);
+        }
+    }*/
     
     // Update is called once per frame
     void FixedUpdate()
@@ -82,12 +92,12 @@ public class AIBehavior : MonoBehaviour
             if(action.Desire(hits) > (lastAction?.desire ?? 0))
             {
                 animator.SetFloat("Speed", 0f);
-                if(GameObject.Find("Player").GetComponent<Transform>().position.x > transform.position.x)
+                if(player.gameObject.transform.position.x > transform.position.x)
                 {
                     animator.SetBool("AttackRight", true);
                     animator.SetBool("AttackLeft", false);
                 }
-                else if(GameObject.Find("Player").GetComponent<Transform>().position.x < transform.position.x)
+                else if(player.gameObject.transform.position.x < transform.position.x)
                 {
                     animator.SetBool("AttackRight", false);
                     animator.SetBool("AttackLeft", true);
