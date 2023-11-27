@@ -1,15 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ShopManager : InventoryManager
 {
     // Start is called before the first frame update
-    public Item[] sellingItems;
-    
 
-    void Start()
+
+
+
+    public Item[] sellingItems;
+
+    void Awake()
     {
+    }
+    void Start()
+    {  
         InventoryManager playerManager = FindObjectOfType<InventoryManager>();
         for(int i = 0 ;i  < playerManager.inventorySlots.Length; i++)
         {
@@ -18,20 +25,64 @@ public class ShopManager : InventoryManager
             if(itemInSlot != null)
             {
                 Debug.Log("ITEM IN SLOT: " + i + " " + itemInSlot.item.name);
-                SpawnNewItem(itemInSlot.item, inventorySlots[i], itemInSlot.count);
+                SpawnNewItem2(itemInSlot.item, inventorySlots[i], itemInSlot.count);
             }
         }
-
-        SpawnNewItem(sellingItems[1], inventorySlots[12], 3);
-        SpawnNewItem(sellingItems[2], inventorySlots[13], 3);
-
+        coinCount = playerManager.coinCount;
+        this.updateCoinCount();
     }
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-    public void SpawnNewItem(Item item, InventorySlot slot, int count)
+    public virtual bool AddItem(Item item)
+    {
+         if(item.itemName == "Coin")
+        {
+            coinCount++;
+            updateCoinCount();
+            return true;
+        }
+
+
+        /* search for slots with same item */
+        for(int i = 0; i < inventorySlots.Length; i++)
+        {
+            InventorySlot slot = inventorySlots[i];
+            InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+            if(itemInSlot != null 
+            && itemInSlot.item == item 
+            && itemInSlot.count < maxStackedItems
+            && itemInSlot.item.stackable == true)
+            {
+                itemInSlot.count++;
+                itemInSlot.RefreshCount();
+                return true;
+            }
+        }
+        /* search for empty item slot */
+        for(int i = 0; i < inventorySlots.Length; i++)
+        {
+            InventorySlot slot = inventorySlots[i];
+            InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+            if(itemInSlot == null)
+            {
+                this.SpawnNewItem(item, slot);
+                return true;
+            }
+        }
+        return false;
+    }
+    public virtual void SpawnNewItem(Item item, InventorySlot slot)
+    {
+        GameObject newItemGo = Instantiate(inventoryItemPrefab, slot.transform);
+        InventoryItem inventoryItem = newItemGo.GetComponent<InventoryItem>();
+        inventoryItem.InitialiseItem(item);
+    }
+
+
+    public void SpawnNewItem2(Item item, InventorySlot slot, int count)
     {
         GameObject newItemGo = Instantiate(inventoryItemPrefab, slot.transform);
         newItemGo.GetComponent<InventoryItem>().count = count;
@@ -39,4 +90,39 @@ public class ShopManager : InventoryManager
         inventoryItem.InitialiseItem(item);
     }
 
+    public void sellButton()
+    {
+        InventoryItem inventoryItem = inventorySlots[12].transform.GetChild(0).gameObject.GetComponent<InventoryItem>();
+        Debug.Log("ITEM NAME: " + inventoryItem.item.name);
+        if(inventoryItem.item.name == "Diamond")
+        {
+            this.AddItem(sellingItems[0]);
+            this.AddItem(sellingItems[0]);
+            this.AddItem(sellingItems[0]);
+            this.AddItem(sellingItems[0]);
+        }
+        else if(inventoryItem.item.name == "Healthpotion")
+        {
+            this.AddItem(sellingItems[0]);
+        }
+        else if(inventoryItem.item.name == "SpeedPotion")
+        {
+            this.AddItem(sellingItems[0]);
+            this.AddItem(sellingItems[0]);
+        }
+        else
+        {
+            return;
+        }
+        inventorySlots[12].GetComponentInChildren<InventoryItem>().count--;
+        inventorySlots[12].GetComponentInChildren<InventoryItem>().RefreshCount();
+        if(inventorySlots[12].GetComponentInChildren<InventoryItem>().count == 0)
+        {
+            Destroy(inventorySlots[12].GetComponentInChildren<InventoryItem>().gameObject);
+        }
+    }
+    public void updateCoinCount()
+    {
+        coins.transform.GetChild(1).GetComponent<TMP_Text>().text = "x " + coinCount;
+    }
 }
