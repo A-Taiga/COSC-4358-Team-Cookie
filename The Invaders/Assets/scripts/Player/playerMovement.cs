@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using System;
+using System.Numerics;
+using Vector2 = UnityEngine.Vector2;
+using Vector3 = UnityEngine.Vector3;
+
 public class playerMovement : characterMovement
 {
     private float moveX, moveY;
@@ -116,7 +120,13 @@ public class playerMovement : characterMovement
         //         animator.SetBool("AttackLeft", true);
         //     }
         // }
-
+        
+        if(isAttacking && 
+           (!animator.GetCurrentAnimatorStateInfo(0).IsName("player_attack_left") 
+            && !animator.GetCurrentAnimatorStateInfo(0).IsName("player_attack_right")))
+        {
+            isAttacking = false;
+        } 
 
         //Debug.Log("PLAYER: " + GameObject.Find("Player").transform.position + "MOUSE: " + worldPosition);
 
@@ -124,11 +134,11 @@ public class playerMovement : characterMovement
         {
             if(GameObject.Find("Player").transform.position.x > worldPosition.x)
             {
-                animator.SetBool("AttackLeft", true);
+                AttackLeft();
             }
             else
             {
-                animator.SetBool("AttackRight", true);
+                AttackRight();
             }
             attackSounds[atkCombo++]?.Play();
             if (atkCombo == attackSounds.Length)
@@ -143,13 +153,6 @@ public class playerMovement : characterMovement
             animator.SetBool("AttackLeft", false);
             animator.SetBool("AttackRight", false);
         }
-
-        if(isAttacking && 
-           (!animator.GetCurrentAnimatorStateInfo(0).IsName("player_attack_left") 
-            && !animator.GetCurrentAnimatorStateInfo(0).IsName("player_attack_right")))
-        {
-            isAttacking = false;
-        } 
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -165,6 +168,32 @@ public class playerMovement : characterMovement
 
     public bool getIsMoving() {
         return isMoving;
+    }
+
+    void AttackLeft()
+    {
+        animator.SetBool("AttackLeft", true);
+        var enemyHit = BoxCastDrawer.BoxCastAndDraw(bc.bounds.center, bc.bounds.size, 0f,
+            Vector2.left, 0.1f,
+            LayerMask.GetMask(TagManager.ENEMY_TAG));
+        if (enemyHit)
+        {
+            Debug.Log("WE HIT LEFT");
+            enemyHit.transform.gameObject.GetComponent<AIBehavior>().TakeDamage(20f);
+        }
+    }
+
+    void AttackRight()
+    {
+        animator.SetBool("AttackRight", true);
+        var enemyHit = BoxCastDrawer.BoxCastAndDraw(bc.bounds.center, bc.bounds.size, 0f,
+            Vector2.right, 0.1f,
+            LayerMask.GetMask(TagManager.ENEMY_TAG));
+        if (enemyHit)
+        {
+            Debug.Log("WE HIT RIGHT");
+            enemyHit.transform.gameObject.GetComponent<AIBehavior>().TakeDamage(20f);
+        }
     }
 
 }

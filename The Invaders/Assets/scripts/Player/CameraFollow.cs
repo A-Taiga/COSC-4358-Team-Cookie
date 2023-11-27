@@ -14,6 +14,8 @@ public class CameraFollow : MonoBehaviour
     public static GameObject cameraHolder;
 
     private static bool seenIntro = false;
+
+    public bool enableDollyOnStart = false;
     
     public Camera mainCam;
     public Camera dollyCam;
@@ -22,7 +24,7 @@ public class CameraFollow : MonoBehaviour
 
     IEnumerator Start()
     {
-        if (!seenIntro && dollyCam)
+        if (enableDollyOnStart && !seenIntro && dollyCam)
         {
             var pm = playerTransform.GetComponent<playerMovement>();
             mainCam.enabled = false;

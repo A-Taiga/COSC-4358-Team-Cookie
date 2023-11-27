@@ -514,8 +514,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentQuest: {fileID: 0}
-  gold: 0
-  progress: 0
 --- !u!1 &3333810270486598358
 GameObject:
   m_ObjectHideFlags: 0
