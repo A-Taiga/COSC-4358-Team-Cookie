@@ -7,6 +7,7 @@ using UnityEngine;
 public class LevelMove_Ref : MonoBehaviour
 {
     private GameObject playerObject;
+    private Player player;
     
     public int sceneBuildIndex;
     public bool useName;
@@ -19,6 +20,7 @@ public class LevelMove_Ref : MonoBehaviour
     public void Start()
     {
         playerObject = Player.getPlayerObject();
+        player = playerObject.GetComponent<Player>();
     }
 
     // Level move zoned enter, if collider is a player
@@ -29,7 +31,7 @@ public class LevelMove_Ref : MonoBehaviour
         // Tags work too. Maybe some players have different script components?
         if(other.tag == TagManager.PLAYER_TAG) {
             
-            if (Player.progress < progressToEnter)
+            if (player.progress < progressToEnter)
             {
                 playerObject.GetComponentInChildren<PopupMessage>().ShowPopup("I don't think I should go here right now...", 2f);
                 return;
@@ -50,6 +52,7 @@ public class LevelMove_Ref : MonoBehaviour
             {
                 Player.setCustomSpawn(spawnPos);
             }
+            SaveManager.Instance.CommitSave();
         }
     }
 }

@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Player : MonoBehaviour
+
+public class Player : MonoBehaviour, ISaveable
 {
     private static bool customSpawn = false;
     private static Vector3 spawnPos;
@@ -12,12 +15,22 @@ public class Player : MonoBehaviour
     private HealthBar healthbar;
     public Quest currentQuest;
 
+    public bool resetSaveOnAwake = false;
     
     // Game data, will fix persistence soon.
-    public static int progress = 0;
+    public int progress = 0;
+
+    void Awake()
+    {
+        if (resetSaveOnAwake)
+        {
+            FileManager.WriteToFile("savegame.json", "");
+        }
+    }
 
     void Start()
-    {
+    {        
+        SaveManager.Instance.LoadData(this);
         player = getPlayerObject();
         healthbar = GetComponent<HealthBar>();
         
@@ -34,7 +47,11 @@ public class Player : MonoBehaviour
         {
             player.GetComponent<Animator>().SetTrigger("PickedUpSword");
         }
+    }
 
+    private void OnDestroy()
+    {
+        SaveManager.Instance.SaveData(this);
     }
 
     public static void setCustomSpawn(Vector3 pos)
@@ -50,4 +67,33 @@ public class Player : MonoBehaviour
         return GameObject.FindWithTag(TagManager.PLAYER_TAG);
     }
 
+    public void PopulateSaveData(SaveData save)
+    {
+        save.playerData.playerProgress = progress;
+        save.playerData.lastScene = SceneManager.GetActiveScene().name;
+        save.playerData.spawnPos = player.transform.position;
+    }
+
+    public void LoadFromSaveData(SaveData save)
+    {
+        progress = save.playerData.playerProgress;
+        if (SceneManager.GetActiveScene().name.Equals(save.playerData.lastScene))
+        {
+            Debug.Log("custom spawn set!");
+            setCustomSpawn(save.playerData.spawnPos);
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F2))
+        {
+            SaveManager.Instance.SaveData(this);
+            SaveManager.Instance.CommitSave();
+        }
+        if (Input.GetKeyDown(KeyCode.F9))
+        {
+            FileManager.WriteToFile("savegame.json", "");
+        }
+    }
 }

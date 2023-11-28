@@ -97413,6 +97413,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3352347324397229383, guid: 16f41eb5e159745e6b19b3e0fd41486a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2.5290527
+      objectReference: {fileID: 0}
     - target: {fileID: 3448988746328773297, guid: 16f41eb5e159745e6b19b3e0fd41486a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -97625,6 +97629,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8158302772575736262, guid: 16f41eb5e159745e6b19b3e0fd41486a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.6945801
+      objectReference: {fileID: 0}
+    - target: {fileID: 8158302772575736262, guid: 16f41eb5e159745e6b19b3e0fd41486a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -41.035583
+      objectReference: {fileID: 0}
     - target: {fileID: 8799760842712806827, guid: 16f41eb5e159745e6b19b3e0fd41486a, type: 3}
       propertyPath: 
       value: 
@@ -97762,6 +97774,10 @@ PrefabInstance:
     - target: {fileID: 620294447757300606, guid: 0c1c91e6bc46f40e2b25307b50b4945b, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981840821560982274, guid: 0c1c91e6bc46f40e2b25307b50b4945b, type: 3}
+      propertyPath: resetSaveOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7573667702047402372, guid: 0c1c91e6bc46f40e2b25307b50b4945b, type: 3}
       propertyPath: m_LocalPosition.x

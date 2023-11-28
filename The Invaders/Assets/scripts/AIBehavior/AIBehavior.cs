@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class AIBehavior : MonoBehaviour
+public class AIBehavior : MonoBehaviour, ISaveable
 {
     
     //[SerializeField]
@@ -13,19 +13,26 @@ public class AIBehavior : MonoBehaviour
     public Transform launchOffset;
     public Animator animator;
     public string enemyType;
-    
+    public float health = 100;
     
     private Range range;
     private float timeWhenAllowedNextShoot = 0f;
     private float timeBetweenShooting = 1f;
     private FloatingHealthBar healthbar;
-    private float health = 100;
     private Player player;
+    public bool toRespawn = true;
+    
     void Start()
     {
+        SaveManager.Instance.LoadData(this);
         healthbar = GetComponentInChildren<FloatingHealthBar>();
         lastAction = null;
         range = GetComponentInChildren<Range>();
+        
+        if (!toRespawn)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Awake()
@@ -40,14 +47,17 @@ public class AIBehavior : MonoBehaviour
         healthbar.UpdateHealthBar(health);
         if (health <= 0)
         {
-            Destroy(gameObject);
-            if (enemyType.Equals("forest_enemy2") && Player.progress < 2)
+            if (enemyType.Equals("forest_boss") && player.progress < 2)
             {
-                Player.progress = 2;
+                player.progress = 2;
                 player.gameObject
                     .GetComponentInChildren<PopupMessage>()
                     .ShowPopup("I can now enter the Sunset Bay!", 5f);
             }
+
+            toRespawn = false;
+            SaveManager.Instance.SaveData(this);
+            Destroy(gameObject);
         }
     }
     
@@ -114,6 +124,36 @@ public class AIBehavior : MonoBehaviour
             animator?.SetFloat("Speed", 0f);
             animator.SetBool("AttackRight", false);
             animator.SetBool("AttackLeft", false);
+        }
+    }
+    
+    public void PopulateSaveData(SaveData save)
+    {
+        if (enemyType.Trim().Length > 0)
+        {
+            var enemy = new SaveData.EnemyData();
+            enemy.enemyName = enemyType;
+            enemy.respawnEnemy = toRespawn;
+            enemy.enemyHealth = health;
+            
+            int idx = save.m_EnemyData.RemoveAll(e => { return e.enemyName == enemyType; });
+            save.m_EnemyData.Add(enemy);   
+        }
+    }
+
+    public void LoadFromSaveData(SaveData save)
+    {
+        if (enemyType.Trim().Length > 0)
+        {
+            foreach (var enemy in save.m_EnemyData)
+            {
+                if (enemy.enemyName.Equals(enemyType))
+                {
+                    toRespawn = enemy.respawnEnemy;
+                    health = enemy.enemyHealth;
+                    break;
+                }
+            }
         }
     }
 }

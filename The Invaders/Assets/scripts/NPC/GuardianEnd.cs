@@ -16,9 +16,9 @@ public class GuardianEnd : MonoBehaviour
     {
         if (npc.Equals("guardian_npc"))
         {
-            if (Player.progress < 1)
+            if (player.progress < 1)
             {
-                Player.progress = 1;
+                player.progress = 1;
                 player.GetComponentInChildren<PopupMessage>().ShowPopup("I can now enter the Enchanted Forest!", 5f);
             }
         }

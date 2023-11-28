@@ -7,7 +7,7 @@ using TMPro;
 public delegate void StartDialogue(string name);
 public delegate void EndDialogue(string name);
 
-public class Dialogue : MonoBehaviour
+public class Dialogue : MonoBehaviour, ISaveable
 {
     public string dialogIdentifier;
 
@@ -25,8 +25,16 @@ public class Dialogue : MonoBehaviour
 
     private Animator playerAnimator;
 
+    public bool dialogRepeatable = true;
+    public bool dialogSeen = false;
+    
     public void DialogueCheck(string startName)
     {
+        if (dialogSeen && !dialogRepeatable)
+        {
+            return;
+        }
+
         if (!started && startName.Equals(dialogIdentifier))
         {
             StartDialogue();
@@ -35,6 +43,7 @@ public class Dialogue : MonoBehaviour
     
     void Start()
     {
+        SaveManager.Instance.LoadData(this);
         textComponent.text = string.Empty;
 
         if (string.IsNullOrEmpty(title))
@@ -98,6 +107,8 @@ public class Dialogue : MonoBehaviour
             PauseManager.isPaused = false;
             Events<EndDialogue>.Instance.Trigger?.Invoke(dialogIdentifier);
             gameObject.SetActive(false);
+            dialogSeen = true;
+            SaveManager.Instance.SaveData(this);
         }
     }
     IEnumerator TypeLine()
@@ -107,5 +118,33 @@ public class Dialogue : MonoBehaviour
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         } 
+    }
+    
+    public void PopulateSaveData(SaveData save)
+    {
+        if (dialogIdentifier.Trim().Length > 0)
+        {
+            var dialog = new SaveData.DialogueData();
+            dialog.dialogName = dialogIdentifier;
+            dialog.dialogSeen = dialogSeen;
+            
+            int idx = save.m_DialogueData.RemoveAll(d => { return d.dialogName == dialogIdentifier; });
+            save.m_DialogueData.Add(dialog);   
+        }
+    }
+
+    public void LoadFromSaveData(SaveData save)
+    {
+        if (dialogIdentifier.Trim().Length > 0)
+        {
+            foreach (var dialog in save.m_DialogueData)
+            {
+                if (dialog.dialogName.Equals(dialogIdentifier))
+                {
+                    dialogSeen = dialog.dialogSeen;
+                    break;
+                }
+            }
+        }
     }
 }

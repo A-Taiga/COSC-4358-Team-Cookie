@@ -6,6 +6,7 @@ public class ForestVillager : MonoBehaviour
 {
     public Sprite healedSprite;
     public static bool injured = true;
+    public Dialogue savedDialog;
 
     IEnumerator Start()
     {
@@ -25,10 +26,16 @@ public class ForestVillager : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-
         if (!injured)
         {
-            Events<StartDialogue>.Instance.Trigger?.Invoke("forest_injured_npc");
+            if (savedDialog.dialogSeen)
+            {
+                this.gameObject.GetComponentInChildren<PopupMessage>().ShowPopup("Thank you once again for saving me. They keep coming back...", 3f);
+            }
+            else
+            {
+                Events<StartDialogue>.Instance.Trigger?.Invoke("forest_injured_npc");
+            }
         }
         else
         {
