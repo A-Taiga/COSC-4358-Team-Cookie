@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public delegate void OnSceneChange(string sceneName);
+
 public class SceneTransition : MonoBehaviour
 {
     public static SceneTransition instance;
@@ -37,6 +39,7 @@ public class SceneTransition : MonoBehaviour
         transitionAnim.SetTrigger("End");
         yield return new WaitForSeconds(1);
         SceneManager.LoadSceneAsync(sceneIdx);
+        Events<OnSceneChange>.Instance.Trigger?.Invoke(SceneManager.GetActiveScene().name);
         transitionAnim.SetTrigger("Start");
         pm.UnlockMovement();
     }
@@ -47,6 +50,7 @@ public class SceneTransition : MonoBehaviour
         transitionAnim.SetTrigger("End");
         yield return new WaitForSeconds(1);
         SceneManager.LoadSceneAsync(name);
+        Events<OnSceneChange>.Instance.Trigger?.Invoke(name);
         transitionAnim.SetTrigger("Start");
         pm.UnlockMovement();
     }

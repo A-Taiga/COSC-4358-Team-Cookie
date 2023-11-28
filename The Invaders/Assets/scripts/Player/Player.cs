@@ -14,19 +14,9 @@ public class Player : MonoBehaviour, ISaveable
     private GameObject cameraHolder;
     private HealthBar healthbar;
     public Quest currentQuest;
-
-    public bool resetSaveOnAwake = false;
-    
+    public InventoryManager inventoryManager;
     // Game data, will fix persistence soon.
     public int progress = 0;
-
-    void Awake()
-    {
-        if (resetSaveOnAwake)
-        {
-            FileManager.WriteToFile("savegame.json", "");
-        }
-    }
 
     void Start()
     {        
@@ -42,9 +32,10 @@ public class Player : MonoBehaviour, ISaveable
         customSpawn = false;
         spawnPos = Vector3.zero;
         // DontDestroyOnLoad(gameObject);
-        InventoryManager inventoryManager = GameObject.Find("Canvas").GetComponentInChildren<InventoryManager>();
+        inventoryManager = GameObject.Find("Canvas").GetComponentInChildren<InventoryManager>();
         if(inventoryManager.hasSword == true)
         {
+            Debug.Log("we have sword!");
             player.GetComponent<Animator>().SetTrigger("PickedUpSword");
         }
     }
