@@ -1318,6 +1318,98 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &626270609
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 626270612}
+  - component: {fileID: 626270610}
+  - component: {fileID: 626270611}
+  m_Layer: 6
+  m_Name: cutscene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &626270610
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626270609}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.029843718, y: 0.08704433}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.35670096, y: 0.42467862}
+  m_EdgeRadius: 0
+--- !u!114 &626270611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626270609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ade660dcb458d459213db64357fbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finalBoss: {fileID: 2063445754}
+  csObject: {fileID: 0}
+--- !u!4 &626270612
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626270609}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.764, y: 1.082, z: -0.9362412}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &794914051
 GameObject:
   m_ObjectHideFlags: 0
@@ -24094,7 +24186,7 @@ Tilemap:
       m_TileIndex: 1
       m_TileSpriteIndex: 12
       m_TileMatrixIndex: 0
-      m_TileColorIndex: 2
+      m_TileColorIndex: 5
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741827
@@ -52527,14 +52619,14 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 4
     m_Data: {r: 0.8841926, g: 0.39376935, b: 0.5244316, a: 1}
-  - m_RefCount: 1
-    m_Data: {r: 0.9324876, g: 0.4453523, b: 0.46098572, a: 1}
+  - m_RefCount: 0
+    m_Data: {r: 6.48927e-40, g: 6.48927e-40, b: 6.48927e-40, a: 6.48927e-40}
   - m_RefCount: 3
     m_Data: {r: 0.7151393, g: 0.38063037, b: 0.3883572, a: 1}
   - m_RefCount: 104
     m_Data: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 1}
-  - m_RefCount: 0
-    m_Data: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
+  - m_RefCount: 1
+    m_Data: {r: 0.9324876, g: 0.4453523, b: 0.46098572, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -108497,6 +108589,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2063445754 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6979426946994718034, guid: 53ed2e934a44041239dcba509c72c7a9, type: 3}
+  m_PrefabInstance: {fileID: 69333976}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2140937738
 GameObject:
   m_ObjectHideFlags: 0
@@ -108600,3 +108697,4 @@ SceneRoots:
   - {fileID: 815746451}
   - {fileID: 1427135034}
   - {fileID: 1478378788}
+  - {fileID: 626270612}

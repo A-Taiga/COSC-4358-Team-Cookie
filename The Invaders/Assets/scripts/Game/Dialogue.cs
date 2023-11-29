@@ -41,7 +41,7 @@ public class Dialogue : MonoBehaviour, ISaveable
         }
     }
     
-    void Start()
+    void Awake()
     {
         SaveManager.Instance.LoadData(this);
         textComponent.text = string.Empty;

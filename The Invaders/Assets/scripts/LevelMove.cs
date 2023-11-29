@@ -14,7 +14,8 @@ public class LevelMove_Ref : MonoBehaviour
     public string sceneName;
     public bool teleportOnLoad = false;
     public Vector3 spawnPos;
-    
+
+    private float exitMargin = 0.5f;
     public int progressToEnter = 0;
 
     public void Start()
@@ -27,6 +28,9 @@ public class LevelMove_Ref : MonoBehaviour
     // Move game to another scene
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (Time.time < exitMargin)
+            return;
+        
         // Could use other.GetComponent<Player>() to see if the game object has a Player component
         // Tags work too. Maybe some players have different script components?
         if(other.tag == TagManager.PLAYER_TAG) {

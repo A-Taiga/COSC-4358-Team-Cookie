@@ -31,7 +31,9 @@ public class CameraFollow : MonoBehaviour, ISaveable
             StartIntro();
             yield return new WaitForSeconds(timeDolly);
             StopIntro();
+            Events<StartDialogue>.Instance.Trigger?.Invoke("village_start");
         }
+        dollyCam.gameObject.SetActive(false);
     }
 
     void StartIntro()

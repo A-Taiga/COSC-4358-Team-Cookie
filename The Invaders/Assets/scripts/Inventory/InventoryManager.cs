@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class InventoryManager : MonoBehaviour, ISaveable
 {
@@ -27,6 +28,11 @@ public class InventoryManager : MonoBehaviour, ISaveable
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
+        var scene = SceneManager.GetActiveScene().name;
+        if (scene.Equals("StartMenu"))
+        {
+            transform.root.gameObject.SetActive(false);
+        }
     }
     private void Start()
     {
