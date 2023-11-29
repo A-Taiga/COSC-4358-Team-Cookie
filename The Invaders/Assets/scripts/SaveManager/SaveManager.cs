@@ -5,11 +5,16 @@ using UnityEngine;
 
 public class SaveManager
 {
-    public static SaveManager Instance = new SaveManager("savegame.json");
+    public static readonly string SAVE_FILE = "savegame.json";
+    public static SaveManager Instance = new SaveManager();
     private SaveData currentSave;
     private string saveName;
     
-    SaveManager(string saveName)
+    public SaveManager() {
+        currentSave = new SaveData();
+        saveName = "tempsave.json";
+    }
+    public SaveManager(string saveName)
     {
         currentSave = new SaveData();
         this.saveName = saveName;
@@ -58,6 +63,11 @@ public class SaveManager
             saveable.LoadFromSaveData(currentSave);
         }
         
+    }
+
+    public string LastActiveScene()
+    {
+        return currentSave.playerData.lastScene;
     }
 
     ~SaveManager()

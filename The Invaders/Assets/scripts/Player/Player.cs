@@ -82,9 +82,5 @@ public class Player : MonoBehaviour, ISaveable
             SaveManager.Instance.SaveData(this);
             SaveManager.Instance.CommitSave();
         }
-        if (Input.GetKeyDown(KeyCode.F9))
-        {
-            FileManager.WriteToFile("savegame.json", "");
-        }
     }
 }
