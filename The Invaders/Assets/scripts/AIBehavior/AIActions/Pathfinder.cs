@@ -26,7 +26,16 @@ public class Pathfinder : AIAction
     private float lastRepath = float.NegativeInfinity;
 
     public bool reachedEndOfPath;
+    
+    public GameObject alertBox;
+    protected bool playerSeen = false;
 
+    protected void Awake()
+    {
+        base.Awake();
+        alertBox?.SetActive(false);
+    }
+    
     public void Start()
     {
         seeker = GetComponent<Seeker>();
@@ -63,6 +72,11 @@ public class Pathfinder : AIAction
 
     public override void Execute()
     {
+        if (!playerSeen)
+        {
+            playerSeen = true;
+            StartCoroutine(PlayerSeenAlert());
+        }
         
         animator.SetFloat("Speed",1f);
         animator.SetFloat("Horizontal", playerLocation.x - transform.position.x);
@@ -156,6 +170,17 @@ public class Pathfinder : AIAction
         else
         {
             p.Release(this);
+        }
+    }
+    
+    
+    IEnumerator PlayerSeenAlert()
+    {
+        if (alertBox)
+        {
+            alertBox.SetActive(true);
+            yield return new WaitForSeconds(2f);
+            alertBox.SetActive(false);
         }
     }
 

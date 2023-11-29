@@ -33,6 +33,8 @@ public class AIBehavior : MonoBehaviour, ISaveable
         {
             Destroy(gameObject);
         }
+        healthbar.SetMaxHealthBar(health);
+        healthbar.UpdateHealthBar(health);
     }
 
     void Awake()

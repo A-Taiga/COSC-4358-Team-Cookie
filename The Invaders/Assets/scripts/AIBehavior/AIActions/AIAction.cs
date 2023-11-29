@@ -16,7 +16,7 @@ public abstract class AIAction : MonoBehaviour
 
     public bool shoot;
     
-    void Awake()
+    protected void Awake()
     {
 
         collidingPlayer = false;

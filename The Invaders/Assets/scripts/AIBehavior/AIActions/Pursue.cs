@@ -7,8 +7,14 @@ public class Pursue : AIAction
 {
     protected float speed = 1f / 2;
     private Vector2 playerLocation;
+    public GameObject alertBox;
+    protected bool playerSeen = false;
 
-
+    protected void Awake()
+    {
+        base.Awake();
+        alertBox?.SetActive(false);
+    }
 
     public override float Desire(RaycastHit2D[] rays)
     {
@@ -36,7 +42,22 @@ public class Pursue : AIAction
 
     public override void Execute()
     {
+        if (!playerSeen)
+        {
+            playerSeen = true;
+            StartCoroutine(PlayerSeenAlert());
+        }
         var step = speed * Time.deltaTime; // calculate distance to move
         transform.position = Vector3.MoveTowards(transform.position, playerLocation, step);
+    }
+
+    IEnumerator PlayerSeenAlert()
+    {
+        if (alertBox)
+        {
+            alertBox.SetActive(true);
+            yield return new WaitForSeconds(2f);
+            alertBox.SetActive(false);
+        }
     }
 }
