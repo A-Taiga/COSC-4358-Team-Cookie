@@ -9407,6 +9407,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &620605856 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5164589688761712061, guid: 16f41eb5e159745e6b19b3e0fd41486a, type: 3}
+  m_PrefabInstance: {fileID: 2438161276227252400}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &637839755
 GameObject:
   m_ObjectHideFlags: 0
@@ -92124,11 +92129,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 920724726}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1737964473 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6608598723068465617, guid: 16f41eb5e159745e6b19b3e0fd41486a, type: 3}
-  m_PrefabInstance: {fileID: 2438161276227252400}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1751502772
 GameObject:
   m_ObjectHideFlags: 0
@@ -97703,7 +97703,7 @@ PrefabInstance:
     - target: {fileID: 8799760842712806827, guid: 16f41eb5e159745e6b19b3e0fd41486a, type: 3}
       propertyPath: coins
       value: 
-      objectReference: {fileID: 1737964473}
+      objectReference: {fileID: 620605856}
     - target: {fileID: 9025649633457199991, guid: 16f41eb5e159745e6b19b3e0fd41486a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -97726,6 +97726,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9025649633457199991, guid: 16f41eb5e159745e6b19b3e0fd41486a, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9199292510239460178, guid: 16f41eb5e159745e6b19b3e0fd41486a, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9199292510239460178, guid: 16f41eb5e159745e6b19b3e0fd41486a, type: 3}
+      propertyPath: m_MaxValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9199292510239460178, guid: 16f41eb5e159745e6b19b3e0fd41486a, type: 3}
+      propertyPath: m_Direction
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -134,6 +134,7 @@ public class InventoryManager : MonoBehaviour, ISaveable
         inventoryItem.InitialiseItem(item);
         coinCount = coins;
         updateCoinCount();
+        Debug.Log("COIN COUNT: " + coinCount);
         // AddItem(items[0]);
     }
     
