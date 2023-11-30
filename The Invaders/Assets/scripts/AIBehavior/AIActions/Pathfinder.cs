@@ -30,7 +30,7 @@ public class Pathfinder : AIAction
     public GameObject alertBox;
     protected bool playerSeen = false;
 
-    protected void Awake()
+    protected override void Awake()
     {
         base.Awake();
         alertBox?.SetActive(false);

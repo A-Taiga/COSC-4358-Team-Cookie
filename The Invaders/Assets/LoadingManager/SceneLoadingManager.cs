@@ -72,6 +72,8 @@ public class SceneLoadingManager : MonoBehaviour
     /// <param name="sceneToLoad">Level name.</param>
     public static void LoadScene(string sceneToLoad)
     {
+        GUIController.Instance?.transform.root.gameObject.SetActive(true);
+        
         _sceneToLoad = sceneToLoad;
         Application.backgroundLoadingPriority = ThreadPriority.High;
         if (LoadingScreenSceneName != null)

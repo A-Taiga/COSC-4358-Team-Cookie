@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SaveManager
@@ -8,7 +9,7 @@ public class SaveManager
     public static readonly string SAVE_FILE = "savegame.json";
     public static SaveManager Instance = new SaveManager();
     private SaveData currentSave;
-    private string saveName;
+    public string saveName { get; private set; }
     
     public SaveManager() {
         currentSave = new SaveData();
@@ -68,6 +69,20 @@ public class SaveManager
     public string LastActiveScene()
     {
         return currentSave.playerData.lastScene;
+    }
+
+    public void ForceSave()
+    {
+        if (saveName.Equals(SaveManager.SAVE_FILE))
+        {
+
+            var savables = GameObject.FindObjectsOfType<MonoBehaviour>()
+                .OfType<ISaveable>()
+                .ToArray();
+
+            SaveData(savables);
+            CommitSave();
+        }
     }
 
     ~SaveManager()

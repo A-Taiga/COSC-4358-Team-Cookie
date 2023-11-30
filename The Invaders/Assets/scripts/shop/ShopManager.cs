@@ -36,7 +36,7 @@ public class ShopManager : InventoryManager
     {
 
     }
-    public virtual bool AddItem(Item item)
+    public override bool AddItem(Item item)
     {
          if(item.itemName == "Coin")
         {
@@ -74,7 +74,7 @@ public class ShopManager : InventoryManager
         }
         return false;
     }
-    public virtual void SpawnNewItem(Item item, InventorySlot slot)
+    public override void SpawnNewItem(Item item, InventorySlot slot)
     {
         GameObject newItemGo = Instantiate(inventoryItemPrefab, slot.transform);
         InventoryItem inventoryItem = newItemGo.GetComponent<InventoryItem>();
@@ -121,7 +121,7 @@ public class ShopManager : InventoryManager
             Destroy(inventorySlots[12].GetComponentInChildren<InventoryItem>().gameObject);
         }
     }
-    public void updateCoinCount()
+    public override void updateCoinCount()
     {
         coins.transform.GetChild(1).GetComponent<TMP_Text>().text = "x " + coinCount;
     }

@@ -27,7 +27,7 @@ public class InventoryManager : MonoBehaviour, ISaveable
     
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(transform.root.gameObject);
         var scene = SceneManager.GetActiveScene().name;
         if (scene.Equals("StartMenu"))
         {
@@ -139,6 +139,7 @@ public class InventoryManager : MonoBehaviour, ISaveable
     
     public void PopulateSaveData(SaveData save)
     {
+        save.m_InventoryData.Clear();
         save.hasSwordUpgrade = hasSword;
         save.coinCount = coinCount;
         

@@ -20,14 +20,16 @@ public class GUIController : MonoBehaviour
     [Tooltip("the inventory screen")]
     public GameObject InventoryScreen;
 
+    public static GUIController Instance;
 
     static public bool loaded = false;
     void Awake()
     {
         if(!loaded)
         {
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(transform.root.gameObject);
             loaded = true;
+            Instance = this;
         }
         else
         {

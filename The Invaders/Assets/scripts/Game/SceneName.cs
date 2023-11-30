@@ -8,6 +8,7 @@ using TMPro;
 public class SceneName : MonoBehaviour
 {
     private float timeRemaining = 3;
+    public static string sceneName { get; private set; }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
@@ -15,6 +16,11 @@ public class SceneName : MonoBehaviour
         timeRemaining = 3f;
         GetComponentInChildren<TMP_Text>().text = scene.name;
         gameObject.SetActive(true);
+    }
+
+    void Awake()
+    {
+        sceneName = SceneManager.GetActiveScene().name;
     }
 
     // Start is called before the first frame update

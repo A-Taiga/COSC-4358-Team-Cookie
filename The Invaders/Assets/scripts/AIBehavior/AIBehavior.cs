@@ -49,14 +49,6 @@ public class AIBehavior : MonoBehaviour, ISaveable
         healthbar.UpdateHealthBar(health);
         if (health <= 0)
         {
-            if (enemyType.Equals("forest_boss") && player.progress < 2)
-            {
-                player.progress = 2;
-                player.gameObject
-                    .GetComponentInChildren<PopupMessage>()
-                    .ShowPopup("I can now enter the Sunset Bay!", 5f);
-            }
-
             toRespawn = false;
             SaveManager.Instance.SaveData(this);
             Destroy(gameObject);
@@ -78,7 +70,7 @@ public class AIBehavior : MonoBehaviour, ISaveable
         {
             return;
         }
-        if(range && range.shoot == true)
+        if(range && range.shoot == true && launchOffset)
         {
             animator.SetFloat("Speed", 0f);
             if (timeWhenAllowedNextShoot <= Time.time)

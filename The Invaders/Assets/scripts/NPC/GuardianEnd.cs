@@ -20,6 +20,7 @@ public class GuardianEnd : MonoBehaviour
             {
                 player.progress = 1;
                 player.GetComponentInChildren<PopupMessage>().ShowPopup("I can now enter the Enchanted Forest!", 5f);
+                SaveManager.Instance.SaveData(player);
             }
         }
     }

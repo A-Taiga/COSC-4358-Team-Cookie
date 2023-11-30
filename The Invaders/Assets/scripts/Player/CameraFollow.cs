@@ -22,18 +22,22 @@ public class CameraFollow : MonoBehaviour, ISaveable
 
     public float timeDolly = 10;
     private playerMovement pm;
+
     IEnumerator Start()
     {
         pm = playerTransform.GetComponent<playerMovement>();
         SaveManager.Instance.LoadData(this);
-        if ((alwaysWatchIntro || !seenIntro) && dollyCam)
+        if (dollyCam)
         {
-            StartIntro();
-            yield return new WaitForSeconds(timeDolly);
-            StopIntro();
-            Events<StartDialogue>.Instance.Trigger?.Invoke("village_start");
+            if ((alwaysWatchIntro || !seenIntro))
+            {
+                StartIntro();
+                yield return new WaitForSeconds(timeDolly);
+                StopIntro();
+            }
+
+            dollyCam.gameObject.SetActive(false);
         }
-        dollyCam.gameObject.SetActive(false);
     }
 
     void StartIntro()
@@ -50,6 +54,7 @@ public class CameraFollow : MonoBehaviour, ISaveable
         pm.UnlockMovement();
         seenIntro = true;
         SaveManager.Instance.SaveData(this);
+        Events<StartDialogue>.Instance.Trigger?.Invoke("village_start");
     }
 
     void Awake()

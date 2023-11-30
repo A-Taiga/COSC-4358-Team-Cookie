@@ -14,7 +14,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler, IPointerDownHandler
 	public int slotIndex;
     public ContextMenu contextMenu;
 
-	public void Awake()
+	public virtual void Awake()
 	{
 		canvas = FindObjectOfType<Canvas>().gameObject;
 		inventoryManager = FindObjectOfType<InventoryManager>();

@@ -10,6 +10,7 @@ public class ForestVillager : MonoBehaviour
 
     IEnumerator Start()
     {
+        Events<EndDialogue>.Instance.Register(EndCheck);
         while (true)
         {
             var enemies = GameObject.FindGameObjectsWithTag("Enemy");
@@ -21,7 +22,21 @@ public class ForestVillager : MonoBehaviour
                 sr.sprite = healedSprite;
                 break;
             }
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(2f);
+        }
+    }
+
+    void EndCheck(string name)
+    {
+        if (name.Equals("forest_injured_npc"))
+        {
+            Player player = Player.getPlayerObject().GetComponent<Player>();
+
+            player.progress = 2;
+            player.gameObject
+                .GetComponentInChildren<PopupMessage>()
+                .ShowPopup("Maybe I should check out Sunset Bay...", 5f);
+            SaveManager.Instance.SaveData(player);
         }
     }
     private void OnTriggerEnter2D(Collider2D other)

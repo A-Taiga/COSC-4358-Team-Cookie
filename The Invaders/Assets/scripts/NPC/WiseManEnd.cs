@@ -20,6 +20,7 @@ public class WiseManEnd : MonoBehaviour
             {
                 player.progress = 3;
                 player.GetComponentInChildren<PopupMessage>().ShowPopup("I can now enter the Wetlands!", 5f);
+                SaveManager.Instance.SaveData(player);
             }
         }
     }

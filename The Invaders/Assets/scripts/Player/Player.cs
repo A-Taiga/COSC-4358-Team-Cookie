@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,21 +5,26 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour, ISaveable
 {
     private static bool customSpawn = false;
-    private static Vector3 spawnPos;
+    public static Vector3 spawnPos { private set; get; }
 
     private GameObject player;
     private GameObject cameraHolder;
     private HealthBar healthbar;
+    private StaminaBar staminabar;
     public Quest currentQuest;
     public InventoryManager inventoryManager;
     // Game data, will fix persistence soon.
     public int progress = 0;
 
+
+    private void Awake()
+    {
+        player = getPlayerObject();
+    }
+
     void Start()
     {        
         SaveManager.Instance.LoadData(this);
-        player = getPlayerObject();
-        healthbar = GetComponent<HealthBar>();
         
         if(customSpawn)
         {
@@ -30,7 +32,7 @@ public class Player : MonoBehaviour, ISaveable
             CameraFollow.cameraHolder.transform.position = new Vector3(spawnPos.x, spawnPos.y, CameraFollow.cameraHolder.transform.position.z);
         }
         customSpawn = false;
-        spawnPos = Vector3.zero;
+        spawnPos = player.transform.position;
         // DontDestroyOnLoad(gameObject);
         inventoryManager = GameObject.Find("Canvas").GetComponentInChildren<InventoryManager>();
         if(inventoryManager.hasSword == true)
@@ -38,11 +40,6 @@ public class Player : MonoBehaviour, ISaveable
             Debug.Log("we have sword!");
             player.GetComponent<Animator>().SetTrigger("PickedUpSword");
         }
-    }
-
-    private void OnDestroy()
-    {
-        SaveManager.Instance.SaveData(this);
     }
 
     public static void setCustomSpawn(Vector3 pos)
@@ -67,11 +64,15 @@ public class Player : MonoBehaviour, ISaveable
 
     public void LoadFromSaveData(SaveData save)
     {
-        progress = save.playerData.playerProgress;
-        if (SceneManager.GetActiveScene().name.Equals(save.playerData.lastScene))
+        if (save.seenIntroCam)
         {
-            Debug.Log("custom spawn set!");
-            setCustomSpawn(save.playerData.spawnPos);
+            progress = save.playerData.playerProgress;
+
+            if (SceneManager.GetActiveScene().name.Equals(save.playerData.lastScene))
+            {
+                Debug.Log("custom spawn set!");
+                setCustomSpawn(save.playerData.spawnPos);
+            }
         }
     }
 
@@ -79,8 +80,7 @@ public class Player : MonoBehaviour, ISaveable
     {
         if (Input.GetKeyDown(KeyCode.F2))
         {
-            SaveManager.Instance.SaveData(this);
-            SaveManager.Instance.CommitSave();
+            SaveManager.Instance.ForceSave();
         }
     }
 }
