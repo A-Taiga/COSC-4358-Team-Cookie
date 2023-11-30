@@ -8,6 +8,7 @@ using TMPro;
 public class SceneName : MonoBehaviour
 {
     private float timeRemaining = 3;
+    public static string sceneName { get; private set; }
 
 
     public GameObject playerMapPos;
@@ -31,6 +32,11 @@ public class SceneName : MonoBehaviour
             case "CastleIsland":    playerMapPos.transform.localPosition = new Vector3(538, 429, 0);    break;
         }
 
+    }
+
+    void Awake()
+    {
+        sceneName = SceneManager.GetActiveScene().name;
     }
 
     // Start is called before the first frame update

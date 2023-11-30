@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public delegate void RunPlayerEvent(float cost);
 
-public class StaminaBar : MonoBehaviour
+public class StaminaBar : MonoBehaviour, ISaveable
 {
     public Slider slider;
     private float health;
@@ -43,6 +43,11 @@ public class StaminaBar : MonoBehaviour
         SetHealth(100f);
     }
 
+    void Start()
+    {
+        SaveManager.Instance.LoadData(this);
+    }
+
     public void SetMaxHealth(float value)
     {
         slider.maxValue = value;
@@ -54,12 +59,30 @@ public class StaminaBar : MonoBehaviour
         slider.value = health;
     }
 
+    public float GetHealth()
+    {
+        return health;
+    }
+
     void FixedUpdate()
     {
         if ((Time.time - lastRan) >= 2f && health < 100f)
         {
             characterMovement.runLocked = false;
             SetHealth(health + 0.5f);
+        }
+    }
+    
+    public void PopulateSaveData(SaveData save)
+    {
+        save.playerData.playerStamina = GetHealth();
+    }
+
+    public void LoadFromSaveData(SaveData save)
+    {
+        if (save.seenIntroCam)
+        {
+            SetHealth(save.playerData.playerStamina);
         }
     }
 

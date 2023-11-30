@@ -16,10 +16,11 @@ public class WiseManEnd : MonoBehaviour
     {
         if (npc.Equals("wizard_npc"))
         {
-            if (Player.progress < 3)
+            if (player.progress < 3)
             {
-                Player.progress = 3;
+                player.progress = 3;
                 player.GetComponentInChildren<PopupMessage>().ShowPopup("I can now enter the Wetlands!", 5f);
+                SaveManager.Instance.SaveData(player);
             }
         }
     }

@@ -27,8 +27,9 @@ public class MeleeAttack : AIAction
 
     private bool isShaking;
 
-    void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         isShaking = false;
         sRenderer = GetComponent<SpriteRenderer>();
         defaultColor = sRenderer.color;

@@ -1,12 +1,12 @@
+using System;
 using System.Collections;
 using System.Threading;
 using UnityEngine;
 
-public class CameraFollow : MonoBehaviour
+public class CameraFollow : MonoBehaviour, ISaveable
 {
     private Transform playerTransform;
-    [SerializeField]
-    private float boundX = 0.3f, boundY = 0.15f;
+    [SerializeField] private float boundX = 0.3f, boundY = 0.15f;
     private Vector3 deltaPos;
     private float deltaX, deltaY;
 
@@ -15,35 +15,64 @@ public class CameraFollow : MonoBehaviour
 
     private static bool seenIntro = false;
 
-    public bool enableDollyOnStart = false;
-    
+    public bool alwaysWatchIntro = false;
+
     public Camera mainCam;
     public Camera dollyCam;
 
     public float timeDolly = 10;
+    private playerMovement pm;
 
     IEnumerator Start()
     {
-        if (enableDollyOnStart && !seenIntro && dollyCam)
+        pm = playerTransform.GetComponent<playerMovement>();
+        SaveManager.Instance.LoadData(this);
+        if (dollyCam)
         {
-            var pm = playerTransform.GetComponent<playerMovement>();
-            mainCam.enabled = false;
-            dollyCam.enabled = true;
-            pm.LockMovement();
-            yield return new WaitForSeconds(timeDolly);
-            dollyCam.enabled = false;
-            mainCam.enabled = true;
-            pm.UnlockMovement();
-            seenIntro = true;
+            if ((alwaysWatchIntro || !seenIntro))
+            {
+                StartIntro();
+                yield return new WaitForSeconds(timeDolly);
+                StopIntro();
+            }
+
+            dollyCam.gameObject.SetActive(false);
         }
     }
+
+    void StartIntro()
+    {
+        mainCam.enabled = false;
+        dollyCam.enabled = true;
+        pm.LockMovement();
+    }
+
+    void StopIntro()
+    {
+        dollyCam.enabled = false;
+        mainCam.enabled = true;
+        pm.UnlockMovement();
+        seenIntro = true;
+        SaveManager.Instance.SaveData(this);
+        Events<StartDialogue>.Instance.Trigger?.Invoke("village_start");
+    }
+
     void Awake()
     {
         cameraHolder = this.gameObject;
         playerTransform = Player.getPlayerObject().transform;
     }
 
-    private void LateUpdate() {
+    void Update()
+    {
+        if (!seenIntro && Input.GetKeyDown(KeyCode.Escape))
+        {
+            StopCoroutine(Start());
+            StopIntro();
+        }
+    }
+
+private void LateUpdate() {
         Follow();
     }
     private void Follow() { 
@@ -74,5 +103,16 @@ public class CameraFollow : MonoBehaviour
         Vector3 targetPos = playerTransform.position + deltaPos;
         targetPos.z = transform.position.z;
         transform.position = Vector3.Lerp(transform.position, targetPos, CameraSpeed * Time.deltaTime);
+    }
+    
+    public void PopulateSaveData(SaveData save)
+    {
+        save.seenIntroCam = seenIntro;
+    }
+
+    public void LoadFromSaveData(SaveData save)
+    {
+        seenIntro = save.seenIntroCam;
+        Debug.Log("intro seen: " + save.seenIntroCam);
     }
 }

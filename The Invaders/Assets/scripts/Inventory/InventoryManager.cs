@@ -1,12 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
-public class InventoryManager : MonoBehaviour
+public class InventoryManager : MonoBehaviour, ISaveable
 {
-
     public Item[] items;
     public int maxStackedItems = 4;
     public InventorySlot[] inventorySlots;
@@ -24,20 +27,36 @@ public class InventoryManager : MonoBehaviour
     
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(transform.root.gameObject);
+        var scene = SceneManager.GetActiveScene().name;
+        if (scene.Equals("StartMenu"))
+        {
+            transform.root.gameObject.SetActive(false);
+        }
     }
     private void Start()
     {
-
+        SaveManager.Instance.LoadData(this);
+        Events<OnSceneChange>.Instance.Register(SceneChange);
     }
 
+    private void OnDestroy()
+    {
+        Events<OnSceneChange>.Instance.Unregister(SceneChange);
+    }
+
+    void SceneChange(string newScene)
+    {
+        SaveManager.Instance.SaveData(this);
+    }
+    
     public void ChangeSelectedSlot(int newValue)
     {
-
         if(selectedSlot >= 0)
         {
             inventorySlots[selectedSlot].Deselect();
         }
+        
         inventorySlots[newValue].Select();
         selectedSlot = newValue;
         itemInfo.DisplaySelected(inventorySlots[newValue].transform.GetChild(0).GetComponent<Image>(),
@@ -116,5 +135,48 @@ public class InventoryManager : MonoBehaviour
         coinCount = coins;
         updateCoinCount();
         // AddItem(items[0]);
+    }
+    
+    public void PopulateSaveData(SaveData save)
+    {
+        save.m_InventoryData.Clear();
+        save.hasSwordUpgrade = hasSword;
+        save.coinCount = coinCount;
+        
+        for (int i = 0; i < inventorySlots.Length; i++)
+        {
+            if (inventorySlots[i] != null)
+            {
+                var slotItem = inventorySlots[i].GetComponentInChildren<InventoryItem>();
+                if (slotItem != null)
+                {
+                    var item = new SaveData.InventoryData();
+                    item.itemName = slotItem.item.itemName;
+                    item.itemAmount = slotItem.count;
+                    item.slotIndex = i;
+
+                    save.m_InventoryData.Add(item);
+                }
+            }
+        }
+    }
+
+    public void LoadFromSaveData(SaveData save)
+    {
+        hasSword = save.hasSwordUpgrade;
+
+        foreach (var item in save.m_InventoryData.ToList())
+        {
+            InventorySlot slot = inventorySlots[item.slotIndex];
+            var _Item = Array.Find(items, i => { return i.itemName == item.itemName; });
+            SpawnNewItem(_Item, slot);
+            InventoryItem slotItem = slot.GetComponentInChildren<InventoryItem>();
+            slotItem.count = item.itemAmount;
+            slotItem.RefreshCount();
+            save.m_InventoryData.Remove(item);
+        }
+
+        coinCount = save.coinCount;
+        updateCoinCount();
     }
 }

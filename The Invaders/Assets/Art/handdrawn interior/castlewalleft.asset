@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: castlewalleft
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 21300000, guid: 4ef77fcc77ff04f949572fa70e790b9a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 1}
   m_Transform:
     e00: 1
     e01: 0

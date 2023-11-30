@@ -14,7 +14,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler, IPointerDownHandler
 	public int slotIndex;
     public ContextMenu contextMenu;
 
-	public void Awake()
+	public virtual void Awake()
 	{
 		canvas = FindObjectOfType<Canvas>().gameObject;
 		inventoryManager = FindObjectOfType<InventoryManager>();
@@ -32,15 +32,15 @@ public class InventorySlot : MonoBehaviour, IDropHandler, IPointerDownHandler
 	}
 	public void OnPointerDown(PointerEventData eventData)
 	{
-		InventoryItem inventoryItem = transform.GetChild(0).gameObject.GetComponent<InventoryItem>();
+		InventoryItem inventoryItem = GetComponentInChildren<InventoryItem>();
 		if(inventoryItem != null)
 		{
 			
-			// Debug.Log("BUTTON: " + eventData.button);
+			//Debug.Log("BUTTON: " + eventData.button);
 			if(eventData.button == PointerEventData.InputButton.Right)
 			{
-				Instantiate(contextMenu, Input.mousePosition, Quaternion.identity, canvas.GetComponentInChildren<RectTransform>().transform);
-				GameObject.Find("ContextMenu(Clone)").GetComponent<ContextMenu>().item = transform.GetChild(0).gameObject;
+				var obj = Instantiate(contextMenu, Input.mousePosition, Quaternion.identity, transform.parent.parent);
+				obj.item = transform.GetChild(0).gameObject;
 			}
 			else if(eventData.button == PointerEventData.InputButton.Left)
 			{

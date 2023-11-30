@@ -6,10 +6,13 @@ public class SaveData
 {
 
     [System.Serializable]
-    public struct PlayerData {
+    public struct PlayerData
+    {
+        public string lastScene;
+        public Vector3 spawnPos;
         public int playerProgress;
-        public int playerHealth;
-        public int playerStamina;
+        public float playerHealth;
+        public float playerStamina;
     }
 
     [System.Serializable]
@@ -23,8 +26,8 @@ public class SaveData
     public struct EnemyData
     {
         public string enemyName;
-        public int respawnEnemy;
-        public int enemyHealth;
+        public bool respawnEnemy;
+        public float enemyHealth;
     }
 
     [System.Serializable]
@@ -32,14 +35,30 @@ public class SaveData
     {
         public string dialogName;
         public bool dialogSeen;
-        public bool dialogRepeatable;
+    }
+
+    [System.Serializable]
+    public struct WorldItem
+    {
+        public int wiHash;
+        public bool wiPickedUp;
     }
     
-
-    public List<EnemyData> m_EnemyData = new List<EnemyData>();
+    public bool seenIntroCam;
+    public bool hasWetlandsKey;
+    public bool hasSwordUpgrade;
+    public bool hasVolcanoIslandsKey;
+    public bool hasShield;
+    public bool forestVillagerSaved;
+    
+    public int coinCount;
+    
+    public PlayerData playerData;
     public List<InventoryData> m_InventoryData = new List<InventoryData>();
+    public List<EnemyData> m_EnemyData = new List<EnemyData>();
     public List<DialogueData> m_DialogueData = new List<DialogueData>();
-
+    public List<WorldItem> m_WorldItems = new List<WorldItem>();
+    
     public string ToJson()
     {
         return JsonUtility.ToJson(this);

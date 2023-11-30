@@ -6,7 +6,7 @@ public class ShopSlot : InventorySlot
 {
     // Start is called before the first frame update
 
-    public void Awake()
+    public override void Awake()
     {
         // canvas = FindObjectOfType<Canvas>().gameObject;
         // canvas = GameObject.Find("ShopCanvas");

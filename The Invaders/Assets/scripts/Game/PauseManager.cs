@@ -17,8 +17,8 @@ public class PauseManager : MonoBehaviour
     void Reset()
     {
         isPaused = false;
-        MainPause?.SetActive(false);
-        Settings?.SetActive(false);
+        MainPause.SetActive(false);
+        Settings.SetActive(false);
     }
     public void PauseGame()
     {
@@ -48,21 +48,26 @@ public class PauseManager : MonoBehaviour
     public void RestartLevel()
     {
         ResumeGame();
+        Player.setCustomSpawn(Player.spawnPos);
+        SceneTransition.instance.transitionAnim.SetTrigger("End");
+        SceneTransition.instance.transitionAnim.SetTrigger("Start");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void ShowSettings()
     {
         MainPause.SetActive(false);
-        Settings?.SetActive(true);
+        Settings.SetActive(true);
     }
     public void CloseSettings()
     {
-        MainPause?.SetActive(true);
-        Settings?.SetActive(false);
+        MainPause.SetActive(true);
+        Settings.SetActive(false);
     }
     public void QuitToMenu()
     {
-        Time.timeScale = 1f;
+        SaveManager.Instance.ForceSave();
+        ResumeGame();
+        uiController.transform.root.gameObject.SetActive(false);
         SceneManager.LoadScene("StartMenu");
     }
 

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public delegate void TakeDamageEvent(float damage);
 
-public class HealthBar : MonoBehaviour
+public class HealthBar : MonoBehaviour, ISaveable
 {
     public Slider slider;
     private float health;
@@ -37,6 +37,10 @@ public class HealthBar : MonoBehaviour
         SetMaxHealth(100f);
         SetHealth(100f);
     }
+    void Start()
+    {
+        SaveManager.Instance.LoadData(this);
+    }
     public void SetMaxHealth(float value)
     {
         slider.maxValue = value;
@@ -56,6 +60,19 @@ public class HealthBar : MonoBehaviour
     {
         health += value;
         slider.value = health;
+    }
+    
+    public void PopulateSaveData(SaveData save)
+    {
+        save.playerData.playerHealth = GetHealth();
+    }
+
+    public void LoadFromSaveData(SaveData save)
+    {
+        if (save.seenIntroCam)
+        {
+            SetHealth(save.playerData.playerHealth);
+        }
     }
 
 }
