@@ -53,6 +53,12 @@ public class HealthBar : MonoBehaviour, ISaveable
     {
         health = value;
         slider.value = health;
+        
+        if (health >= slider.maxValue)
+        {
+            health = slider.maxValue;
+            slider.value = health;
+        }
     }
     public float GetHealth()
     {
@@ -63,6 +69,11 @@ public class HealthBar : MonoBehaviour, ISaveable
     {
         health += value;
         slider.value = health;
+        if (health >= slider.maxValue)
+        {
+            health = slider.maxValue;
+            slider.value = health;
+        }
     }
     
     public void PopulateSaveData(SaveData save)

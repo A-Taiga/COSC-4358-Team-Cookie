@@ -57,12 +57,24 @@ public class StaminaBar : MonoBehaviour, ISaveable
     {
         health = value;
         slider.value = health;
+        
+        if (health >= slider.maxValue)
+        {
+            health = slider.maxValue;
+            slider.value = health;
+        }
     }
 
     public void AddHealth(float value)
     {
         health += value;
         slider.value = health;
+        
+        if (health >= slider.maxValue)
+        {
+            health = slider.maxValue;
+            slider.value = health;
+        }
     }
 
     public float GetHealth()
@@ -76,7 +88,7 @@ public class StaminaBar : MonoBehaviour, ISaveable
             characterMovement.runLocked = false;
 
 
-        if ((Time.time - lastRan) >= 10f && health < 100f)
+        if ((Time.time - lastRan) >= 5f && health < 100f)
         {
             characterMovement.runLocked = false;
             SetHealth(health + 0.5f);

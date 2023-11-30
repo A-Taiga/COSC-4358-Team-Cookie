@@ -64,6 +64,7 @@ public class WorldItem : MonoBehaviour, ISaveable
                 collision.gameObject.GetComponent<Animator>().SetTrigger("PickedUpSword");
                 inventoryManager.hasSword = true;
                 SaveManager.Instance.SaveData(inventoryManager);
+                SaveManager.Instance.SaveData(player);
                 Destroy(gameObject);
                 return;
             } 
