@@ -123,7 +123,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.89, y: 2.6}
+    oldSize: {x: 0.1556, y: 0.104}
     newSize: {x: 3.89, y: 2.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -172,6 +172,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 8395542973572441650}
-  open: {fileID: 21300000, guid: 1d90f8584278d443689f4d8cdb88e004, type: 3}
+  open: {fileID: 21300000, guid: 88303471e3fab4e96811844d74ea0a7a, type: 3}
+  animator: {fileID: 0}
   myPrefab: {fileID: 4672922866989552495, guid: 6d1564f392ece4ff680486dad729f517, type: 3}
   item: {fileID: 11400000, guid: 9ce29168edb2d490285697a19fad33aa, type: 2}
+  keyName: 
+  rattle: {fileID: 8300000, guid: 10ca50a6693d57b4494975eac6819f16, type: 3}
+  openSound: {fileID: 8300000, guid: 37d6647b4f732c54393dd77498c375de, type: 3}

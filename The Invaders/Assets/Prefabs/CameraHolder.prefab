@@ -48,6 +48,10 @@ MonoBehaviour:
   boundX: 0.3
   boundY: 0.15
   CameraSpeed: 5
+  alwaysWatchIntro: 0
+  mainCam: {fileID: 6347538072251643961}
+  dollyCam: {fileID: 0}
+  timeDolly: 10
 --- !u!1 &1560255857489756205
 GameObject:
   m_ObjectHideFlags: 0

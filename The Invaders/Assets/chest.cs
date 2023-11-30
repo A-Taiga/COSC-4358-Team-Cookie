@@ -17,9 +17,21 @@ public class chest : MonoBehaviour
     private bool done = false;
 
     private bool opened = false;
+
+    public string keyName;
+
+    private Player player;
+
+    public AudioClip rattle;
+    public AudioClip openSound;
+
+    private AudioSource srcPlayer;
+    
     void Start()
     {
+        srcPlayer = InventoryManager.Instance.transform.root.gameObject.GetComponent<AudioSource>();
         myPrefab.GetComponent<WorldItem>().item = item;
+        player = Player.getPlayerObject().GetComponent<Player>();
     }
     // Update is called once per frame
     void Update()
@@ -37,9 +49,40 @@ public class chest : MonoBehaviour
 
     void OnCollisionEnter2D()
     {
+        
         if(opened == true)
             return;
+        
+        if (keyName == "wetlands" && !player.hasWetlandsKey)
+        {
+            // rattle lock.
+            if (srcPlayer && rattle)
+            {
+                srcPlayer.clip = rattle;
+                srcPlayer.Play();
+            }
+            player.GetComponentInChildren<PopupMessage>().ShowPopup("Looks like the chest is locked.", 5f);
+            return;
+        } 
+        else if (keyName == "volcano")
+        {
+            if (player.hasShield)
+            {
+                if (srcPlayer && rattle)
+                {
+                    srcPlayer.clip = rattle;
+                    srcPlayer.Play();
+                }
+                return;
+            }
+        }
+
         Debug.Log("Collision");
+        if (srcPlayer && openSound)
+        {
+            srcPlayer.clip = openSound;
+            srcPlayer.Play();
+        }
         // sprite.sprite = open;
         // animator.SetTrigger("open");
         gameObject.GetComponent<Animator>().SetBool("open", true);

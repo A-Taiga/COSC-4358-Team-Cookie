@@ -25,9 +25,20 @@ public class InventoryManager : MonoBehaviour, ISaveable
 
     public GameObject coins;
     
+    public static InventoryManager Instance { private set; get; }
+    
     void Awake()
     {
-        DontDestroyOnLoad(transform.root.gameObject);
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(transform.root.gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
         var scene = SceneManager.GetActiveScene().name;
         if (scene.Equals("StartMenu"))
         {
@@ -108,7 +119,7 @@ public class InventoryManager : MonoBehaviour, ISaveable
     
     public virtual void updateCoinCount()
     {
-        coins.transform.GetChild(1).GetComponent<TMP_Text>().text = "x " + coinCount;
+        coins.GetComponentInChildren<TMP_Text>().text = "x " + coinCount;
     }
     public void erase()
     {

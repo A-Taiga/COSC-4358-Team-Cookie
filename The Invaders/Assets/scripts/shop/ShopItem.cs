@@ -8,7 +8,7 @@ public class ShopItem : MonoBehaviour, IPointerClickHandler
     // Start is called before the first frame update
     public GameObject shopManager;
     public Item item;
-
+    public AudioClip purchaseSound;
     public bool selected = false;
     public int price;
     void Start()
@@ -27,6 +27,13 @@ public class ShopItem : MonoBehaviour, IPointerClickHandler
         shopManager.GetComponent<ShopManager>().AddItem(item);
         shopManager.GetComponent<ShopManager>().coinCount -= price;
         shopManager.GetComponent<ShopManager>().updateCoinCount();
+
+        var src = InventoryManager.Instance.transform.root.gameObject.GetComponent<AudioSource>();
+        if (src && purchaseSound)
+        {
+            src.clip = purchaseSound;
+            src.Play();
+        }
     }
 
 

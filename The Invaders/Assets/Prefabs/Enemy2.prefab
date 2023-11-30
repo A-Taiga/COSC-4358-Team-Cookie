@@ -808,6 +808,7 @@ MonoBehaviour:
   enemyType: 
   health: 100
   toRespawn: 1
+  coin: {fileID: 760845164290246038, guid: 29e02ea3e1399e343afe0969ca8302c7, type: 3}
 --- !u!114 &2550803555123210732
 MonoBehaviour:
   m_ObjectHideFlags: 0

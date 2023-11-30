@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -13,12 +14,18 @@ public class InventorySlot : MonoBehaviour, IDropHandler, IPointerDownHandler
 	public GameObject canvas;
 	public int slotIndex;
     public ContextMenu contextMenu;
+    public InventoryItem invItem;
+	public virtual void Start()
+	{
+		canvas = FindObjectOfType<Canvas>().gameObject;
+		inventoryManager = InventoryManager.Instance;
+		invItem = GetComponentInChildren<InventoryItem>();
+		Deselect();
+	}
 
 	public virtual void Awake()
 	{
-		canvas = FindObjectOfType<Canvas>().gameObject;
-		inventoryManager = FindObjectOfType<InventoryManager>();
-		Deselect();
+		
 	}
 	public void Select()
 	{

@@ -61224,6 +61224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopManager: {fileID: 2355470237373800162}
   item: {fileID: 11400000, guid: 4f928a13f9e0c46b8ae86005abd68011, type: 2}
+  purchaseSound: {fileID: 8300000, guid: b60a14ea9f9cd644b8a4fe423099a2a3, type: 3}
   selected: 0
   price: 1
 --- !u!114 &982244102
@@ -61363,6 +61364,7 @@ MonoBehaviour:
   canvas: {fileID: 0}
   slotIndex: 12
   contextMenu: {fileID: 0}
+  invItem: {fileID: 0}
 --- !u!114 &1093414127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61968,6 +61970,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopManager: {fileID: 2355470237373800162}
   item: {fileID: 11400000, guid: fcee3f4e49717407dbbb5ee33b658c0b, type: 2}
+  purchaseSound: {fileID: 8300000, guid: 6a75eead64d35324a9aeb7c2a1aa0063, type: 3}
   selected: 0
   price: 2
 --- !u!114 &1314893797
@@ -64526,6 +64529,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5c3d2cd5a5b5d43f48f2bab40fa66b17, type: 2}
   - {fileID: 11400000, guid: 4f928a13f9e0c46b8ae86005abd68011, type: 2}
   - {fileID: 11400000, guid: fcee3f4e49717407dbbb5ee33b658c0b, type: 2}
+  sellSound: {fileID: 8300000, guid: fd93bfe1215100a49bbb36b28a3e98e1, type: 3}
 --- !u!1 &3333810271641063714
 GameObject:
   m_ObjectHideFlags: 0
@@ -70654,6 +70658,7 @@ MonoBehaviour:
   canvas: {fileID: 0}
   slotIndex: 1
   contextMenu: {fileID: 0}
+  invItem: {fileID: 0}
 --- !u!114 &8395998922062432542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70703,6 +70708,7 @@ MonoBehaviour:
   canvas: {fileID: 0}
   slotIndex: 4
   contextMenu: {fileID: 0}
+  invItem: {fileID: 0}
 --- !u!114 &8395998922428240180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70752,6 +70758,7 @@ MonoBehaviour:
   canvas: {fileID: 0}
   slotIndex: 11
   contextMenu: {fileID: 0}
+  invItem: {fileID: 0}
 --- !u!114 &8395998922530135574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70801,6 +70808,7 @@ MonoBehaviour:
   canvas: {fileID: 0}
   slotIndex: 5
   contextMenu: {fileID: 0}
+  invItem: {fileID: 0}
 --- !u!114 &8395998922540472509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70850,6 +70858,7 @@ MonoBehaviour:
   canvas: {fileID: 0}
   slotIndex: 7
   contextMenu: {fileID: 0}
+  invItem: {fileID: 0}
 --- !u!114 &8395998922796828521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70899,6 +70908,7 @@ MonoBehaviour:
   canvas: {fileID: 0}
   slotIndex: 0
   contextMenu: {fileID: 0}
+  invItem: {fileID: 0}
 --- !u!114 &8395998922800730382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70948,6 +70958,7 @@ MonoBehaviour:
   canvas: {fileID: 0}
   slotIndex: 2
   contextMenu: {fileID: 0}
+  invItem: {fileID: 0}
 --- !u!114 &8395998923049052603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70997,6 +71008,7 @@ MonoBehaviour:
   canvas: {fileID: 0}
   slotIndex: 9
   contextMenu: {fileID: 0}
+  invItem: {fileID: 0}
 --- !u!114 &8395998923076739911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71046,6 +71058,7 @@ MonoBehaviour:
   canvas: {fileID: 0}
   slotIndex: 3
   contextMenu: {fileID: 0}
+  invItem: {fileID: 0}
 --- !u!114 &8395998923098526740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71095,6 +71108,7 @@ MonoBehaviour:
   canvas: {fileID: 0}
   slotIndex: 8
   contextMenu: {fileID: 0}
+  invItem: {fileID: 0}
 --- !u!114 &8395998923101869386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71144,6 +71158,7 @@ MonoBehaviour:
   canvas: {fileID: 0}
   slotIndex: 6
   contextMenu: {fileID: 0}
+  invItem: {fileID: 0}
 --- !u!114 &8395998923162788496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71193,6 +71208,7 @@ MonoBehaviour:
   canvas: {fileID: 0}
   slotIndex: 10
   contextMenu: {fileID: 0}
+  invItem: {fileID: 0}
 --- !u!114 &8996338120511317983
 MonoBehaviour:
   m_ObjectHideFlags: 0

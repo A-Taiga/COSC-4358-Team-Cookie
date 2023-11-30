@@ -7,13 +7,14 @@ public class ShopManager : InventoryManager
 {
 
     public Item[] sellingItems;
-
+    public AudioClip sellSound;
+    
     void Awake()
     {
     }
     void Start()
     {  
-        InventoryManager playerManager = FindObjectOfType<InventoryManager>();
+        InventoryManager playerManager = InventoryManager.Instance;
         for(int i = 0 ;i  < playerManager.inventorySlots.Length; i++)
         {
             InventorySlot slot = playerManager.inventorySlots[i];
@@ -110,6 +111,13 @@ public class ShopManager : InventoryManager
         {
             return;
         }
+        var src = InventoryManager.Instance.transform.root.gameObject.GetComponent<AudioSource>();
+        if (src && sellSound)
+        {
+            src.clip = sellSound;
+            src.Play();
+        }
+        
         inventorySlots[12].GetComponentInChildren<InventoryItem>().count--;
         inventorySlots[12].GetComponentInChildren<InventoryItem>().RefreshCount();
         if(inventorySlots[12].GetComponentInChildren<InventoryItem>().count == 0)

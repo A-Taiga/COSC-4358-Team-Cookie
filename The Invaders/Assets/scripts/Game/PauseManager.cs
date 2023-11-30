@@ -63,8 +63,17 @@ public class PauseManager : MonoBehaviour
         MainPause.SetActive(true);
         Settings.SetActive(false);
     }
+
+    public void NoSaveQuit()
+    {
+        GUIController.Instance.SetDeathScreen(false);
+        ResumeGame();
+        uiController.transform.root.gameObject.SetActive(false);
+        SceneManager.LoadScene("StartMenu");
+    }
     public void QuitToMenu()
     {
+        GUIController.Instance.SetDeathScreen(false);
         SaveManager.Instance.ForceSave();
         ResumeGame();
         uiController.transform.root.gameObject.SetActive(false);

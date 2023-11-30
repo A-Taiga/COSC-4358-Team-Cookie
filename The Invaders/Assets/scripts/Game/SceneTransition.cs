@@ -37,8 +37,11 @@ public class SceneTransition : MonoBehaviour
         var pm = Player.getPlayerObject().GetComponent<playerMovement>();
         pm.LockMovement();
         transitionAnim.SetTrigger("End");
-        yield return new WaitForSeconds(1);
-        SceneManager.LoadSceneAsync(sceneIdx);
+        yield return new WaitForSeconds(1f);
+        var asyncLoadLevel = SceneManager.LoadSceneAsync(sceneIdx, LoadSceneMode.Single);
+        while (!asyncLoadLevel.isDone){
+            yield return null;
+        }
         Events<OnSceneChange>.Instance.Trigger?.Invoke(SceneManager.GetActiveScene().name);
         transitionAnim.SetTrigger("Start");
         pm.UnlockMovement();
@@ -48,8 +51,11 @@ public class SceneTransition : MonoBehaviour
         var pm = Player.getPlayerObject().GetComponent<playerMovement>();
         pm.LockMovement();
         transitionAnim.SetTrigger("End");
-        yield return new WaitForSeconds(1);
-        SceneManager.LoadSceneAsync(name);
+        yield return new WaitForSeconds(1f);
+        var asyncLoadLevel = SceneManager.LoadSceneAsync(name, LoadSceneMode.Single);
+        while (!asyncLoadLevel.isDone){
+            yield return null;
+        }
         Events<OnSceneChange>.Instance.Trigger?.Invoke(name);
         transitionAnim.SetTrigger("Start");
         pm.UnlockMovement();

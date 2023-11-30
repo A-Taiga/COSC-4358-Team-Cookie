@@ -16,14 +16,14 @@ public class Player : MonoBehaviour, ISaveable
     // Game data, will fix persistence soon.
     public int progress = 0;
 
+    public bool hasWetlandsKey = false;
 
-    private void Awake()
-    {
-        player = getPlayerObject();
-    }
-
+    public int diamonds = 0;
+    public bool hasShield = false;
+    
     void Start()
     {        
+        player = getPlayerObject();
         SaveManager.Instance.LoadData(this);
         
         if(customSpawn)
@@ -34,8 +34,8 @@ public class Player : MonoBehaviour, ISaveable
         customSpawn = false;
         spawnPos = player.transform.position;
         // DontDestroyOnLoad(gameObject);
-        inventoryManager = GameObject.Find("Canvas").GetComponentInChildren<InventoryManager>();
-        if(inventoryManager.hasSword == true)
+        inventoryManager = InventoryManager.Instance;
+        if(inventoryManager?.hasSword == true)
         {
             Debug.Log("we have sword!");
             player.GetComponent<Animator>().SetTrigger("PickedUpSword");
@@ -57,16 +57,22 @@ public class Player : MonoBehaviour, ISaveable
 
     public void PopulateSaveData(SaveData save)
     {
+        save.hasWetlandsKey = hasWetlandsKey;
         save.playerData.playerProgress = progress;
         save.playerData.lastScene = SceneManager.GetActiveScene().name;
         save.playerData.spawnPos = player.transform.position;
+        save.diamondCount = diamonds;
+        save.hasShield = hasShield;
     }
 
     public void LoadFromSaveData(SaveData save)
     {
         if (save.seenIntroCam)
         {
+            hasWetlandsKey = save.hasWetlandsKey;
             progress = save.playerData.playerProgress;
+            diamonds = save.diamondCount;
+            hasShield = save.hasShield;
 
             if (SceneManager.GetActiveScene().name.Equals(save.playerData.lastScene))
             {

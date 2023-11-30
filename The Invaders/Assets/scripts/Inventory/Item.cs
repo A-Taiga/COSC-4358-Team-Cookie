@@ -36,6 +36,7 @@ public class Item : ScriptableObject
     [Header("Both")]
     public Sprite image;
 
+    public AudioClip useSound;
 
-   
+
 }

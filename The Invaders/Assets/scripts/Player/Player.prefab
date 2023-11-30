@@ -516,7 +516,8 @@ MonoBehaviour:
   currentQuest: {fileID: 0}
   inventoryManager: {fileID: 0}
   progress: 0
-  mainUI: {fileID: 0}
+  hasWetlandsKey: 0
+  diamonds: 0
 --- !u!1 &3333810270486598358
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,8 +686,8 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7683322016900983261}
-  m_BodyType: 0
-  m_Simulated: 1
+  m_BodyType: 2
+  m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 0.0001

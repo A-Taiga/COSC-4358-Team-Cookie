@@ -21,6 +21,8 @@ public class AIBehavior : MonoBehaviour, ISaveable
     private FloatingHealthBar healthbar;
     private Player player;
     public bool toRespawn = true;
+
+    public GameObject coin;
     
     void Start()
     {
@@ -51,6 +53,10 @@ public class AIBehavior : MonoBehaviour, ISaveable
         {
             toRespawn = false;
             SaveManager.Instance.SaveData(this);
+            if (coin)
+            {
+                Instantiate(coin, transform.position, Quaternion.identity);
+            }
             Destroy(gameObject);
         }
     }
@@ -66,7 +72,7 @@ public class AIBehavior : MonoBehaviour, ISaveable
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(lastAction?.lockAction == true)
+        if(lastAction?.lockAction == true || PauseManager.isPaused)
         {
             return;
         }

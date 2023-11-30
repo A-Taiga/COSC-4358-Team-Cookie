@@ -42,31 +42,39 @@ public class ContextMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void UseButton()
     {
-        if(item.gameObject.GetComponent<InventoryItem>().item.type == ItemType.Consumable)
+        var _item = item.gameObject.GetComponent<InventoryItem>();
+        if(_item.item.type == ItemType.Consumable)
         {
 
-            if(item.gameObject.GetComponent<InventoryItem>().item.name == "SpeedPotion")
+            if(_item.item.name == "SpeedPotion")
             {
                 Debug.Log("Speed Potion");
-                item.gameObject.GetComponent<InventoryItem>().count--;
-                item.gameObject.GetComponent<InventoryItem>().RefreshCount();
+                _item.count--;
+                _item.RefreshCount();
                 GameObject go = GameObject.Find("Stamina");
                 StaminaBar other = (StaminaBar) go.GetComponent(typeof(StaminaBar));
-                Debug.Log("GO: " + go);
-                Debug.Log("OTHER: " + other);
-                other.AddHealth(50);
+                other.AddHealth(75);
             }
             else
             {
-                item.gameObject.GetComponent<InventoryItem>().count--;
-                item.gameObject.GetComponent<InventoryItem>().RefreshCount();
+                _item.count--;
+                _item.RefreshCount();
                 GameObject go = GameObject.Find("Healthbar");
                 HealthBar other = (HealthBar) go.GetComponent(typeof(HealthBar));
                 other.AddHealth(20);
             }
-           
 
-            if(item.gameObject.GetComponent<InventoryItem>().count == 0)
+            if (_item.item.useSound)
+            {
+                var src = gameObject.transform.root.gameObject.GetComponent<AudioSource>();
+                if (src)
+                {
+                    src.clip = _item.item.useSound;
+                    src.Play();
+                }
+            }
+            
+            if(_item.count == 0)
             {
                 Destroy(item);
             }

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 374514839958077954}
   - component: {fileID: 3634922152353060474}
   - component: {fileID: 5533276927050558917}
-  - component: {fileID: 5532733667891980304}
   - component: {fileID: 1363488612845443766}
   m_Layer: 0
   m_Name: WorldItem
@@ -102,33 +101,8 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 9ce29168edb2d490285697a19fad33aa, type: 2}
   spriteRenderer: {fileID: 3634922152353060474}
   inventoryManager: {fileID: 0}
---- !u!50 &5532733667891980304
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4672922866989552495}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.0001
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7
+  respawn: 1
+  pickupSound: {fileID: 8300000, guid: 296668df87f0b2e4786fcd6a6a27c44d, type: 3}
 --- !u!61 &1363488612845443766
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -158,7 +132,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

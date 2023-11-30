@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Threading;
 using UnityEngine;
+using Object = System.Object;
 
 public class CameraFollow : MonoBehaviour, ISaveable
 {
@@ -23,8 +24,30 @@ public class CameraFollow : MonoBehaviour, ISaveable
     public float timeDolly = 10;
     private playerMovement pm;
 
+    private static bool bossIntro = false;
+
     IEnumerator Start()
     {
+        GameObject boss;
+        if (!bossIntro && (boss = GameObject.Find("Enemy1")))
+        {
+            var temp = playerTransform;
+            playerTransform = boss.transform;
+            mainCam.orthographicSize = 0.35f;
+            PauseManager.isPaused = true;
+            Events<StartDialogue>.Instance.Trigger?.Invoke("finalboss");
+            Events<EndDialogue>.Instance.Register(BossDialogueEnd);
+            while (!bossIntro)
+            {
+                yield return new WaitForSeconds(1f);
+            }
+            playerTransform = temp;
+            mainCam.orthographicSize = 0.7f;
+            PauseManager.isPaused = false;
+            Events<EndDialogue>.Instance.Unregister(BossDialogueEnd);
+            
+        }
+        
         pm = playerTransform.GetComponent<playerMovement>();
         SaveManager.Instance.LoadData(this);
         if (dollyCam)
@@ -40,6 +63,13 @@ public class CameraFollow : MonoBehaviour, ISaveable
         }
     }
 
+    void BossDialogueEnd(string npc)
+    {
+        if (npc == "finalboss")
+        {
+            bossIntro = true;
+        }
+    }
     void StartIntro()
     {
         mainCam.enabled = false;

@@ -52,6 +52,7 @@ public class SaveData
     public bool forestVillagerSaved;
     
     public int coinCount;
+    public int diamondCount;
     
     public PlayerData playerData;
     public List<InventoryData> m_InventoryData = new List<InventoryData>();

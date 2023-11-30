@@ -11,10 +11,16 @@ public class HealthBar : MonoBehaviour, ISaveable
     public Slider slider;
     private float health;
 
+    private bool isDead;
+
     void OnTakeDamage(float damage) {
         if (this.health < damage)
         {
-            SetHealth(100 - damage);
+            // Dead...
+            isDead = true;
+            Time.timeScale = 0f;
+            PauseManager.isPaused = true;
+            GUIController.Instance.SetDeathScreen(true);
         }
         else
         {
@@ -25,6 +31,7 @@ public class HealthBar : MonoBehaviour, ISaveable
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     void OnEnable()
     {
+        SaveManager.Instance.LoadData(this);
         Events<TakeDamageEvent>.Instance.Register(OnTakeDamage);
     }
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
@@ -36,10 +43,6 @@ public class HealthBar : MonoBehaviour, ISaveable
     {
         SetMaxHealth(100f);
         SetHealth(100f);
-    }
-    void Start()
-    {
-        SaveManager.Instance.LoadData(this);
     }
     public void SetMaxHealth(float value)
     {
@@ -64,15 +67,15 @@ public class HealthBar : MonoBehaviour, ISaveable
     
     public void PopulateSaveData(SaveData save)
     {
-        save.playerData.playerHealth = GetHealth();
+        if (!isDead)
+        {
+            save.playerData.playerHealth = GetHealth();
+        }
     }
 
     public void LoadFromSaveData(SaveData save)
     {
-        if (save.seenIntroCam)
-        {
-            SetHealth(save.playerData.playerHealth);
-        }
+        SetHealth(save.playerData.playerHealth);
     }
 
 }

@@ -20,12 +20,13 @@ public class UIDamageFlash : MonoBehaviour
     {
         Debug.Log("damage !");
         if(heartSprite && !active) {
-            startColor = heartSprite.color;
+            startColor = Color.red;
             StartCoroutine(flashHeart());
         }
     }
     public void OnEnable()
     {
+        heartSprite.color = Color.red;
         Events<TakeDamageEvent>.Instance.Register(OnTakeDamage);
     }
     public void OnDisable()

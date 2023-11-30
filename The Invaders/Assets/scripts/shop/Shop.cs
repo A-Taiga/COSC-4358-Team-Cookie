@@ -9,6 +9,7 @@ public class Shop : MonoBehaviour
     public GameObject exitScript;
     public Canvas shopCanvas;
     private bool browsing = false;
+    
     void Start()
     {
         

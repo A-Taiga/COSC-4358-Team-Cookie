@@ -97,8 +97,7 @@ public class Pathfinder : AIAction
 
     public void Update()
     {
-
-        if (path == null)
+        if (path == null || PauseManager.isPaused)
         {
             // We have no path to follow yet, so don't do anything
             return;
@@ -146,6 +145,8 @@ public class Pathfinder : AIAction
         // Multiply the direction by our desired speed to get a velocity
         Vector3 velocity = dir * speed * speedFactor;
 
+        if (PauseManager.isPaused)
+            return; 
         // If you are writing a 2D game you may want to remove the CharacterController and instead modify the position directly
         transform.position += velocity * Time.deltaTime;
     }

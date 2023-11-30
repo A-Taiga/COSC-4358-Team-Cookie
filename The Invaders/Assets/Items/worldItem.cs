@@ -19,12 +19,19 @@ public class WorldItem : MonoBehaviour, ISaveable
     private int hash;
     private bool pickedUp = false;
 
+    private float spawnTime;
+
+    public AudioClip pickupSound;
+    private AudioSource src;
+    
     void Awake()
     {
     }
     
     void Start()
     {
+        src = InventoryManager.Instance.transform.root.gameObject.GetComponent<AudioSource>();
+        spawnTime = Time.time;
         string temp = "item_" + gameObject.name + item.itemName + SceneName.sceneName;
         hash = GetFNV1aHashCode(temp);
         SaveManager.Instance.LoadData(this);
@@ -34,11 +41,16 @@ public class WorldItem : MonoBehaviour, ISaveable
             Destroy(gameObject);
         }
         spriteRenderer.sprite = item.image;
-        inventoryManager = GameObject.Find("Canvas").GetComponentInChildren<InventoryManager>();
+        inventoryManager = InventoryManager.Instance;
     }
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (Time.time - spawnTime < 0.5)
+        {
+            return;
+        }
+        
+        if(collision.gameObject.CompareTag("Player"))
         {
             if(item.name == "sword")
             {
@@ -61,9 +73,30 @@ public class WorldItem : MonoBehaviour, ISaveable
                 if (player.progress < 5)
                 {
                     player.progress = 5;
-                    player.GetComponentInChildren<PopupMessage>().ShowPopup("I can now enter the North Beach!", 5f);
+                    player.GetComponentInChildren<PopupMessage>().ShowPopup("This looks like it might be useful in the final battle.", 5f);
                 }
+
+                player.hasShield = true;
+                SaveManager.Instance.SaveData(player);
+            } 
+            else if (item.name == "Diamond")
+            {
+                Player player = Player.getPlayerObject().GetComponent<Player>();
+                player.diamonds += 1;
+                if (player.diamonds == 3)
+                {
+                    player.GetComponentInChildren<PopupMessage>().ShowPopup("That should be all of them.", 5f);
+                }
+                SaveManager.Instance.SaveData(player);
             }
+
+            if (pickupSound)
+            {
+                Debug.Log("play");
+                src.clip = pickupSound;
+                src.Play();
+            }
+            
             inventoryManager.AddItem(item);
             pickedUp = true;
             SaveManager.Instance.SaveData(this);

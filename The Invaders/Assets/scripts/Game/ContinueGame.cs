@@ -18,6 +18,12 @@ public class ContinueGame : MonoBehaviour
     {
         SaveManager.Instance = new SaveManager(SaveManager.SAVE_FILE);
         var sceneName = SaveManager.Instance.LastActiveScene();
+        if (string.IsNullOrEmpty(sceneName))
+        {
+            this.gameObject.SetActive(false);
+            Debug.LogWarning("Could not load this save file.");
+            return;
+        }
         SceneLoadingManager.LoadScene(sceneName);
     }
 }

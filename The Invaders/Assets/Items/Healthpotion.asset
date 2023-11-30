@@ -19,3 +19,4 @@ MonoBehaviour:
   range: {x: 5, y: 4}
   stackable: 1
   image: {fileID: 21300000, guid: 39cdb7dac77094256aa5f4c2e27cc5e6, type: 3}
+  useSound: {fileID: 8300000, guid: b60a14ea9f9cd644b8a4fe423099a2a3, type: 3}

@@ -793,7 +793,7 @@ MonoBehaviour:
   nextWaypointDistance: 3
   repathRate: 0.5
   reachedEndOfPath: 0
-  alertBox: {fileID: 0}
+  alertBox: {fileID: 4201716108289876155}
 --- !u!114 &1533476049195956590
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -47,7 +47,9 @@ public class MeleeAttack : AIAction
 
     public override void Execute()
     {
-
+        if (PauseManager.isPaused)
+            return;
+        
         lockAction = true;
         isShaking = true;
         _startPos = transform.position;
