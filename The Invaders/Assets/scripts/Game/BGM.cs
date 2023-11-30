@@ -21,7 +21,7 @@ public class BGM : MonoBehaviour
     void OnDisable() {
         Events<VolumeChangeEvent>.Instance.Unregister(OnVolumeChange);
     }
-    void Awake()
+    void Start()
     {
         audioSource = GetComponent<AudioSource>();
         audioSource.volume = PlayerPrefs.GetFloat("volume", 0.2f); // 20% of volume.

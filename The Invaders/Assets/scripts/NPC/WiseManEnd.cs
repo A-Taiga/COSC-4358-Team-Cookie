@@ -52,8 +52,8 @@ public class WiseManEnd : MonoBehaviour
             if (player.progress < 3)
             {
                 player.progress = 3;
-                SaveManager.Instance.SaveData(player);
             }
+            SaveManager.Instance.SaveData(player);
         }
         else
         {

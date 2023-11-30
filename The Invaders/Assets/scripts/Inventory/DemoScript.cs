@@ -6,7 +6,7 @@ public class DemoScript : MonoBehaviour
 {
     public InventoryManager inventoryManager;
     public Item[] itemsToPickup;
-    void Awake()
+    void Start()
     {
         inventoryManager = InventoryManager.Instance;
     }

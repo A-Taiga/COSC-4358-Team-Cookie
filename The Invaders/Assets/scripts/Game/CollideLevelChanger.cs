@@ -8,7 +8,7 @@ public class CollideLevelChanger : MonoBehaviour
     public string newLevelName;
 
 
-    public void Awake()
+    public void Start()
     {
         coll = GetComponent<Collider2D>();
     }

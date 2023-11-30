@@ -75,7 +75,10 @@ public class HealthBar : MonoBehaviour, ISaveable
 
     public void LoadFromSaveData(SaveData save)
     {
-        SetHealth(save.playerData.playerHealth);
+        if (save.seenIntroCam)
+        {
+            SetHealth(save.playerData.playerHealth);
+        }
     }
 
 }
