@@ -41,14 +41,13 @@ public class ForestVillager : MonoBehaviour
     {
         if (name.Equals("forest_injured_npc"))
         {
-            DropItems();
             Player player = Player.getPlayerObject().GetComponent<Player>();
             player.progress = 2;
             player.gameObject
                 .GetComponentInChildren<PopupMessage>()
                 .ShowPopup("Maybe I should check out Sunset Bay...", 5f);
             SaveManager.Instance.SaveData(player);
-            
+            DropItems();
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
@@ -107,12 +106,15 @@ public class ForestVillager : MonoBehaviour
     {
         if (!worldItem)
             return;
-        
-        foreach(var item in drops)
+
+        foreach (var item in drops)
         {
-            Vector2 offsets = Random.insideUnitCircle.normalized * 0.16f;
-            worldItem.GetComponent<WorldItem>().item = item;
-            Instantiate(worldItem, (Vector2) gameObject.transform.position + offsets, Quaternion.identity);
+            try
+            {
+                Vector2 offsets = Random.insideUnitCircle.normalized * 0.16f;
+                worldItem.GetComponent<WorldItem>().item = item;
+                Instantiate(worldItem, (Vector2)gameObject.transform.position + offsets, Quaternion.identity);
+            } catch {}
         }
     }
 }

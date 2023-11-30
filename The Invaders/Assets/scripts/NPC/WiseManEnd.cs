@@ -77,12 +77,15 @@ public class WiseManEnd : MonoBehaviour
     {
         if (!worldItem)
             return;
-        
-        foreach(var item in drops)
+
+        foreach (var item in drops)
         {
-            Vector2 offsets = Random.insideUnitCircle.normalized * 0.16f;
-            worldItem.GetComponent<WorldItem>().item = item;
-            Instantiate(worldItem, (Vector2) gameObject.transform.position + offsets, Quaternion.identity);
+            try
+            {
+                Vector2 offsets = Random.insideUnitCircle.normalized * 0.16f;
+                worldItem.GetComponent<WorldItem>().item = item;
+                Instantiate(worldItem, (Vector2)gameObject.transform.position + offsets, Quaternion.identity);
+            } catch {}
         }
     }
 }
