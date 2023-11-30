@@ -24,6 +24,9 @@ public class InventoryManager : MonoBehaviour, ISaveable
     public int coinCount = 0;
 
     public GameObject coins;
+
+    private bool showCheats = false;
+    public GameObject cheats;
     
     public static InventoryManager Instance { private set; get; }
     
@@ -49,6 +52,12 @@ public class InventoryManager : MonoBehaviour, ISaveable
     {
         SaveManager.Instance.LoadData(this);
         Events<OnSceneChange>.Instance.Register(SceneChange);
+
+        if (cheats)
+        {
+            showCheats = false;
+            cheats.SetActive(false);
+        }
     }
 
     private void OnDestroy()
@@ -190,5 +199,20 @@ public class InventoryManager : MonoBehaviour, ISaveable
 
         coinCount = save.coinCount;
         updateCoinCount();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F5))
+        {
+            if (showCheats)
+            {
+                cheats.SetActive(false);
+            } else {
+                cheats.SetActive(true);
+            }
+
+            showCheats = !showCheats;
+        }
     }
 }
