@@ -45,11 +45,26 @@ public class ContextMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         if(item.gameObject.GetComponent<InventoryItem>().item.type == ItemType.Consumable)
         {
 
-            item.gameObject.GetComponent<InventoryItem>().count--;
-            item.gameObject.GetComponent<InventoryItem>().RefreshCount();
-            GameObject go = GameObject.Find("Healthbar");
-            HealthBar other = (HealthBar) go.GetComponent(typeof(HealthBar));
-            other.AddHealth(20);
+            if(item.gameObject.GetComponent<InventoryItem>().item.name == "SpeedPotion")
+            {
+                Debug.Log("Speed Potion");
+                item.gameObject.GetComponent<InventoryItem>().count--;
+                item.gameObject.GetComponent<InventoryItem>().RefreshCount();
+                GameObject go = GameObject.Find("Stamina");
+                StaminaBar other = (StaminaBar) go.GetComponent(typeof(StaminaBar));
+                Debug.Log("GO: " + go);
+                Debug.Log("OTHER: " + other);
+                other.AddHealth(50);
+            }
+            else
+            {
+                item.gameObject.GetComponent<InventoryItem>().count--;
+                item.gameObject.GetComponent<InventoryItem>().RefreshCount();
+                GameObject go = GameObject.Find("Healthbar");
+                HealthBar other = (HealthBar) go.GetComponent(typeof(HealthBar));
+                other.AddHealth(20);
+            }
+           
 
             if(item.gameObject.GetComponent<InventoryItem>().count == 0)
             {

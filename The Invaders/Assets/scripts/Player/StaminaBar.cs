@@ -59,6 +59,12 @@ public class StaminaBar : MonoBehaviour, ISaveable
         slider.value = health;
     }
 
+    public void AddHealth(float value)
+    {
+        health += value;
+        slider.value = health;
+    }
+
     public float GetHealth()
     {
         return health;
@@ -66,7 +72,11 @@ public class StaminaBar : MonoBehaviour, ISaveable
 
     void FixedUpdate()
     {
-        if ((Time.time - lastRan) >= 2f && health < 100f)
+        if(health > 0)
+            characterMovement.runLocked = false;
+
+
+        if ((Time.time - lastRan) >= 10f && health < 100f)
         {
             characterMovement.runLocked = false;
             SetHealth(health + 0.5f);
