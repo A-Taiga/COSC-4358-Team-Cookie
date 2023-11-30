@@ -3820,6 +3820,7 @@ MonoBehaviour:
   sceneName: Village2
   teleportOnLoad: 1
   spawnPos: {x: 3.4238713, y: 0.7468104, z: 0}
+  progressToEnter: 0
 --- !u!61 &495575917
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -62479,7 +62480,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.77647066, g: 0.69803923, b: 0.6, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}

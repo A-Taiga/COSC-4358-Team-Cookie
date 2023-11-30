@@ -5,10 +5,6 @@ using TMPro;
 
 public class ShopManager : InventoryManager
 {
-    // Start is called before the first frame update
-
-
-
 
     public Item[] sellingItems;
 

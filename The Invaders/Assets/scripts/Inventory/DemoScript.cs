@@ -8,7 +8,7 @@ public class DemoScript : MonoBehaviour
     public Item[] itemsToPickup;
     void Awake()
     {
-        inventoryManager = GameObject.Find("Canvas").GetComponentInChildren<InventoryManager>();
+        // inventoryManager = GameObject.Find("Canvas").GetComponentInChildren<InventoryManager>();
     }
     public void PickupItem(int id)
     {
