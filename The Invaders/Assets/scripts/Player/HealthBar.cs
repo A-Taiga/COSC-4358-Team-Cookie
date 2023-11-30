@@ -33,6 +33,10 @@ public class HealthBar : MonoBehaviour, ISaveable
     {
         SaveManager.Instance.LoadData(this);
         Events<TakeDamageEvent>.Instance.Register(OnTakeDamage);
+        if (health <= 0)
+        {
+            SetHealth(100);
+        }
     }
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     void OnDisable()
