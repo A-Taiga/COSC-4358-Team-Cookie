@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
@@ -60,7 +61,7 @@ public class IntroScene : MonoBehaviour
     void EndReached(VideoPlayer vp)
     {
         Debug.Log($"Video {index} ended.");
-        PlayNext();
+        StartCoroutine(Co_playNext());
     }
 
     void Update()
@@ -91,6 +92,13 @@ public class IntroScene : MonoBehaviour
                 skipText.text = "";
             }
         }
+    }
+
+    IEnumerator Co_playNext()
+    {
+        videos[index].Stop();
+        yield return new WaitForSeconds(2);
+        PlayNext();
     }
 
 }
